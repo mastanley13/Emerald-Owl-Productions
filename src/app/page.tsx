@@ -1,4 +1,3 @@
-
 import Header from '../components/shared/Layout/Header';
 import HeroBanner from '../components/home/HeroBanner';
 import AmericaBanner from '../components/home/AmericaBanner';
