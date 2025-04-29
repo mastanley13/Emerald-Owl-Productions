@@ -12,11 +12,11 @@ export default function HeroBanner() {
         <Image 
           src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/6704204d9d9a095a00d5b580.png"
           alt="Emerald Owl Productions Background"
-          fill
-          className="object-contain md:object-scale-down opacity-20 max-w-[60%] md:max-w-[50%] mx-auto"
+          width={500}
+          height={300}
+          className="absolute opacity-20 mx-auto left-0 right-0 top-0 bottom-0 object-contain"
           sizes="(max-width: 768px) 90vw, 50vw"
           priority
-          style={{ width: 'auto', height: 'auto' }}
         />
       </div>
       
