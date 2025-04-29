@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from 'react';
@@ -42,7 +43,7 @@ export default function VideoHighlight() {
           ) : (
             <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
               <iframe 
-                src="https://assets.cdn.filesafe.space/d2BYZGOF7ecSj21A0t4N/media/transcoded_videos/3198a0efe217fc4a.mp4?autoplay=1"
+                src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67c692cfa5debb772355f884.mp4?autoplay=1"
                 allow="autoplay; encrypted-media"
                 className="w-full h-full"
                 title="Emerald Owl Productions Video"
@@ -53,4 +54,4 @@ export default function VideoHighlight() {
       </div>
     </section>
   );
-} 
+}
