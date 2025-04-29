@@ -42,7 +42,7 @@ export default function LaserShowHero() {
                 Book Your Laser Show
               </Link>
               <a 
-                href="#laser-show-types" 
+                href="#laser-show-types-section" 
                 className="bg-transparent border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-900/30 font-bold py-3 px-8 rounded-full transition-all duration-300"
               >
                 Explore Show Types

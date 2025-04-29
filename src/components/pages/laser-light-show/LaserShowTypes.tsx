@@ -24,7 +24,7 @@ const showTypes = [
 
 export default function LaserShowTypes() {
   return (
-    <section id="laser-show-types" className="bg-gray-900 py-16 md:py-24">
+    <section id="laser-show-types-section" className="bg-gray-900 py-16 md:py-24">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-white mb-4">
           Types of <span className="text-emerald-400">Laser Shows</span>

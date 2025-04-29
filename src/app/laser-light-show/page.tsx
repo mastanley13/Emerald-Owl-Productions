@@ -1,7 +1,6 @@
 
-import { redirect } from 'next/navigation';
-
-export default function LaserLightShowAppRoute() {
-  // Use a more specific redirection approach to avoid routing conflicts
-  redirect('/laser-light-show?source=app-router');
+// This page is intentionally left empty
+// We are using the Pages Router for laser-light-show
+export default function EmptyPage() {
+  return null;
 }
