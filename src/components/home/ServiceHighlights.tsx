@@ -43,12 +43,12 @@ const services = [
 
 export default function ServiceHighlights() {
   return (
-    <section className="bg-white py-16">
+    <section id="our-experiences" className="bg-white py-16 md:py-24">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
           Our <span className="text-emerald-600">Experiences</span>
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map(service => (
             <Link href={service.link} key={service.id} className="group">
@@ -70,7 +70,7 @@ export default function ServiceHighlights() {
             </Link>
           ))}
         </div>
-        
+
         <div className="text-center mt-12">
           <Link 
             href="/our-experiences" 
@@ -82,4 +82,4 @@ export default function ServiceHighlights() {
       </div>
     </section>
   );
-} 
+}

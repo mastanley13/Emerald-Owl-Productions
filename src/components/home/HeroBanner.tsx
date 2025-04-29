@@ -72,13 +72,18 @@ export default function HeroBanner() {
                 {/* Subtle shimmer effect */}
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-45 transform -translate-x-full transition-transform duration-1000 ease-in-out group-hover:translate-x-full"></span>
               </Link>
-              <Link 
-                href="/our-experiences" 
+              <button
+                onClick={() => {
+                  const experiencesSection = document.getElementById('our-experiences');
+                  if (experiencesSection) {
+                    experiencesSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
                 className="group relative overflow-hidden bg-white/90 backdrop-blur-sm border-2 border-emerald-600 py-4 px-10 rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 <span className="relative z-10 text-emerald-600 group-hover:text-white transition-colors duration-300 font-bold">View Our Experiences</span>
                 <span className="absolute inset-0 bg-emerald-600 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
-              </Link>
+              </button>
             </div>
             
             {/* Trust indicators - removed "Nationwide Service" as requested */}
