@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function HeroBanner() {
   return (
-    <section className="relative min-h-[500px] flex items-center bg-white text-gray-900 pt-24">
+    <section className="relative min-h-[500px] flex items-center bg-white text-gray-900 pt-24 md:pt-32 lg:pt-36">
       {/* Background image with proper sizing */}
       <div className="absolute inset-0 overflow-hidden">
         <Image 
