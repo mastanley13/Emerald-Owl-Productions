@@ -13,12 +13,12 @@ export default function HeroBanner() {
           <Image 
             src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/6704204d9d9a095a00d5b580.png"
             alt="Emerald Owl Productions Background"
-            width={600}
-            height={360}
+            width={400}
+            height={240}
             className="opacity-20 object-contain"
-            sizes="(max-width: 768px) 90vw, 70vw"
+            sizes="(max-width: 768px) 90vw, 50vw"
             priority
-            style={{ width: 'auto', height: 'auto', maxWidth: '90%' }}
+            style={{ width: 'auto', height: 'auto', maxWidth: '60%' }}
           />
         </div>
       </div>
