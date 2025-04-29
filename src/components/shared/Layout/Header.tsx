@@ -42,6 +42,7 @@ export default function Header() {
           }`}
         >
           <ul className="flex flex-col lg:flex-row justify-end items-start lg:items-center gap-2 lg:gap-6 py-4 lg:py-0 px-4 lg:px-0">
+            {/* HOME */}
             <li className="w-full lg:w-auto">
               <Link 
                 href="/" 
@@ -51,50 +52,323 @@ export default function Header() {
                 Home
               </Link>
             </li>
-            <li className="w-full lg:w-auto">
+            
+            {/* OUR EXPERIENCES - Dropdown */}
+            <li className="w-full lg:w-auto group relative">
               <Link 
-                href="/laser-light-show" 
+                href="/our-experiences" 
                 className="block py-2 px-3 lg:px-2 text-emerald-700 font-medium uppercase hover:text-emerald-900 hover:bg-emerald-50 lg:hover:bg-transparent rounded-md w-full lg:w-auto"
                 onClick={() => setMenuOpen(false)}
               >
-                Laser Light Show
+                Our Experiences
               </Link>
+              <div className="hidden lg:group-hover:block absolute left-0 top-full bg-white/95 backdrop-blur-md shadow-lg rounded-md min-w-[220px] z-50">
+                <div className="py-2">
+                  <Link 
+                    href="/laser-light-show" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Laser Light Show
+                  </Link>
+                  <Link 
+                    href="/neon-nights" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Neon Nights
+                  </Link>
+                  <Link 
+                    href="/foam-parties" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Foam Parties
+                  </Link>
+                  <Link 
+                    href="/water-games" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Water Games
+                  </Link>
+                  <Link 
+                    href="/dripping-in-confidence" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Dripping in Confidence
+                  </Link>
+                  <Link 
+                    href="/sensory-friendly-experiences" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Sensory Friendly Experiences
+                  </Link>
+                </div>
+              </div>
+              
+              {/* Mobile dropdown items */}
+              <div className="lg:hidden pl-4 mt-1 space-y-1">
+                {menuOpen && (
+                  <>
+                    <Link 
+                      href="/laser-light-show" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Laser Light Show
+                    </Link>
+                    <Link 
+                      href="/neon-nights" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Neon Nights
+                    </Link>
+                    <Link 
+                      href="/foam-parties" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Foam Parties
+                    </Link>
+                    <Link 
+                      href="/water-games" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Water Games
+                    </Link>
+                    <Link 
+                      href="/dripping-in-confidence" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Dripping in Confidence
+                    </Link>
+                    <Link 
+                      href="/sensory-friendly-experiences" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Sensory Friendly Experiences
+                    </Link>
+                  </>
+                )}
+              </div>
             </li>
-            <li className="w-full lg:w-auto">
+            
+            {/* OUR INITIATIVES */}
+            <li className="w-full lg:w-auto group relative">
               <Link 
-                href="/neon-nights" 
+                href="/our-initiatives" 
                 className="block py-2 px-3 lg:px-2 text-emerald-700 font-medium uppercase hover:text-emerald-900 hover:bg-emerald-50 lg:hover:bg-transparent rounded-md w-full lg:w-auto"
                 onClick={() => setMenuOpen(false)}
               >
-                Neon Nights
+                Our Initiatives
               </Link>
+              <div className="hidden lg:group-hover:block absolute left-0 top-full bg-white/95 backdrop-blur-md shadow-lg rounded-md min-w-[220px] z-50">
+                <div className="py-2">
+                  <Link 
+                    href="/upcoming-events" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Upcoming Events
+                  </Link>
+                  <Link 
+                    href="/holiday-events" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Holiday Events
+                  </Link>
+                  <Link 
+                    href="/american-anniversary-celebration" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    America's 250th Anniversary
+                  </Link>
+                  <Link 
+                    href="/fundraisers" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Fundraisers
+                  </Link>
+                  <Link 
+                    href="/emmy-the-owl" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Emmy The Owl
+                  </Link>
+                </div>
+              </div>
+              
+              {/* Mobile dropdown items */}
+              <div className="lg:hidden pl-4 mt-1 space-y-1">
+                {menuOpen && (
+                  <>
+                    <Link 
+                      href="/upcoming-events" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Upcoming Events
+                    </Link>
+                    <Link 
+                      href="/holiday-events" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Holiday Events
+                    </Link>
+                    <Link 
+                      href="/american-anniversary-celebration" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      America's 250th Anniversary
+                    </Link>
+                    <Link 
+                      href="/fundraisers" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Fundraisers
+                    </Link>
+                    <Link 
+                      href="/emmy-the-owl" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Emmy The Owl
+                    </Link>
+                  </>
+                )}
+              </div>
             </li>
+            
+            {/* SPECIAL OCCASIONS */}
             <li className="w-full lg:w-auto">
               <Link 
-                href="/foam-parties" 
+                href="/special-occasions" 
                 className="block py-2 px-3 lg:px-2 text-emerald-700 font-medium uppercase hover:text-emerald-900 hover:bg-emerald-50 lg:hover:bg-transparent rounded-md w-full lg:w-auto"
                 onClick={() => setMenuOpen(false)}
               >
-                Foam Parties
+                Special Occasions
               </Link>
             </li>
-            <li className="w-full lg:w-auto">
-              <Link 
-                href="/water-games" 
-                className="block py-2 px-3 lg:px-2 text-emerald-700 font-medium uppercase hover:text-emerald-900 hover:bg-emerald-50 lg:hover:bg-transparent rounded-md w-full lg:w-auto"
-                onClick={() => setMenuOpen(false)}
-              >
-                Water Games
-              </Link>
-            </li>
+            
+            {/* CONTACT US */}
             <li className="w-full lg:w-auto">
               <Link 
                 href="/contact-us" 
-                className="block py-2 px-3 lg:px-2 bg-emerald-600 text-white font-medium uppercase hover:bg-emerald-700 rounded-md w-full lg:w-auto"
+                className="block py-2 px-3 lg:px-2 text-emerald-700 font-medium uppercase hover:text-emerald-900 hover:bg-emerald-50 lg:hover:bg-transparent rounded-md w-full lg:w-auto"
                 onClick={() => setMenuOpen(false)}
               >
                 Contact Us
               </Link>
+            </li>
+            
+            {/* MORE - Dropdown */}
+            <li className="w-full lg:w-auto group relative">
+              <Link 
+                href="#" 
+                className="block py-2 px-3 lg:px-2 text-emerald-700 font-medium uppercase hover:text-emerald-900 hover:bg-emerald-50 lg:hover:bg-transparent rounded-md w-full lg:w-auto"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMenuOpen(menuOpen);
+                }}
+              >
+                More...
+              </Link>
+              <div className="hidden lg:group-hover:block absolute right-0 top-full bg-white/95 backdrop-blur-md shadow-lg rounded-md min-w-[180px] z-50">
+                <div className="py-2">
+                  <Link 
+                    href="/our-story" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Our Story
+                  </Link>
+                  <Link 
+                    href="/our-team" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Our Team
+                  </Link>
+                  <Link 
+                    href="/gallery" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Gallery
+                  </Link>
+                  <Link 
+                    href="/blog" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Blog
+                  </Link>
+                  <Link 
+                    href="/careers" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Careers
+                  </Link>
+                </div>
+              </div>
+              
+              {/* Mobile dropdown items */}
+              <div className="lg:hidden pl-4 mt-1 space-y-1">
+                {menuOpen && (
+                  <>
+                    <Link 
+                      href="/our-story" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Our Story
+                    </Link>
+                    <Link 
+                      href="/our-team" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Our Team
+                    </Link>
+                    <Link 
+                      href="/gallery" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Gallery
+                    </Link>
+                    <Link 
+                      href="/blog" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Blog
+                    </Link>
+                    <Link 
+                      href="/careers" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Careers
+                    </Link>
+                  </>
+                )}
+              </div>
             </li>
           </ul>
         </nav>
