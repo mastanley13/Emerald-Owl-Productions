@@ -1,0 +1,10 @@
+
+@keyframes floatingStars {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-200px); }
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(76,175,80,0.2);
+}

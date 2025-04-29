@@ -1,12 +1,22 @@
-import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  reactStrictMode: true,
+  
+  // Enable the pages directory alongside the app directory
+  experimental: {
+    appDir: true,
+  },
+  
   images: {
-    domains: [
-      'storage.googleapis.com',
-      'assets.cdn.filesafe.space',
-      'images.leadconnectorhq.com'
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'storage.googleapis.com',
+        pathname: '**',
+      },
     ],
   },
 };
