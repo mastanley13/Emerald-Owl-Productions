@@ -161,13 +161,24 @@ export default function Header() {
             </li>
             
             {/* OUR INITIATIVES */}
-            <li className="w-full lg:w-auto group relative">
+            <li className="w-full lg:w-auto">
               <Link 
                 href="/our-initiatives" 
                 className="block py-2 px-3 lg:px-2 text-emerald-700 font-medium uppercase hover:text-emerald-900 hover:bg-emerald-50 lg:hover:bg-transparent rounded-md w-full lg:w-auto"
                 onClick={() => setMenuOpen(false)}
               >
                 Our Initiatives
+              </Link>
+            </li>
+            
+            {/* SPECIAL OCCASIONS */}
+            <li className="w-full lg:w-auto group relative">
+              <Link 
+                href="/special-occasions" 
+                className="block py-2 px-3 lg:px-2 text-emerald-700 font-medium uppercase hover:text-emerald-900 hover:bg-emerald-50 lg:hover:bg-transparent rounded-md w-full lg:w-auto"
+                onClick={() => setMenuOpen(false)}
+              >
+                Special Occasions
               </Link>
               <div className="hidden lg:group-hover:block absolute left-0 top-full bg-white/95 backdrop-blur-md shadow-lg rounded-md min-w-[220px] z-50">
                 <div className="py-2">
@@ -251,17 +262,6 @@ export default function Header() {
                   </>
                 )}
               </div>
-            </li>
-            
-            {/* SPECIAL OCCASIONS */}
-            <li className="w-full lg:w-auto">
-              <Link 
-                href="/special-occasions" 
-                className="block py-2 px-3 lg:px-2 text-emerald-700 font-medium uppercase hover:text-emerald-900 hover:bg-emerald-50 lg:hover:bg-transparent rounded-md w-full lg:w-auto"
-                onClick={() => setMenuOpen(false)}
-              >
-                Special Occasions
-              </Link>
             </li>
             
             {/* CONTACT US */}
