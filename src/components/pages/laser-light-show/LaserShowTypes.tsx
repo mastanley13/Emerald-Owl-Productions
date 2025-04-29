@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Image from 'next/image';
 
@@ -12,7 +11,7 @@ const showTypes = [
   {
     id: 'graphic-show',
     title: 'Graphic/Animation Show',
-    description: 'Audience sees specific images displayed in laser light on a large flat surface. We can display seasonal characters, various themes, a client's/sponsor's logo, or tell a story. Custom designed event or sponsor logos are also possible.',
+    description: 'Audience sees specific images displayed in laser light on a large flat surface. We can display seasonal characters, various themes, a client\'s/sponsor\'s logo, or tell a story. Custom designed event or sponsor logos are also possible.',
     image: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/671fc430bc925310f0743e06.jpeg'
   },
   {
@@ -54,7 +53,7 @@ export default function LaserShowTypes() {
             </div>
           ))}
         </div>
-        
+
         <div className="mt-16 text-center">
           <p className="text-emerald-400 text-xl font-light mb-4">Need a combination of different effects?</p>
           <p className="text-white text-lg max-w-2xl mx-auto">

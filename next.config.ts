@@ -4,10 +4,8 @@ const nextConfig = {
   output: 'export',
   reactStrictMode: true,
   
-  // Enable the pages directory alongside the app directory
-  experimental: {
-    appDir: true,
-  },
+  // Configure page extensions
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   
   images: {
     unoptimized: true,
