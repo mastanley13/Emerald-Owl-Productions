@@ -1,28 +1,12 @@
+import type { NextConfig } from "next";
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
-  reactStrictMode: true,
-  
-  // Configure page extensions
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  
-  experimental: {
-    // Allow cross-origin requests from Replit
-    allowedDevOrigins: [
-      /\.replit\.dev$/,
-      /\.repl\.co$/
-    ]
-  },
-  
+const nextConfig: NextConfig = {
+  /* config options here */
   images: {
-    unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'storage.googleapis.com',
-        pathname: '**',
-      },
+    domains: [
+      'storage.googleapis.com',
+      'assets.cdn.filesafe.space',
+      'images.leadconnectorhq.com'
     ],
   },
 };
