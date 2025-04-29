@@ -6,18 +6,21 @@ import Image from 'next/image';
 
 export default function HeroBanner() {
   return (
-    <section className="relative min-h-[500px] md:min-h-[550px] lg:min-h-[600px] flex items-center bg-white text-gray-900 pt-32 md:pt-44 lg:pt-48">
+    <section className="relative min-h-[500px] md:min-h-[550px] lg:min-h-[600px] flex items-center bg-white text-gray-900 pt-24 md:pt-28 lg:pt-32">
       {/* Background image with proper sizing */}
-      <div className="absolute inset-0 overflow-hidden">
-        <Image 
-          src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/6704204d9d9a095a00d5b580.png"
-          alt="Emerald Owl Productions Background"
-          width={500}
-          height={300}
-          className="absolute opacity-20 mx-auto left-0 right-0 top-0 bottom-0 object-contain"
-          sizes="(max-width: 768px) 90vw, 50vw"
-          priority
-        />
+      <div className="absolute inset-0 overflow-hidden pt-16 md:pt-20">
+        <div className="relative w-full h-full flex items-center justify-center">
+          <Image 
+            src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/6704204d9d9a095a00d5b580.png"
+            alt="Emerald Owl Productions Background"
+            width={400}
+            height={240}
+            className="opacity-20 object-contain"
+            sizes="(max-width: 768px) 90vw, 50vw"
+            priority
+            style={{ width: 'auto', height: 'auto', maxWidth: '60%' }}
+          />
+        </div>
       </div>
       
       <div className="container mx-auto px-6 z-10 relative">
