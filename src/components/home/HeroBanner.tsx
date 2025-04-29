@@ -14,9 +14,10 @@ export default function HeroBanner() {
 
   return (
     <section className="relative min-h-[600px] md:min-h-[650px] lg:min-h-[700px] flex items-center bg-gradient-to-b from-white via-white to-emerald-50 text-gray-900 pt-24 md:pt-28 lg:pt-32 overflow-hidden">
-      {/* Animated background elements with overlay for better text contrast */}
+      {/* Background with darker overlay for better text contrast */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/85 to-emerald-50/90 backdrop-blur-[2px]" />
+        {/* Darker overlay gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/80 to-emerald-50/80 backdrop-blur-[2px]" />
         
         {/* Decorative circles */}
         <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-emerald-100/40 opacity-70 animate-pulse"></div>
@@ -45,20 +46,20 @@ export default function HeroBanner() {
           <div className={`text-center md:text-left transition-all duration-1000 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
             <div className="relative inline-block mb-6">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold relative">
-                <span className="text-emerald-600 relative drop-shadow-sm">
+                <span className="text-emerald-600 relative drop-shadow-md">
                   Emerald Owl
                   <span className="absolute -bottom-2 left-0 w-full h-1 bg-emerald-600 transform scale-x-0 origin-left transition-transform duration-1000 ease-out" style={{ transform: isVisible ? 'scaleX(1)' : 'scaleX(0)' }}></span>
                 </span>
-                <span className="text-gray-800 ml-2 drop-shadow-sm">Productions</span>
+                <span className="text-gray-800 ml-2 drop-shadow-md">Productions</span>
               </h1>
-              {/* Subtle background glow for heading */}
-              <div className="absolute -inset-4 bg-white/50 blur-xl -z-10 rounded-full"></div>
+              {/* Enhanced background glow for heading */}
+              <div className="absolute -inset-4 bg-white/70 blur-xl -z-10 rounded-full"></div>
             </div>
             <p className="text-xl md:text-2xl lg:text-3xl mb-10 text-gray-700 font-light max-w-2xl relative">
               Creating 
               <span className="relative mx-2">
                 <span className="text-emerald-600 font-medium relative z-10">unforgettable experiences</span>
-                <span className="absolute inset-0 bg-white/70 blur-sm -z-0 rounded-lg"></span>
+                <span className="absolute inset-0 bg-white/80 blur-sm -z-0 rounded-lg"></span>
               </span>
               for your most important events
             </p>
@@ -80,15 +81,15 @@ export default function HeroBanner() {
               </Link>
             </div>
             
-            {/* Trust indicators */}
-            <div className="mt-16 flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm text-gray-500">
-              <span className="flex items-center bg-white/80 px-3 py-1.5 rounded-full shadow-sm">
+            {/* Trust indicators - removed "Nationwide Service" as requested */}
+            <div className="mt-16 flex flex-wrap items-center justify-center md:justify-start gap-6 text-sm">
+              <span className="flex items-center bg-white/80 px-4 py-2 rounded-full shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-emerald-500" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span className="font-medium">5-Star Rated</span>
               </span>
-              <span className="flex items-center bg-white/80 px-3 py-1.5 rounded-full shadow-sm">
+              <span className="flex items-center bg-white/80 px-4 py-2 rounded-full shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-emerald-500" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
