@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -100,6 +100,13 @@ export default function Header() {
                     Dripping in Confidence
                   </Link>
                   <Link 
+                    href="/gunge" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Gunge
+                  </Link>
+                  <Link 
                     href="/sensory-friendly-experiences" 
                     className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
                     onClick={() => setMenuOpen(false)}
@@ -112,7 +119,7 @@ export default function Header() {
               {/* Mobile dropdown items */}
               <div className="lg:hidden pl-4 mt-1 space-y-1">
                 {menuOpen && (
-                  <>
+                  <React.Fragment>
                     <Link 
                       href="/laser-light-show" 
                       className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
@@ -149,13 +156,20 @@ export default function Header() {
                       Dripping in Confidence
                     </Link>
                     <Link 
+                      href="/gunge" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Gunge
+                    </Link>
+                    <Link 
                       href="/sensory-friendly-experiences" 
                       className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
                       onClick={() => setMenuOpen(false)}
                     >
                       Sensory Friendly Experiences
                     </Link>
-                  </>
+                  </React.Fragment>
                 )}
               </div>
             </li>
@@ -223,7 +237,7 @@ export default function Header() {
               {/* Mobile dropdown items */}
               <div className="lg:hidden pl-4 mt-1 space-y-1">
                 {menuOpen && (
-                  <>
+                  <React.Fragment>
                     <Link 
                       href="/upcoming-events" 
                       className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
@@ -259,7 +273,7 @@ export default function Header() {
                     >
                       Emmy The Owl
                     </Link>
-                  </>
+                  </React.Fragment>
                 )}
               </div>
             </li>
@@ -280,7 +294,7 @@ export default function Header() {
               <Link 
                 href="#" 
                 className="block py-2 px-3 lg:px-2 text-emerald-700 font-medium uppercase hover:text-emerald-900 hover:bg-emerald-50 lg:hover:bg-transparent rounded-md w-full lg:w-auto"
-                onClick={(e) => {
+                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
                   e.preventDefault();
                   setMenuOpen(menuOpen);
                 }}
@@ -330,7 +344,7 @@ export default function Header() {
               {/* Mobile dropdown items */}
               <div className="lg:hidden pl-4 mt-1 space-y-1">
                 {menuOpen && (
-                  <>
+                  <React.Fragment>
                     <Link 
                       href="/our-story" 
                       className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
@@ -366,7 +380,7 @@ export default function Header() {
                     >
                       Careers
                     </Link>
-                  </>
+                  </React.Fragment>
                 )}
               </div>
             </li>

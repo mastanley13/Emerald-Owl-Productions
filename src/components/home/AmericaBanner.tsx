@@ -1,9 +1,15 @@
 "use client";
 
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { AmericaBannerData } from '../../types/homepage';
 
-export default function AmericaBanner() {
+interface AmericaBannerProps {
+  data: AmericaBannerData;
+}
+
+export default function AmericaBanner({ data }: AmericaBannerProps) {
   return (
     <section className="relative bg-zinc-900 py-8 overflow-hidden">
       <div 
@@ -19,19 +25,19 @@ export default function AmericaBanner() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-              America's 250th Anniversary
+              {data.title}
             </h2>
             <p className="text-lg text-white/80 mb-4">
-              Experience a Revolutionary Light Show Celebration!
+              {data.subtitle}
             </p>
           </div>
           
           <div className="flex gap-4 flex-wrap justify-center">
             <Link 
-              href="/american-anniversary-celebration"
+              href={data.ctaUrl}
               className="bg-white hover:bg-white/90 text-blue-800 font-bold py-2 px-6 rounded-full transition-colors inline-flex items-center"
             >
-              <span>Discover More</span>
+              <span>{data.ctaText}</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 ml-2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>

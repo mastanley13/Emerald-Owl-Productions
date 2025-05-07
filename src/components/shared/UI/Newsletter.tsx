@@ -1,17 +1,21 @@
 "use client";
 
-import { useState } from 'react';
+import React, { useState, ChangeEvent } from 'react';
 
 export default function Newsletter() {
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Here you would normally handle form submission to your API
     console.log('Email submitted:', email);
     setIsSubmitted(true);
     setEmail('');
+  };
+
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
   };
 
   return (
@@ -30,7 +34,7 @@ export default function Newsletter() {
               <input
                 type="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={handleEmailChange}
                 placeholder="Your email address"
                 required
                 className="flex-grow px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"

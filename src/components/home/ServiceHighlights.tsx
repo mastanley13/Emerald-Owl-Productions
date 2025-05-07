@@ -1,47 +1,15 @@
 "use client";
 
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Service } from '../../types/homepage';
 
-const services = [
-  {
-    id: 'laser-show',
-    title: 'Laser Light Shows',
-    description: 'Spectacular laser displays for any event',
-    image: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/678fb2d6141a590c80b64c99.jpeg',
-    link: '/laser-light-show'
-  },
-  {
-    id: 'neon-nights',
-    title: 'Neon Nights',
-    description: 'Glow in the dark party experiences',
-    image: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a4558baa4eed1400f75c3a.jpeg',
-    link: '/neon-nights'
-  },
-  {
-    id: 'dripping',
-    title: 'Dripping in Confidence',
-    description: 'Fun and messy experiences',
-    image: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67ab94d979284b777a6a7660.jpeg',
-    link: '/dripping-in-confidence'
-  },
-  {
-    id: 'foam-parties',
-    title: 'Foam Party & Color Run',
-    description: 'Exciting foam activities and entertainment',
-    image: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a453fb7ee1c12aa7752dcc.jpeg',
-    link: '/foam-parties'
-  },
-  {
-    id: 'sensory',
-    title: 'Sensory Friendly Experiences',
-    description: 'Inclusive experiences for all',
-    image: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67ab91924dcedf6404738967.png',
-    link: '/sensory-friendly-experiences'
-  }
-];
+interface ServiceHighlightsProps {
+  services: Service[];
+}
 
-export default function ServiceHighlights() {
+export default function ServiceHighlights({ services }: ServiceHighlightsProps) {
   return (
     <section id="our-experiences" className="bg-white py-16 md:py-24">
       <div className="container mx-auto px-4">
