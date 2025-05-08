@@ -1,24 +1,16 @@
-import { Resource } from "@/types/homepage";
-
-interface HeroBannerProps {
-  title: string;
-  backgroundImage: Resource;
-}
-
-export default function HeroBanner({ title, backgroundImage }: HeroBannerProps) {
+export default function HeroBanner() {
   return (
     <section className="relative w-full h-[70vh] md:h-[80vh] bg-black overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-50"
-        style={{ backgroundImage: `url(${backgroundImage.url})` }}
+        style={{ backgroundImage: `url(https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/673652882fd9d4e5aaea654c.png)` }}
       ></div>
       
-      {/* Stars animation background */}
+      {/* Stars background */}
       <div className="absolute inset-0 opacity-30">
         <div 
-          className="absolute inset-0 bg-[radial-gradient(white,rgba(255,255,255,.2)_2px,transparent_40px)] bg-[length:50px_50px]" 
-          style={{animation: 'twinkle 7s ease-in-out infinite alternate'}}
+          className="absolute inset-0 bg-[radial-gradient(white,rgba(255,255,255,.2)_2px,transparent_40px)] bg-[length:50px_50px]"
         ></div>
       </div>
       
@@ -41,20 +33,6 @@ export default function HeroBanner({ title, backgroundImage }: HeroBannerProps) 
       
       {/* Bottom fade overlay */}
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black to-transparent"></div>
-      
-      {/* Custom animations */}
-      <style jsx global>{`
-        @keyframes twinkle {
-          0%, 100% {
-            opacity: 0.3;
-            background-position: 0% 0%;
-          }
-          50% {
-            opacity: 0.6;
-            background-position: 100% 100%;
-          }
-        }
-      `}</style>
     </section>
   );
 } 

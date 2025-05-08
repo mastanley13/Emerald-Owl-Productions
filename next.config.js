@@ -24,6 +24,11 @@ const nextConfig = {
         hostname: 'assets.cdn.filesafe.space',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: 'i.ibb.co',
+        pathname: '**',
+      },
     ],
   },
   // Add async rewrites to handle specific routes
@@ -32,6 +37,10 @@ const nextConfig = {
       {
         source: '/gunge',
         destination: '/gunge',
+      },
+      {
+        source: '/holiday-events',
+        destination: '/holiday-events',
       },
     ];
   },

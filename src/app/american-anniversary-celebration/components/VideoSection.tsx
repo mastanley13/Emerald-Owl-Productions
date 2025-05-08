@@ -1,38 +1,20 @@
-interface VideoSectionProps {
-  videoUrl: string;
-  thumbnailUrl: string;
-  title: string;
-  note?: string;
-}
-
-export default function VideoSection({ videoUrl, thumbnailUrl, title, note }: VideoSectionProps) {
+export default function VideoSection() {
   return (
-    <section className="py-16 bg-black w-full">
+    <section className="py-16 bg-gray-900 relative overflow-hidden">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">
-          {title}
-        </h2>
+        <div className="max-w-4xl mx-auto text-center mb-8">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            See Our American Anniversary Celebration in Action
+          </h2>
+          <p className="text-yellow-400 font-bold">
+            PLEASE UNMUTE TO HEAR INFORMATION
+          </p>
+        </div>
         
-        {/* Video Container */}
-        <div className="max-w-5xl mx-auto relative">
-          <div className="relative aspect-video bg-gray-900 rounded-lg overflow-hidden">
-            {/* Video Element */}
-            <video 
-              controls 
-              poster={thumbnailUrl}
-              className="absolute inset-0 w-full h-full object-cover"
-            >
-              <source src={videoUrl} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+        <div className="relative max-w-3xl mx-auto aspect-video">
+          <div className="absolute inset-0 bg-blue-900/30 flex items-center justify-center">
+            <p className="text-white text-lg">Video content would display here</p>
           </div>
-          
-          {/* Note */}
-          {note && (
-            <p className="text-center text-red-500 font-semibold mt-4 animate-pulse">
-              {note}
-            </p>
-          )}
         </div>
       </div>
     </section>

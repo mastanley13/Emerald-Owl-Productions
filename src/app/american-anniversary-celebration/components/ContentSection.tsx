@@ -1,70 +1,87 @@
-interface ContentSectionProps {
-  title: string;
-  description: string;
-  features?: string[];
-}
+export default function ContentSection() {
+  const features = [
+    'Stunning patriotic visuals and effects',
+    'Historical narration and music',
+    'Perfect for community events and celebrations',
+    'Custom shows tailored to your venue and audience'
+  ];
 
-export default function ContentSection({ title, description, features = [] }: ContentSectionProps) {
   return (
-    <section className="py-24 relative overflow-hidden bg-black w-full">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-            {title}
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-700 mb-6">
+            Celebrate America's 250th Anniversary with a Revolutionary Light Show
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            {description}
+          
+          <p className="text-lg text-gray-700 text-center mb-12">
+            Join us in celebrating America's 250th anniversary with a spectacular laser light show experience. 
+            Our patriotic displays bring American history to life in a breathtaking visual celebration.
           </p>
-        </div>
-        
-        {features.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {/* Feature Cards */}
-            {features.map((feature, index) => {
-              // Alternate card colors for visual interest
-              const colors = [
-                {
-                  bg: "from-gray-900 to-blue-900/50",
-                  accent: "bg-red-600",
-                  hover: "hover:shadow-blue-500/20"
-                },
-                {
-                  bg: "from-gray-900 to-red-900/50",
-                  accent: "bg-blue-600",
-                  hover: "hover:shadow-red-500/20"
-                },
-                {
-                  bg: "from-gray-900 to-purple-900/50",
-                  accent: "bg-white text-blue-600",
-                  hover: "hover:shadow-purple-500/20"
-                }
-              ];
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Feature List */}
+            <div className="bg-blue-50 p-8 rounded-lg">
+              <h3 className="text-2xl font-bold text-blue-700 mb-4">
+                Experience Highlights
+              </h3>
               
-              const colorSet = colors[index % colors.length];
+              <ul className="space-y-4">
+                {features.map((feature, index) => (
+                  <li key={index} className="flex items-start">
+                    <div className="flex-shrink-0 mt-1">
+                      <svg className="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <p className="ml-3 text-gray-700">{feature}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            {/* Call to Action Card */}
+            <div className="bg-red-50 p-8 rounded-lg">
+              <h3 className="text-2xl font-bold text-red-700 mb-4">
+                Perfect For
+              </h3>
               
-              return (
-                <div 
-                  key={index} 
-                  className={`bg-gradient-to-br ${colorSet.bg} rounded-2xl p-8 transform transition-all hover:-translate-y-2 hover:shadow-2xl ${colorSet.hover}`}
-                >
-                  <div className={`w-16 h-16 ${colorSet.accent} rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0`}>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 ${colorSet.accent.includes('white') ? '' : 'text-white'}`}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4 text-center md:text-left">
-                    {feature.split(':')[0] || feature}
-                  </h3>
-                  {feature.includes(':') && (
-                    <p className="text-white/70">
-                      {feature.split(':')[1].trim()}
-                    </p>
-                  )}
-                </div>
-              );
-            })}
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-red-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+                  </svg>
+                  <span className="text-gray-700">Community celebrations</span>
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-red-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+                  </svg>
+                  <span className="text-gray-700">School programs</span>
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-red-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+                  </svg>
+                  <span className="text-gray-700">Municipal events</span>
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 text-red-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+                  </svg>
+                  <span className="text-gray-700">Independence Day celebrations</span>
+                </li>
+              </ul>
+              
+              <a 
+                href="/contact-us" 
+                className="block w-full py-3 px-4 bg-red-600 hover:bg-red-700 text-white font-bold text-center rounded-lg transition duration-200"
+              >
+                Request More Information
+              </a>
+            </div>
           </div>
-        )}
+        </div>
       </div>
     </section>
   );

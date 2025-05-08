@@ -1,0 +1,130 @@
+/**
+ * Laser Light Show data structure types
+ */
+
+import { Resource } from './homepage';
+
+/**
+ * Meta information for SEO
+ */
+export interface MetaInfo {
+  title: string;
+  description: string;
+  keywords: string;
+}
+
+/**
+ * Hero Banner section data
+ */
+export interface HeroBannerData {
+  title: string;
+  backgroundImage: Resource;
+}
+
+/**
+ * Video Content data
+ */
+export interface VideoContentData {
+  videoUrl: string;
+  thumbnailUrl: string;
+  title?: string;
+  note?: string;
+}
+
+/**
+ * Content Section data
+ */
+export interface ContentSectionData {
+  title: string;
+  description: string;
+  features?: string[];
+}
+
+/**
+ * Benefit Item data
+ */
+export interface BenefitItem {
+  title: string;
+  description: string;
+  icon?: string;
+}
+
+/**
+ * Gallery Item
+ */
+export interface GalleryItem {
+  image: Resource;
+  caption?: string;
+}
+
+/**
+ * Package Option
+ */
+export interface PackageOption {
+  title: string;
+  description: string;
+  image: Resource;
+  features?: string[];
+  price?: string;
+}
+
+/**
+ * FAQ Item
+ */
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+/**
+ * Call To Action data
+ */
+export interface CtaData {
+  text: string;
+  url: string;
+  backgroundColor?: string;
+}
+
+/**
+ * Safety Feature data
+ */
+export interface SafetyFeature {
+  title: string;
+  description: string;
+  icon?: string;
+}
+
+/**
+ * Testimonial data
+ */
+export interface TestimonialData {
+  quote: string;
+  author: string;
+  role?: string;
+}
+
+/**
+ * Complete Laser Light Show data
+ */
+export interface LaserLightShowData {
+  meta: MetaInfo;
+  hero: HeroBannerData;
+  videoContent?: VideoContentData;
+  contentSection: ContentSectionData;
+  benefits?: BenefitItem[];
+  safetyFeatures?: SafetyFeature[];
+  packages?: PackageOption[];
+  gallery: GalleryItem[];
+  testimonials?: TestimonialData[];
+  faqs?: FaqItem[];
+  cta: CtaData;
+  resources: {
+    byCategory: {
+      heroBackground: Resource[];
+      videoThumbnails: Resource[];
+      galleryImages: Resource[];
+      packageImages: Resource[];
+      all: Resource[];
+    };
+  };
+} 
