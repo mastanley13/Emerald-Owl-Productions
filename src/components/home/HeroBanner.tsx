@@ -23,8 +23,15 @@ export default function HeroBanner({ data }: HeroBannerProps) {
     }
   };
 
+  const scrollToExperienceMenu = () => {
+    const experienceMenuSection = document.getElementById('experience-menu');
+    if (experienceMenuSection) {
+      experienceMenuSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="relative min-h-[600px] md:min-h-[650px] lg:min-h-[700px] flex items-center bg-gradient-to-b from-white via-white to-emerald-50 text-gray-900 pt-24 md:pt-28 lg:pt-32 overflow-hidden">
+    <section className="relative min-h-[600px] md:min-h-[650px] lg:min-h-[700px] flex items-center bg-gradient-to-b from-white via-white to-emerald-50 text-gray-900 pt-36 md:pt-28 lg:pt-32 overflow-hidden">
       {/* Background with darker overlay for better text contrast */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Darker overlay gradient */}
@@ -61,7 +68,7 @@ export default function HeroBanner({ data }: HeroBannerProps) {
                   {data.title.main}
                   <span className="absolute -bottom-2 left-0 w-full h-1 bg-emerald-600 transform scale-x-0 origin-left transition-transform duration-1000 ease-out" style={{ transform: isVisible ? 'scaleX(1)' : 'scaleX(0)' }}></span>
                 </span>
-                <span className="text-gray-800 ml-2 drop-shadow-md">{data.title.secondary}</span>
+                <span className="block mt-2 text-gray-800 md:mt-0 md:ml-2 md:inline drop-shadow-md">{data.title.secondary}</span>
               </h1>
               {/* Enhanced background glow for heading */}
               <div className="absolute -inset-4 bg-white/70 blur-xl -z-10 rounded-full"></div>
@@ -78,6 +85,13 @@ export default function HeroBanner({ data }: HeroBannerProps) {
                 {/* Subtle shimmer effect */}
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-45 transform -translate-x-full transition-transform duration-1000 ease-in-out group-hover:translate-x-full"></span>
               </Link>
+              <button
+                onClick={scrollToExperienceMenu}
+                className="bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 shadow-xl hover:shadow-amber-300/60 hover:-translate-y-1 transform relative overflow-hidden group"
+              >
+                <span className="relative z-10">Plan Your Event</span>
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-45 transform -translate-x-full transition-transform duration-1000 ease-in-out group-hover:translate-x-full"></span>
+              </button>
               <button
                 onClick={scrollToExperiences}
                 className="group relative overflow-hidden bg-white/90 backdrop-blur-sm border-2 border-emerald-600 py-4 px-10 rounded-full transition-all duration-300 shadow-md hover:shadow-lg"

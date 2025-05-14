@@ -7,7 +7,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white/95 backdrop-blur-md w-full py-4 px-4 md:px-8 fixed top-0 shadow-lg z-50">
+    <header className="bg-white/90 backdrop-blur-md w-full py-4 px-4 md:px-8 fixed top-0 shadow-lg z-50">
       <div className="max-w-[1400px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/">
@@ -37,8 +37,8 @@ export default function Header() {
 
         {/* Navigation */}
         <nav
-          className={`absolute left-0 top-full w-full bg-white/95 shadow-lg backdrop-blur-md overflow-hidden transition-all duration-300 lg:shadow-none lg:overflow-visible lg:static lg:max-h-full lg:w-auto ${
-            menuOpen ? 'max-h-[90vh] border-b border-emerald-600' : 'max-h-0'
+          className={`absolute left-0 top-full w-full bg-white/90 shadow-lg backdrop-blur-md lg:bg-transparent lg:backdrop-blur-none transition-all duration-300 lg:shadow-none lg:overflow-visible lg:static lg:max-h-full lg:w-auto ${
+            menuOpen ? 'max-h-[90vh] border-b border-emerald-600 overflow-y-auto' : 'max-h-0 overflow-hidden'
           }`}
         >
           <ul className="flex flex-col lg:flex-row justify-end items-start lg:items-center gap-2 lg:gap-6 py-4 lg:py-0 px-4 lg:px-0">
@@ -62,7 +62,7 @@ export default function Header() {
               >
                 Our Experiences
               </Link>
-              <div className="hidden lg:group-hover:block absolute left-0 top-full bg-white/95 backdrop-blur-md shadow-lg rounded-md min-w-[220px] z-50">
+              <div className="hidden lg:group-hover:block absolute left-0 top-full backdrop-blur-md shadow-lg rounded-md min-w-[220px] z-50 lg:bg-white/90">
                 <div className="py-2">
                   <Link 
                     href="/laser-light-show" 
@@ -185,7 +185,7 @@ export default function Header() {
               </Link>
             </li>
             
-            {/* SPECIAL OCCASIONS */}
+            {/* SPECIAL OCCASIONS - Dropdown */}
             <li className="w-full lg:w-auto group relative">
               <Link 
                 href="/special-occasions" 
@@ -194,7 +194,7 @@ export default function Header() {
               >
                 Special Occasions
               </Link>
-              <div className="hidden lg:group-hover:block absolute left-0 top-full bg-white/95 backdrop-blur-md shadow-lg rounded-md min-w-[220px] z-50">
+              <div className="hidden lg:group-hover:block absolute left-0 top-full backdrop-blur-md shadow-lg rounded-md min-w-[220px] z-50 lg:bg-white/90">
                 <div className="py-2">
                   <Link 
                     href="/upcoming-events" 
@@ -301,7 +301,7 @@ export default function Header() {
               >
                 More...
               </Link>
-              <div className="hidden lg:group-hover:block absolute right-0 top-full bg-white/95 backdrop-blur-md shadow-lg rounded-md min-w-[180px] z-50">
+              <div className="hidden lg:group-hover:block absolute right-0 top-full backdrop-blur-md shadow-lg rounded-md min-w-[180px] z-50 lg:bg-white/90">
                 <div className="py-2">
                   <Link 
                     href="/our-story" 

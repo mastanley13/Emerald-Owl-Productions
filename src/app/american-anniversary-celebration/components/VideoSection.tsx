@@ -12,11 +12,21 @@ export default function VideoSection() {
         </div>
         
         <div className="relative max-w-3xl mx-auto aspect-video">
-          <div className="absolute inset-0 bg-blue-900/30 flex items-center justify-center">
-            <p className="text-white text-lg">Video content would display here</p>
-          </div>
+          <video 
+            className="w-full h-full object-cover"
+            controls
+            autoPlay
+            muted
+            playsInline
+          >
+            <source 
+              src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/673c32fe15ee06bf5fbfeed7.mp4" 
+              type="video/mp4" 
+            />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </section>
   );
-} 
+}

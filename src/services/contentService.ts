@@ -8,6 +8,7 @@ import { LaserLightShowData } from '../types/laserLightShow';
 import { NeonNightsData } from '../types/neonNights';
 import { SensoryFriendlyExperiencesData } from '../types/sensoryFriendlyExperiences';
 import { HolidayEventsData } from '../types/holidayEvents';
+import { ExperiencesData } from '../types/experiences';
 import { parseHomepageData } from '../utils/homepageDataParser';
 import { parseAmericanAnniversaryData } from '../utils/americanAnniversaryParser';
 import { parseDrippingInConfidenceData } from '../utils/drippingInConfidenceParser';
@@ -31,6 +32,7 @@ let waterGamesDataCache: WaterGamesData | null = null;
 let laserLightShowDataCache: LaserLightShowData | null = null;
 let neonNightsDataCache: NeonNightsData | null = null;
 let sensoryFriendlyExperiencesDataCache: SensoryFriendlyExperiencesData | null = null;
+let experiencesDataCache: ExperiencesData | null = null;
 
 /**
  * Fetches the homepage content data
@@ -56,10 +58,17 @@ export async function getHomepageData(): Promise<HomepageData> {
         if (!fs.existsSync(filePath)) {
           const legacyFilePath = path.join(process.cwd(), 'legacy-site', 'homepage.json');
           if (!fs.existsSync(legacyFilePath)) {
-            throw new Error('Homepage content not found');
+            // If file also doesn't exist in legacy-site, try src/app/api/content directory
+            const apiFilePath = path.join(process.cwd(), 'src', 'app', 'api', 'content', 'homepage.json');
+            if (!fs.existsSync(apiFilePath)) {
+              throw new Error('Homepage content not found in page-content, legacy-site, or src/app/api/content');
+            }
+            const fileData = fs.readFileSync(apiFilePath, 'utf8');
+            rawData = JSON.parse(fileData);
+          } else {
+            const fileData = fs.readFileSync(legacyFilePath, 'utf8');
+            rawData = JSON.parse(fileData);
           }
-          const fileData = fs.readFileSync(legacyFilePath, 'utf8');
-          rawData = JSON.parse(fileData);
         } else {
           const fileData = fs.readFileSync(filePath, 'utf8');
           rawData = JSON.parse(fileData);
@@ -114,11 +123,18 @@ export async function getAmericanAnniversaryData(): Promise<AmericanAnniversaryD
         // If the file doesn't exist in page-content, try the legacy-site directory
         if (!fs.existsSync(filePath)) {
           const legacyFilePath = path.join(process.cwd(), 'legacy-site', 'american-anniversary-celebration.json');
+          // If the file also doesn't exist in legacy-site, try src/app/api/content directory
           if (!fs.existsSync(legacyFilePath)) {
-            throw new Error('American Anniversary content not found');
+            const apiFilePath = path.join(process.cwd(), 'src', 'app', 'api', 'content', 'american-anniversary-celebration.json');
+            if (!fs.existsSync(apiFilePath)) {
+              throw new Error('American Anniversary content not found in page-content, legacy-site, or src/app/api/content');
+            }
+            const fileData = fs.readFileSync(apiFilePath, 'utf8');
+            rawData = JSON.parse(fileData);
+          } else {
+            const fileData = fs.readFileSync(legacyFilePath, 'utf8');
+            rawData = JSON.parse(fileData);
           }
-          const fileData = fs.readFileSync(legacyFilePath, 'utf8');
-          rawData = JSON.parse(fileData);
         } else {
           const fileData = fs.readFileSync(filePath, 'utf8');
           rawData = JSON.parse(fileData);
@@ -173,11 +189,18 @@ export async function getDrippingInConfidenceData(): Promise<DrippingInConfidenc
         // If the file doesn't exist in page-content, try the legacy-site directory
         if (!fs.existsSync(filePath)) {
           const legacyFilePath = path.join(process.cwd(), 'legacy-site', 'dripping-in-confidence.json');
+          // If the file also doesn't exist in legacy-site, try src/app/api/content directory
           if (!fs.existsSync(legacyFilePath)) {
-            throw new Error('Dripping in Confidence content not found');
+            const apiFilePath = path.join(process.cwd(), 'src', 'app', 'api', 'content', 'dripping-in-confidence.json');
+            if (!fs.existsSync(apiFilePath)) {
+              throw new Error('Dripping in Confidence content not found in page-content, legacy-site, or src/app/api/content');
+            }
+            const fileData = fs.readFileSync(apiFilePath, 'utf8');
+            rawData = JSON.parse(fileData);
+          } else {
+            const fileData = fs.readFileSync(legacyFilePath, 'utf8');
+            rawData = JSON.parse(fileData);
           }
-          const fileData = fs.readFileSync(legacyFilePath, 'utf8');
-          rawData = JSON.parse(fileData);
         } else {
           const fileData = fs.readFileSync(filePath, 'utf8');
           rawData = JSON.parse(fileData);
@@ -232,11 +255,18 @@ export async function getFoamPartiesData(): Promise<FoamPartiesData> {
         // If the file doesn't exist in page-content, try the legacy-site directory
         if (!fs.existsSync(filePath)) {
           const legacyFilePath = path.join(process.cwd(), 'legacy-site', 'foam-parties.json');
+          // If the file also doesn't exist in legacy-site, try src/app/api/content directory
           if (!fs.existsSync(legacyFilePath)) {
-            throw new Error('Foam Parties content not found');
+            const apiFilePath = path.join(process.cwd(), 'src', 'app', 'api', 'content', 'foam-parties.json');
+            if (!fs.existsSync(apiFilePath)) {
+              throw new Error('Foam Parties content not found in page-content, legacy-site, or src/app/api/content');
+            }
+            const fileData = fs.readFileSync(apiFilePath, 'utf8');
+            rawData = JSON.parse(fileData);
+          } else {
+            const fileData = fs.readFileSync(legacyFilePath, 'utf8');
+            rawData = JSON.parse(fileData);
           }
-          const fileData = fs.readFileSync(legacyFilePath, 'utf8');
-          rawData = JSON.parse(fileData);
         } else {
           const fileData = fs.readFileSync(filePath, 'utf8');
           rawData = JSON.parse(fileData);
@@ -291,11 +321,18 @@ export async function getGungeData(): Promise<GungeData> {
         // If the file doesn't exist in page-content, try the legacy-site directory
         if (!fs.existsSync(filePath)) {
           const legacyFilePath = path.join(process.cwd(), 'legacy-site', 'gunge.json');
+          // If the file also doesn't exist in legacy-site, try src/app/api/content directory
           if (!fs.existsSync(legacyFilePath)) {
-            throw new Error('Gunge content not found');
+            const apiFilePath = path.join(process.cwd(), 'src', 'app', 'api', 'content', 'gunge.json');
+            if (!fs.existsSync(apiFilePath)) {
+              throw new Error('Gunge content not found in page-content, legacy-site, or src/app/api/content');
+            }
+            const fileData = fs.readFileSync(apiFilePath, 'utf8');
+            rawData = JSON.parse(fileData);
+          } else {
+            const fileData = fs.readFileSync(legacyFilePath, 'utf8');
+            rawData = JSON.parse(fileData);
           }
-          const fileData = fs.readFileSync(legacyFilePath, 'utf8');
-          rawData = JSON.parse(fileData);
         } else {
           const fileData = fs.readFileSync(filePath, 'utf8');
           rawData = JSON.parse(fileData);
@@ -350,11 +387,18 @@ export async function getWaterGamesData(): Promise<WaterGamesData> {
         // If the file doesn't exist in page-content, try the legacy-site directory
         if (!fs.existsSync(filePath)) {
           const legacyFilePath = path.join(process.cwd(), 'legacy-site', 'water-games.json');
+          // If the file also doesn't exist in legacy-site, try src/app/api/content directory
           if (!fs.existsSync(legacyFilePath)) {
-            throw new Error('Water Games content not found');
+            const apiFilePath = path.join(process.cwd(), 'src', 'app', 'api', 'content', 'water-games.json');
+            if (!fs.existsSync(apiFilePath)) {
+              throw new Error('Water Games content not found in page-content, legacy-site, or src/app/api/content');
+            }
+            const fileData = fs.readFileSync(apiFilePath, 'utf8');
+            rawData = JSON.parse(fileData);
+          } else {
+            const fileData = fs.readFileSync(legacyFilePath, 'utf8');
+            rawData = JSON.parse(fileData);
           }
-          const fileData = fs.readFileSync(legacyFilePath, 'utf8');
-          rawData = JSON.parse(fileData);
         } else {
           const fileData = fs.readFileSync(filePath, 'utf8');
           rawData = JSON.parse(fileData);
@@ -409,11 +453,18 @@ export async function getLaserLightShowData(): Promise<LaserLightShowData> {
         // If the file doesn't exist in page-content, try the legacy-site directory
         if (!fs.existsSync(filePath)) {
           const legacyFilePath = path.join(process.cwd(), 'legacy-site', 'laser-light-show.json');
+          // If the file also doesn't exist in legacy-site, try src/app/api/content directory
           if (!fs.existsSync(legacyFilePath)) {
-            throw new Error('Laser Light Show content not found');
+            const apiFilePath = path.join(process.cwd(), 'src', 'app', 'api', 'content', 'laser-light-show.json');
+            if (!fs.existsSync(apiFilePath)) {
+              throw new Error('Laser Light Show content not found in page-content, legacy-site, or src/app/api/content');
+            }
+            const fileData = fs.readFileSync(apiFilePath, 'utf8');
+            rawData = JSON.parse(fileData);
+          } else {
+            const fileData = fs.readFileSync(legacyFilePath, 'utf8');
+            rawData = JSON.parse(fileData);
           }
-          const fileData = fs.readFileSync(legacyFilePath, 'utf8');
-          rawData = JSON.parse(fileData);
         } else {
           const fileData = fs.readFileSync(filePath, 'utf8');
           rawData = JSON.parse(fileData);
@@ -468,11 +519,18 @@ export async function getNeonNightsData(): Promise<NeonNightsData> {
         // If the file doesn't exist in page-content, try the legacy-site directory
         if (!fs.existsSync(filePath)) {
           const legacyFilePath = path.join(process.cwd(), 'legacy-site', 'neon-nights.json');
+          // If the file also doesn't exist in legacy-site, try src/app/api/content directory
           if (!fs.existsSync(legacyFilePath)) {
-            throw new Error('Neon Nights content not found');
+            const apiFilePath = path.join(process.cwd(), 'src', 'app', 'api', 'content', 'neon-nights.json');
+            if (!fs.existsSync(apiFilePath)) {
+              throw new Error('Neon Nights content not found in page-content, legacy-site, or src/app/api/content');
+            }
+            const fileData = fs.readFileSync(apiFilePath, 'utf8');
+            rawData = JSON.parse(fileData);
+          } else {
+            const fileData = fs.readFileSync(legacyFilePath, 'utf8');
+            rawData = JSON.parse(fileData);
           }
-          const fileData = fs.readFileSync(legacyFilePath, 'utf8');
-          rawData = JSON.parse(fileData);
         } else {
           const fileData = fs.readFileSync(filePath, 'utf8');
           rawData = JSON.parse(fileData);
@@ -523,17 +581,22 @@ export async function getSensoryFriendlyExperiencesData(): Promise<SensoryFriend
     // Server-side: Direct file reading
     if (typeof window === 'undefined') {
       try {
-        // Try to read from page-content directory first
         const filePath = path.join(process.cwd(), 'page-content', 'sensory-friendly-experiences.json');
-        
-        // If file doesn't exist in page-content, try legacy-site directory
+        // If the file doesn't exist in page-content, try the legacy-site directory
         if (!fs.existsSync(filePath)) {
           const legacyFilePath = path.join(process.cwd(), 'legacy-site', 'sensory-friendly-experiences.json');
+          // If the file also doesn't exist in legacy-site, try src/app/api/content directory
           if (!fs.existsSync(legacyFilePath)) {
-            throw new Error('Sensory Friendly Experiences content not found');
+            const apiFilePath = path.join(process.cwd(), 'src', 'app', 'api', 'content', 'sensory-friendly-experiences.json');
+            if (!fs.existsSync(apiFilePath)) {
+              throw new Error('Sensory Friendly Experiences content not found in page-content, legacy-site, or src/app/api/content');
+            }
+            const fileData = fs.readFileSync(apiFilePath, 'utf8');
+            rawData = JSON.parse(fileData);
+          } else {
+            const fileData = fs.readFileSync(legacyFilePath, 'utf8');
+            rawData = JSON.parse(fileData);
           }
-          const fileData = fs.readFileSync(legacyFilePath, 'utf8');
-          rawData = JSON.parse(fileData);
         } else {
           const fileData = fs.readFileSync(filePath, 'utf8');
           rawData = JSON.parse(fileData);
@@ -583,11 +646,18 @@ export async function getHolidayEventsData(): Promise<HolidayEventsData> {
         // If the file doesn't exist in page-content, try the legacy-site directory
         if (!fs.existsSync(filePath)) {
           const legacyFilePath = path.join(process.cwd(), 'legacy-site', 'holiday-events.json');
+          // If the file also doesn't exist in legacy-site, try src/app/api/content directory
           if (!fs.existsSync(legacyFilePath)) {
-            throw new Error('Holiday Events content not found');
+            const apiFilePath = path.join(process.cwd(), 'src', 'app', 'api', 'content', 'holiday-events.json');
+            if (!fs.existsSync(apiFilePath)) {
+              throw new Error('Holiday Events content not found in page-content, legacy-site, or src/app/api/content');
+            }
+            const fileData = fs.readFileSync(apiFilePath, 'utf8');
+            rawData = JSON.parse(fileData);
+          } else {
+            const fileData = fs.readFileSync(legacyFilePath, 'utf8');
+            rawData = JSON.parse(fileData);
           }
-          const fileData = fs.readFileSync(legacyFilePath, 'utf8');
-          rawData = JSON.parse(fileData);
         } else {
           const fileData = fs.readFileSync(filePath, 'utf8');
           rawData = JSON.parse(fileData);
@@ -620,6 +690,54 @@ export async function getHolidayEventsData(): Promise<HolidayEventsData> {
     console.error('Error in getHolidayEventsData:', error);
     // Return fallback data in case of any error
     return createFallbackHolidayEventsData();
+  }
+}
+
+/**
+ * Fetches the experiences content data
+ * Uses caching for improved performance
+ */
+export async function getExperiencesData(): Promise<ExperiencesData> {
+  if (experiencesDataCache) {
+    return experiencesDataCache;
+  }
+
+  try {
+    let rawData;
+    // Server-side: Direct file reading from src/app/api/content/experiences.json
+    if (typeof window === 'undefined') {
+      try {
+        const filePath = path.join(process.cwd(), 'src', 'app', 'api', 'content', 'experiences.json');
+        if (!fs.existsSync(filePath)) {
+          throw new Error('Experiences content not found at src/app/api/content/experiences.json');
+        }
+        const fileData = fs.readFileSync(filePath, 'utf8');
+        rawData = JSON.parse(fileData);
+      } catch (fileReadError) {
+        console.error('Error reading experiences.json from filesystem:', fileReadError);
+        throw fileReadError;
+      }
+    } else {
+      // Client-side: Fetch via API (assuming an endpoint /api/content/experiences will be created)
+      // For now, this might not be strictly necessary if pages are server-rendered with this data.
+      // However, to follow the pattern, we include it.
+      // We might need to create this API route handler: src/app/api/content/experiences/route.ts
+      const response = await fetch('/api/content/experiences');
+      if (!response.ok) {
+        throw new Error(`Failed to fetch experiences data: ${response.status}`);
+      }
+      rawData = await response.json();
+    }
+
+    // For now, no specific parser is used, directly use rawData if it matches ExperiencesData
+    // TODO: Add a parser if data transformation or validation is needed, e.g., parseExperiencesData(rawData)
+    const parsedData: ExperiencesData = rawData;
+    
+    experiencesDataCache = parsedData;
+    return parsedData;
+  } catch (error) {
+    console.error('Error fetching experiences data:', error);
+    return createFallbackExperiencesData(); // Return fallback data
   }
 }
 
@@ -1120,4 +1238,17 @@ function createFallbackHolidayEventsData(): HolidayEventsData {
       backgroundColor: "#059669"
     }
   });
+}
+
+/**
+ * Creates fallback Experiences data in case the API fetch fails
+ */
+function createFallbackExperiencesData(): ExperiencesData {
+  return {
+    mainCourses: [
+      { id: 'fallback-laser', title: 'Laser Shows (Fallback)', hook: 'Unable to load details.', visual: '/images/placeholder.jpg' }
+    ],
+    appetizers: [],
+    desserts: []
+  };
 } 

@@ -9,6 +9,8 @@ import FeaturedSlider from '../components/home/FeaturedSlider';
 import Newsletter from '../components/shared/UI/Newsletter';
 import Footer from '../components/shared/Layout/Footer';
 import { getHomepageData } from '../services/contentService';
+import { getExperiencesData } from '../services/contentService';
+import ExperienceMenu from '../components/home/ExperienceMenu';
 import { parseHomepageData } from '../utils/homepageDataParser';
 
 // Hardcoded fallback data for critical error cases
@@ -53,6 +55,7 @@ export default async function Home() {
   try {
     // Fetch the homepage data
     const homepageData = await getHomepageData();
+    const experiencesData = await getExperiencesData();
     
     return (
       <React.Fragment>
@@ -60,6 +63,7 @@ export default async function Home() {
         <main>
           <HeroBanner data={homepageData.hero} />
           <AmericaBanner data={homepageData.americaBanner} />
+          <ExperienceMenu experiences={experiencesData} />
           <VideoHighlight data={homepageData.videoHighlight} />
           <ServiceHighlights services={homepageData.services} />
           <FeaturedSlider data={homepageData.featuredContent} />
@@ -71,12 +75,15 @@ export default async function Home() {
   } catch (error) {
     // Fallback UI in case of error
     console.error('Error rendering homepage:', error);
+    // Fetch fallback experiences data for error case
+    const experiencesData = await getExperiencesData();
     return (
       <React.Fragment>
         <Header />
         <main>
           <HeroBanner data={FALLBACK_DATA.hero} />
           <ServiceHighlights services={FALLBACK_DATA.services} />
+          <ExperienceMenu experiences={experiencesData} />
           <Newsletter />
         </main>
         <Footer />
