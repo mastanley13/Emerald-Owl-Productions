@@ -110,7 +110,7 @@ export default function EmmyTheOwlPage() {
                 <h3 className="text-lg font-bold text-emerald-700 mb-2 text-center">Literacy Advocate</h3>
                 <p className="text-gray-700 text-center">
                   Emmy visits schools and libraries to promote reading and participates in our 
-                  children's literacy initiatives.
+                  children literacy initiatives.
                 </p>
               </div>
               
