@@ -32,7 +32,7 @@ export default function OurStoryPage() {
                 </span>
               </h1>
               <p className="text-lg md:text-xl mb-6 text-gray-100 font-light max-w-2xl text-center md:text-left">
-                How we became the region's premier event production company
+                How we became the region&apos;s premier event production company
               </p>
             </div>
           </div>
@@ -232,7 +232,7 @@ export default function OurStoryPage() {
               </h2>
               <p className="text-gray-700 mb-10">
                 As we continue to grow, our commitment to creating joyful, inclusive experiences remains 
-                at the heart of everything we do. We're excited about expanding our reach, developing new 
+                at the heart of everything we do. We&apos;re excited about expanding our reach, developing new 
                 innovative experiences, and making a positive impact in more communities across the country.
               </p>
               

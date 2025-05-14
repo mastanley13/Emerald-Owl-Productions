@@ -281,7 +281,7 @@ const ExperienceMenu: React.FC<ExperienceMenuProps> = ({ experiences }) => {
       <WizardStepWrapper isTransitioning={isTransitioning}>
         <div className="text-center py-12 bg-emerald-50 rounded-lg shadow-xl">
           <h3 className="text-3xl font-bold text-emerald-700 mb-1">Main Course Selected!</h3>
-          <p className="text-lg text-gray-600 mb-6">You're off to a great start.</p>
+          <p className="text-lg text-gray-600 mb-6">You&apos;re off to a great start.</p>
           <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md mb-8">
               <div className="relative w-full h-56 rounded-md overflow-hidden mb-4">
                 <Image 

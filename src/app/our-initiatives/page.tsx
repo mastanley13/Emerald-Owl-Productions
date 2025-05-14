@@ -72,7 +72,7 @@ export default function OurInitiativesPage() {
               <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
                 <h3 className="text-xl font-bold text-emerald-700 mb-3">Green Events Initiative</h3>
                 <p className="text-gray-700 mb-4">
-                  We're committed to reducing the environmental impact of our events through sustainable 
+                  We&apos;re committed to reducing the environmental impact of our events through sustainable 
                   practices, equipment choices, and waste reduction strategies.
                 </p>
                 <div className="flex items-center text-emerald-600 font-medium">

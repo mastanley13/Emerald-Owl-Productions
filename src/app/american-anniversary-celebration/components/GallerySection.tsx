@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function GallerySection() {
   const galleryItems = [
     {
@@ -31,10 +33,12 @@ export default function GallerySection() {
           {galleryItems.map((item, index) => (
             <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md group">
               <div className="relative aspect-video bg-gray-200">
-                <img
+                <Image
                   src={item.image.url}
                   alt={item.caption}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  layout="fill"
+                  objectFit="cover"
+                  className="absolute inset-0 w-full h-full"
                 />
               </div>
               <div className="p-4">

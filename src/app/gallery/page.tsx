@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../../components/shared/Layout/Header';
 import Footer from '../../components/shared/Layout/Footer';
+import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -106,7 +107,7 @@ export default function GalleryPage() {
               </h2>
               <p className="text-gray-700">
                 Browse through our collection of photos showcasing the variety of events and experiences 
-                we've had the pleasure of producing. From high-energy foam parties to serene sensory-friendly 
+                we&apos;ve had the pleasure of producing. From high-energy foam parties to serene sensory-friendly 
                 experiences, these images capture the joy, wonder, and community connections we create.
               </p>
             </div>
@@ -135,18 +136,21 @@ export default function GalleryPage() {
             
             {/* Gallery grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {galleryImages.map((image) => (
-                <div key={image.id} className="group relative rounded-lg overflow-hidden shadow-md">
+              {galleryImages.map((imageItem) => (
+                <div key={imageItem.id} className="group relative rounded-lg overflow-hidden shadow-md">
                   <div className="aspect-w-4 aspect-h-3 bg-gray-200">
-                    <img 
-                      src={image.src} 
-                      alt={image.alt}
+                    <Image 
+                      src={imageItem.src} 
+                      alt={imageItem.alt}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      width={600} 
+                      height={400}
+                      unoptimized={true}
                     />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
-                    <p className="text-white font-bold text-lg">{image.caption}</p>
-                    <p className="text-emerald-300 text-sm">{image.category}</p>
+                    <p className="text-white font-bold text-lg">{imageItem.caption}</p>
+                    <p className="text-emerald-300 text-sm">{imageItem.category}</p>
                   </div>
                 </div>
               ))}
@@ -183,9 +187,9 @@ export default function GalleryPage() {
                       </div>
                     </div>
                     <p className="text-gray-700 italic">
-                      "The sensory-friendly event that Emerald Owl produced for our community center was 
+                      &quot;The sensory-friendly event that Emerald Owl produced for our community center was 
                       amazing. They paid attention to every detail and created an inclusive environment 
-                      that all of our attendees could enjoy."
+                      that all of our attendees could enjoy.&quot;
                     </p>
                   </div>
                   
@@ -202,9 +206,9 @@ export default function GalleryPage() {
                       </div>
                     </div>
                     <p className="text-gray-700 italic">
-                      "Our students couldn\'t stop talking about the foam party! Emerald Owl\'s team was 
+                      &quot;Our students couldn&apos;t stop talking about the foam party! Emerald Owl&apos;s team was 
                       professional, safety-conscious, and delivered an experience that exceeded all 
-                      expectations. We\'ll definitely be booking them again."
+                      expectations. We&apos;ll definitely be booking them again.&quot;
                     </p>
                   </div>
                 </div>

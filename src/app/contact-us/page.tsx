@@ -49,7 +49,7 @@ export default function ContactUsPage() {
                 <p className="text-gray-700 mb-8">
                   We would love to hear from you! Whether you have a question about our services, 
                   want to book an event, or need more information about any of our experiences, 
-                  we're here to help.
+                  we&apos;re here to help.
                 </p>
                 
                 <div className="space-y-6">

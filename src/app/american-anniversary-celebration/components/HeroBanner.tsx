@@ -22,7 +22,7 @@ export default function HeroBanner() {
       {/* Content */}
       <div className="relative z-10 container mx-auto h-full flex flex-col justify-center items-center px-4 text-center">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white mb-6 drop-shadow-lg">
-          <span className="text-white">America's </span>
+          <span className="text-white">America&apos;s </span>
           <span className="text-red-600">250th </span>
           <span className="text-blue-600">Anniversary</span>
         </h1>

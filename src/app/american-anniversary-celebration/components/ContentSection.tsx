@@ -11,11 +11,11 @@ export default function ContentSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-700 mb-6">
-            Celebrate America's 250th Anniversary with a Revolutionary Light Show
+            Celebrate America&apos;s 250th Anniversary with a Revolutionary Light Show
           </h2>
           
           <p className="text-lg text-gray-700 text-center mb-12">
-            Join us in celebrating America's 250th anniversary with a spectacular laser light show experience. 
+            Join us in celebrating America&apos;s 250th anniversary with a spectacular laser light show experience. 
             Our patriotic displays bring American history to life in a breathtaking visual celebration.
           </p>
           

@@ -152,10 +152,10 @@ export default async function NeonNightsPage() {
               <div className="bg-black/50 p-8 rounded-lg shadow-lg">
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">Glow in the Dark Foam & Paint</h3>
                 <p className="mb-4">
-                  If you think the foam party looks fun, imagine at night with glow in the dark foam and paint! Bring a change of clothes and a towel for this one - the fun memories you'll leave with are going to last a long time!
+                  If you think the foam party looks fun, imagine at night with glow in the dark foam and paint! Bring a change of clothes and a towel for this one - the fun memories you&apos;ll leave with are going to last a long time!
                 </p>
                 <p>
-                  These can be done as stand-alone smaller events, or add a "SPLASH ZONE" at your outdoor laser light glow party!
+                  These can be done as stand-alone smaller events, or add a &quot;SPLASH ZONE&quot; at your outdoor laser light glow party!
                 </p>
               </div>
               

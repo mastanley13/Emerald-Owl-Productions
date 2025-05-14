@@ -175,7 +175,7 @@ export default function OurExperiencesPage() {
             {/* Call to Action */}
             <div className="text-center mt-16">
               <p className="text-gray-700 max-w-2xl mx-auto mb-8">
-                Can't decide which experience is right for your event? Contact our team for personalized recommendations and custom packages.
+                Can&apos;t decide which experience is right for your event? Contact our team for personalized recommendations and custom packages.
               </p>
               <Link 
                 href="/contact-us" 

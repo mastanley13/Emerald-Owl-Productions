@@ -16,7 +16,7 @@ export default function NotFound() {
         Looks like Emmy flew off with this page!
       </h2>
       <p className="mb-8 text-gray-600 max-w-md">
-        Or maybe it's just playing hide and seek. While we send out a search party (or finish our coding), 
+        Or maybe it&apos;s just playing hide and seek. While we send out a search party (or finish our coding), 
         why not head back to safety?
       </p>
       <Link 

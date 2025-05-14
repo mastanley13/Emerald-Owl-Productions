@@ -132,11 +132,11 @@ export default function SpecialOccasionsPage() {
               <div className="bg-emerald-50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-emerald-700 mb-3">
                   <Link href="/american-anniversary-celebration" className="hover:text-emerald-600 transition-colors">
-                    America's 250th Anniversary
+                    America&apos;s 250th Anniversary
                   </Link>
                 </h3>
                 <p className="text-gray-700 mb-4">
-                  Join us in celebrating America's 250th anniversary with special patriotic productions 
+                  Join us in celebrating America&apos;s 250th anniversary with special patriotic productions 
                   designed for communities, schools, and organizations. Our commemorative events honor 
                   American history and culture through immersive experiences.
                 </p>
@@ -181,7 +181,7 @@ export default function SpecialOccasionsPage() {
                 </h3>
                 <p className="text-gray-700 mb-4">
                   Discover our calendar of upcoming public events that you can attend or participate in. 
-                  From community festivals to special productions, there's always something exciting on 
+                  From community festivals to special productions, there&apos;s always something exciting on 
                   the horizon with Emerald Owl Productions.
                 </p>
                 <Link 

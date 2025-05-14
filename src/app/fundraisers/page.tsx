@@ -73,7 +73,7 @@ export default function FundraisersPage() {
                 <h3 className="text-xl font-bold text-emerald-700 mb-3">Community Fundraisers</h3>
                 <p className="text-gray-700 mb-4">
                   Our community fundraising events bring people together for a good cause while 
-                  providing unique entertainment that attendees can't experience elsewhere.
+                  providing unique entertainment that attendees can&apos;t experience elsewhere.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
@@ -109,7 +109,7 @@ export default function FundraisersPage() {
                 <h3 className="text-xl font-bold text-emerald-700 mb-3">Gunge Tank Challenge</h3>
                 <p className="text-gray-700 mb-4">
                   One of our most popular fundraising options! Participants raise pledges for the 
-                  chance to "gunge" teachers, principals, or community leaders. The colorful, 
+                  chance to &quot;gunge&quot; teachers, principals, or community leaders. The colorful, 
                   safe slime creates a memorable spectacle that generates excitement and donations.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -132,7 +132,7 @@ export default function FundraisersPage() {
                         <svg className="w-4 h-4 text-emerald-500 mr-1 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        <span>When targets are met, volunteers get "gunged"</span>
+                        <span>When targets are met, volunteers get &quot;gunged&quot;</span>
                       </li>
                       <li className="flex items-start">
                         <svg className="w-4 h-4 text-emerald-500 mr-1 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -236,7 +236,7 @@ export default function FundraisersPage() {
               <div className="bg-emerald-50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-emerald-700 mb-3">Laser Light Show Benefit</h3>
                 <p className="text-gray-700 mb-4">
-                  Our laser light show events create a premium experience that's perfect for gala 
+                  Our laser light show events create a premium experience that&apos;s perfect for gala 
                   fundraisers, benefit concerts, and special community events. The immersive visual 
                   experience adds value that justifies higher ticket prices.
                 </p>
@@ -315,7 +315,7 @@ export default function FundraisersPage() {
               </div>
               <p className="text-gray-700 mb-4">
                 Henderson Elementary needed to raise funds for their new playground equipment. We worked 
-                with them to create a "Gunge the Principal" campaign where students collected pledges 
+                with them to create a &quot;Gunge the Principal&quot; campaign where students collected pledges 
                 toward a $10,000 goal. The event exceeded expectations, raising over $15,000 and creating 
                 a memorable experience for the entire school community.
               </p>
@@ -378,7 +378,7 @@ export default function FundraisersPage() {
             </h2>
             <p className="text-gray-700 mb-8">
               Contact us today to discuss how we can help you create a successful fundraising 
-              event that's both fun and profitable for your organization.
+              event that&apos;s both fun and profitable for your organization.
             </p>
             <a 
               href="/contact-us" 

@@ -221,7 +221,7 @@ export default async function LaserLightShowPage() {
                 Laser shows are unique entertainment options where you need details to get an accurate quote. Different needs and budgets can be accommodated, scaling the spectacle up or down. To discuss a laser show for your event, call us at 252-764-7628 without any sales pressure.
               </p>
               <p className="text-gray-700 mb-8">
-                During the call, we'll discuss your objectives, desired show type (beam, graphic or combo), venue specifics, anticipated audience size, sound and power requirements, location, whether it\'s a solo event, customized music needs, and your budget. Our talented programmers design shows to music and offer package deals for multi-night events, reducing the cost per night significantly.
+                During the call, we&apos;ll discuss your objectives, desired show type (beam, graphic or combo), venue specifics, anticipated audience size, sound and power requirements, location, whether it&apos;s a solo event, customized music needs, and your budget. Our talented programmers design shows to music and offer package deals for multi-night events, reducing the cost per night significantly.
               </p>
               <p className="text-gray-700 mb-10">
                 One-time shows are pricier due to fixed overheads, but shared packages or revenue-split events can make them more affordable. At Emerald Owl Productions, we aim to find the right balance for a memorable laser show experience within your budget—multiple nightly shows also hardly impact the price.
@@ -269,7 +269,7 @@ export default async function LaserLightShowPage() {
               <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 {data.testimonials.map((testimonial, index) => (
                   <div key={index} className="bg-gray-50 p-6 rounded-lg shadow-lg border border-gray-100">
-                    <p className="text-gray-700 italic mb-4">"{testimonial.quote}"</p>
+                    <p className="text-gray-700 italic mb-4">&quot;{testimonial.quote}&quot;</p>
                     <div>
                       <p className="font-bold text-gray-900">{testimonial.author}</p>
                       {testimonial.role && (
@@ -298,7 +298,7 @@ export default async function LaserLightShowPage() {
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <div className="bg-black/30 backdrop-blur-sm p-6 rounded-lg border border-emerald-500/20 transition-all duration-300 hover:transform hover:scale-105">
                 <h3 className="text-xl font-bold text-emerald-400 mb-3">Customizable & Scalable</h3>
-                <p className="text-gray-200">Perfect for any scale - from intimate gatherings to major festivals. Fully tailored to your event's theme and goals.</p>
+                <p className="text-gray-200">Perfect for any scale - from intimate gatherings to major festivals. Fully tailored to your event&apos;s theme and goals.</p>
               </div>
               <div className="bg-black/30 backdrop-blur-sm p-6 rounded-lg border border-emerald-500/20 transition-all duration-300 hover:transform hover:scale-105">
                 <h3 className="text-xl font-bold text-emerald-400 mb-3">Cost-Effective</h3>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../../components/shared/Layout/Header';
 import Footer from '../../components/shared/Layout/Footer';
+import Image from 'next/image';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -116,10 +117,13 @@ export default function BlogPage() {
               {featuredPosts.map((post) => (
                 <div key={post.id} className="bg-white rounded-lg overflow-hidden shadow-lg">
                   <div className="relative">
-                    <img 
+                    <Image 
                       src={post.image} 
                       alt={post.title}
                       className="w-full h-64 object-cover"
+                      width={800}
+                      height={500}
+                      unoptimized={true}
                     />
                     <div className="absolute top-4 right-4 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                       {post.category}
@@ -193,10 +197,13 @@ export default function BlogPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {regularPosts.map((post) => (
                 <div key={post.id} className="bg-white rounded-lg overflow-hidden shadow-md">
-                  <img 
+                  <Image 
                     src={post.image} 
                     alt={post.title}
                     className="w-full h-48 object-cover"
+                    width={800}
+                    height={500}
+                    unoptimized={true}
                   />
                   <div className="p-6">
                     <div className="flex items-center mb-3">
@@ -298,7 +305,7 @@ export default function BlogPage() {
                 </h3>
                 <p className="text-gray-700 mb-6">
                   Stay updated with the latest event industry trends, tips, and news from our team.
-                  We'll send you our best content once a month - no spam, we promise!
+                  We&apos;ll send you our best content once a month - no spam, we promise!
                 </p>
                 <form className="flex flex-col sm:flex-row max-w-md mx-auto gap-3">
                   <input

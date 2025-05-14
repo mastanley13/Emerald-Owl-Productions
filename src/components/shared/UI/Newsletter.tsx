@@ -49,7 +49,7 @@ export default function Newsletter() {
           ) : (
             <div className="bg-green-800 text-white p-4 rounded-md inline-block">
               <p className="font-semibold">Thank you for subscribing!</p>
-              <p className="text-sm text-green-200">You'll hear from us soon.</p>
+              <p className="text-sm text-green-200">You&apos;ll hear from us soon.</p>
             </div>
           )}
           

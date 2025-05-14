@@ -155,7 +155,7 @@ export default async function SensoryFriendlyExperiencesPage() {
                 ))}
                 {data.director.quote && (
                   <blockquote className="border-l-4 border-emerald-500 pl-5 py-2 my-8 bg-emerald-50 rounded-r-lg pr-5">
-                    <p className="italic text-gray-700">"{data.director.quote}"</p>
+                    <p className="italic text-gray-700">&quot;{data.director.quote}&quot;</p>
                   </blockquote>
                 )}
                 {data.director.contact && (

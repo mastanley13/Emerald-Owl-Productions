@@ -18,7 +18,7 @@ export default function CareersPage() {
       department: "Production",
       location: "Henderson, NC",
       type: "Full-time",
-      description: "We're looking for an experienced Event Production Specialist to join our team. The ideal candidate will have experience in event setup, technical operations, and client coordination.",
+      description: "We&apos;re looking for an experienced Event Production Specialist to join our team. The ideal candidate will have experience in event setup, technical operations, and client coordination.",
       responsibilities: [
         "Set up and operate production equipment including lighting, sound, and special effects",
         "Coordinate with venue staff and clients to ensure smooth event execution",
@@ -40,7 +40,7 @@ export default function CareersPage() {
       department: "Marketing",
       location: "Henderson, NC",
       type: "Full-time",
-      description: "We're seeking a creative and organized Marketing Coordinator to help promote our event experiences across multiple channels. This role will work closely with our creative and sales teams.",
+      description: "We&apos;re seeking a creative and organized Marketing Coordinator to help promote our event experiences across multiple channels. This role will work closely with our creative and sales teams.",
       responsibilities: [
         "Develop and implement marketing campaigns for our various event offerings",
         "Manage social media accounts and create engaging content",
@@ -84,7 +84,7 @@ export default function CareersPage() {
       department: "Operations",
       location: "Various Locations",
       type: "Part-time / Seasonal",
-      description: "We're hiring seasonal team members to assist with our busy summer and holiday event seasons. This is a great opportunity to gain experience in the event industry while working with a fun, creative team.",
+      description: "We&apos;re hiring seasonal team members to assist with our busy summer and holiday event seasons. This is a great opportunity to gain experience in the event industry while working with a fun, creative team.",
       responsibilities: [
         "Assist with event setup and breakdown",
         "Help operate equipment such as foam machines, water games, and more",
@@ -160,7 +160,7 @@ export default function CareersPage() {
                   </div>
                   <h3 className="text-xl font-bold text-emerald-700 mb-2">Growth Opportunities</h3>
                   <p className="text-gray-700">
-                    We're a growing company that invests in employee development. Take on new 
+                    We&apos;re a growing company that invests in employee development. Take on new 
                     challenges and advance your career with us.
                   </p>
                 </div>
@@ -302,9 +302,9 @@ export default function CareersPage() {
               </div>
               
               <div className="mt-12 bg-emerald-50 p-6 rounded-lg text-center">
-                <h3 className="text-xl font-bold text-emerald-700 mb-3">Don't see a position that fits?</h3>
+                <h3 className="text-xl font-bold text-emerald-700 mb-3">Don&apos;t see a position that fits?</h3>
                 <p className="text-gray-700 mb-6">
-                  We're always interested in connecting with talented people. Send us your resume and 
+                  We&apos;re always interested in connecting with talented people. Send us your resume and 
                   let us know how you could contribute to our team.
                 </p>
                 <Link 
@@ -340,9 +340,9 @@ export default function CareersPage() {
                     </div>
                   </div>
                   <p className="text-gray-700 italic">
-                    "Working at Emerald Owl has been the most rewarding experience of my career. 
+                    &quot;Working at Emerald Owl has been the most rewarding experience of my career. 
                     Every day brings new challenges and opportunities to create amazing 
-                    experiences for our clients. The team really feels like family."
+                    experiences for our clients. The team really feels like family.&quot;
                   </p>
                 </div>
                 
@@ -359,9 +359,9 @@ export default function CareersPage() {
                     </div>
                   </div>
                   <p className="text-gray-700 italic">
-                    "I started as an intern and have grown so much professionally since joining 
+                    &quot;I started as an intern and have grown so much professionally since joining 
                     the team. The company really invests in employee development and creates paths 
-                    for advancement. Plus, we have a lot of fun along the way!"
+                    for advancement. Plus, we have a lot of fun along the way!&quot;
                   </p>
                 </div>
               </div>
