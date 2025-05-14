@@ -5,8 +5,21 @@ import Footer from '../../components/shared/Layout/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 
+// Define a type for the color names
+type ServiceColor = 'emerald' | 'purple' | 'pink' | 'blue' | 'teal' | 'sky';
+
+// Define an interface for a single service
+interface Service {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+  color: ServiceColor;
+}
+
 // Services data
-const services = [
+const services: Service[] = [
   {
     id: 'laser-show',
     title: 'Laser Light Shows',
@@ -56,9 +69,6 @@ const services = [
     color: 'sky'
   }
 ];
-
-// Define a type for the color names
-type ServiceColor = 'emerald' | 'purple' | 'pink' | 'blue' | 'teal' | 'sky';
 
 // Function to get appropriate color classes
 const getColorClasses = (color: ServiceColor) => {
