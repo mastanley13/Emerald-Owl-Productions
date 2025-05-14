@@ -1,4 +1,3 @@
-
 "use client";
 
 import Header from '../../components/shared/Layout/Header';
@@ -58,9 +57,12 @@ const services = [
   }
 ];
 
+// Define a type for the color names
+type ServiceColor = 'emerald' | 'purple' | 'pink' | 'blue' | 'teal' | 'sky';
+
 // Function to get appropriate color classes
-const getColorClasses = (color) => {
-  const colorMap = {
+const getColorClasses = (color: ServiceColor) => {
+  const colorMap: Record<ServiceColor, { bg: string; hover: string; shadow: string; text: string }> = {
     emerald: {
       bg: 'bg-emerald-600',
       hover: 'hover:bg-emerald-700',
