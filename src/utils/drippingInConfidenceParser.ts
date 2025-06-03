@@ -102,16 +102,16 @@ export function parseDrippingInConfidenceData(rawData: any): DrippingInConfidenc
 
   // Extract testimonials
   const testimonials: TestimonialData[] = [
-    {
-      quote: "The slime experience was the highlight of our school fundraiser! Kids and parents alike couldn't stop talking about it.",
-      author: 'Sarah Johnson',
-      role: 'PTA President'
-    },
-    {
-      quote: "Emerald Owl's team made setup and cleanup so easy. The slime was vibrant, safe, and exactly what we wanted for our event.",
-      author: 'Michael Carter',
-      role: 'Event Coordinator'
-    }
+    // {
+    //   quote: "The slime experience was the highlight of our school fundraiser! Kids and parents alike couldn't stop talking about it.",
+    //   author: 'Sarah Johnson',
+    //   role: 'PTA President'
+    // },
+    // {
+    //   quote: "Emerald Owl's team made setup and cleanup so easy. The slime was vibrant, safe, and exactly what we wanted for our event.",
+    //   author: 'Michael Carter',
+    //   role: 'Event Coordinator'
+    // }
   ];
 
   // Create the structured data

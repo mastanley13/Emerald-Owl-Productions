@@ -303,6 +303,9 @@ export default function BlogPage() {
                 <h3 className="text-2xl font-bold text-emerald-700 mb-4">
                   Subscribe to Our Newsletter
                 </h3>
+                <p className="text-lg md:text-xl text-emerald-600 font-medium mb-4">
+                  Coming Soon
+                </p>
                 <p className="text-gray-700 mb-6">
                   Stay updated with the latest event industry trends, tips, and news from our team.
                   We&apos;ll send you our best content once a month - no spam, we promise!

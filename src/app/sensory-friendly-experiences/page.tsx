@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Header from '../../components/shared/Layout/Header';
 import Footer from '../../components/shared/Layout/Footer';
-import Newsletter from '../../components/shared/UI/Newsletter';
 import { getSensoryFriendlyExperiencesData } from '../../services/contentService';
 import { Metadata } from 'next';
 
@@ -29,10 +28,10 @@ export default async function SensoryFriendlyExperiencesPage() {
           <div className="absolute inset-0 overflow-hidden">
             {data.hero.backgroundImage && (
               <Image 
-                src={data.hero.backgroundImage}
+                src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/6732349d7f10cd2fc32ef839.jpeg"
                 alt={data.hero.heading}
                 fill
-                className="object-cover opacity-30"
+                className="object-cover opacity-50"
                 priority
               />
             )}
@@ -82,9 +81,9 @@ export default async function SensoryFriendlyExperiencesPage() {
                 ))}
               </div>
               {data.introduction.image && (
-                <div className="md:w-1/2 relative h-[400px] overflow-hidden rounded-xl shadow-2xl transform transition-all duration-500 hover:scale-[1.02]">
+                <div className="w-full h-[300px] md:w-1/2 md:h-[400px] relative overflow-hidden rounded-xl shadow-2xl transform transition-all duration-500 hover:scale-[1.02]">
                   <Image 
-                    src={data.introduction.image}
+                    src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a4cd3916dadebb8d0b3c22.jpeg"
                     alt="Sensory friendly experience" 
                     fill
                     className="object-cover"
@@ -126,13 +125,6 @@ export default async function SensoryFriendlyExperiencesPage() {
         {/* Director Profile */}
         <section className="bg-white py-20">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
-              <span className="text-emerald-600 relative">
-                {data.director.heading}
-                <span className="absolute -bottom-2 left-0 right-0 h-1 bg-emerald-200 rounded-full opacity-50"></span>
-              </span>
-            </h2>
-            
             <div className="flex flex-col md:flex-row gap-10 items-center bg-gray-50 rounded-2xl p-8 shadow-lg">
               <div className="md:w-1/3 relative h-[400px] mb-8 md:mb-0 overflow-hidden rounded-xl">
                 <Image 
@@ -264,7 +256,7 @@ export default async function SensoryFriendlyExperiencesPage() {
         </section>
 
         {/* Newsletter Section */}
-        <Newsletter />
+        
       </main>
       <Footer />
     </>

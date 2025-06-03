@@ -114,8 +114,8 @@ export function parseNeonNightsData(rawData: any): NeonNightsData {
   // Parse testimonials if available
   const testimonials: TestimonialData[] = rawData.testimonials
     ? rawData.testimonials.map((testimonial: any) => ({
-        quote: testimonial.quote || 'This was an amazing experience!',
-        author: testimonial.author || 'Happy Client',
+        quote: testimonial.quote || '',
+        author: testimonial.author || '',
         role: testimonial.role || '',
         image: testimonial.image || null,
       }))

@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../../components/shared/Layout/Header';
 import Footer from '../../components/shared/Layout/Footer';
+import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -65,15 +66,16 @@ export default function EmmyTheOwlPage() {
                 </div>
               </div>
               
-              <div className="bg-emerald-100 rounded-lg p-12 flex items-center justify-center">
-                <div className="w-48 h-48 bg-emerald-200 rounded-full flex items-center justify-center">
-                  <div className="text-center">
-                    <svg className="w-24 h-24 text-emerald-700 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                      <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
-                    </svg>
-                    <p className="text-emerald-800 mt-2 font-medium">Emmy&apos;s photo would appear here</p>
-                  </div>
+              <div className="bg-emerald-100 rounded-lg p-8 flex items-center justify-center">
+                <div className="relative w-80 h-80 rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/671fb9850b52952b979e066f.png"
+                    alt="Emmy the Owl - Emerald Owl Productions Mascot"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 320px"
+                    priority
+                  />
                 </div>
               </div>
             </div>

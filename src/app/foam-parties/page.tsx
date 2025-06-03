@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
     const data = await getFoamPartiesData();
     
     return {
-      title: data.meta.title,
+      title: "Foam Parties & Water Battles | Emerald Owl Productions",
       description: data.meta.description,
       keywords: data.meta.keywords,
     };
@@ -37,19 +37,39 @@ async function getFoamPartiesData(): Promise<FoamPartiesData> {
     
     // Parse the raw data into our typed data model
     const rawData = await res.json();
-    return parseFoamPartiesData(rawData);
+    const parsedData = parseFoamPartiesData(rawData);
+    
+    // Update title in the fetched data
+    parsedData.meta.title = "Foam Parties & Water Battles | Emerald Owl Productions";
+    parsedData.hero.title = "Foam Parties & Water Battles";
+    parsedData.meta.description = "High-energy foam parties, perfect with our exciting Water Battle Games for unforgettable events! We also offer vibrant Color Run experiences.";
+    parsedData.contentSection.description = parsedData.contentSection.description.replace("Our foam parties create", "Our exhilarating foam parties create");
+    parsedData.meta.keywords = ['foam party', 'water battles', 'foam and water games', 'event entertainment', 'kids parties', 'outdoor fun'].join(', ');
+    if (parsedData.colorRun) {
+      delete parsedData.colorRun;
+    }
+
+    // Update the second gallery image if gallery exists and has at least two items
+    if (parsedData.gallery && parsedData.gallery.length >= 2) {
+      parsedData.gallery[1].image.url = 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a4498d9b155f5f4b70128e.jpeg';
+      parsedData.gallery[1].image.alt = 'Kids enjoying a foam party with colorful buckets'; // Update alt text accordingly
+      // If there was a caption, you might want to update or remove it if it's no longer relevant
+      // parsedData.gallery[1].caption = 'New Caption for Updated Image'; 
+    }
+
+    return parsedData;
   } catch (error) {
     console.error('Error fetching foam parties data:', error);
     
-    // Return a default data structure in case of error
+    // Return a default data structure in case of error, with updated titles
     return {
       meta: {
-        title: 'Foam Parties & Color Run | Emerald Owl Productions',
-        description: 'Create high-energy, fun-filled foam parties and color run events for any occasion!',
-        keywords: 'foam party, color run, events, kids activities, outdoor events',
+        title: 'Foam Parties & Water Battles | Emerald Owl Productions',
+        description: 'High-energy foam parties, perfect with our exciting Water Battle Games for unforgettable events! We also offer vibrant Color Run experiences.',
+        keywords: ['foam party', 'water battles', 'foam and water games', 'event entertainment', 'kids parties', 'outdoor fun'].join(', '),
       },
       hero: {
-        title: 'Foam Parties & Color Run',
+        title: 'Foam Parties & Water Battles',
         backgroundImage: {
           type: 'image',
           url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a453fb7ee1c12aa7752dcc.jpeg',
@@ -58,10 +78,10 @@ async function getFoamPartiesData(): Promise<FoamPartiesData> {
       },
       contentSection: {
         title: 'High-Energy Fun for Any Occasion',
-        description: 'Our foam parties and color runs create unforgettable experiences that bring joy and excitement to any event. Perfect for schools, birthday celebrations, community gatherings, and more, our professional equipment and dedicated team ensure safe, vibrant, and memorable activities for participants of all ages.',
+        description: 'Our foam parties create unforgettable experiences that bring joy and excitement to any event. Perfect for schools, birthday celebrations, community gatherings, and more, our professional equipment and dedicated team ensure safe, vibrant, and memorable activities for participants of all ages.',
         features: [
           'Professional foam machines with customizable settings',
-          'Non-toxic, skin-friendly foam and color powder',
+          'Non-toxic, skin-friendly foam',
           'Experienced staff for setup and supervision',
           'Adaptable for indoor or outdoor venues',
           'Perfect for fundraisers, celebrations, and community events'
@@ -81,8 +101,8 @@ async function getFoamPartiesData(): Promise<FoamPartiesData> {
           ],
           image: {
             type: 'image',
-            url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a453fb7ee1c12aa7752dcc.jpeg',
-            alt: 'Standard Foam Party'
+            url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67111c601ff902234d3256b4.jpeg',
+            alt: 'Fun and affordable Basic Foam Package by Emerald Owl Productions, perfect for parties.'
           }
         },
         {
@@ -99,27 +119,11 @@ async function getFoamPartiesData(): Promise<FoamPartiesData> {
           ],
           image: {
             type: 'image',
-            url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a453fb7ee1c12aa7752dcc.jpeg',
-            alt: 'Deluxe Foam Experience'
+            url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67111c53970dedac4ff481a6.jpeg',
+            alt: 'Ultimate Premium Foam Experience with extra foam and fun from Emerald Owl Productions.'
           }
         }
       ],
-      colorRun: {
-        title: 'Color Run Events',
-        description: 'Our color run experiences bring vibrant energy to any event. Participants run, walk, or dance through stations where they are showered with brilliant, washable colored powder. It\'s perfect for school field days, fundraisers, or community celebrations.',
-        benefits: [
-          'Non-toxic, easily washable color powder',
-          'Custom course design to fit your venue',
-          'Multiple color stations with different hues',
-          'Photography opportunities included',
-          'Full setup and cleanup services'
-        ],
-        image: {
-          type: 'image',
-          url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a453fb7ee1c12aa7752dcc.jpeg',
-          alt: 'Color Run'
-        }
-      },
       gallery: [
         {
           image: {
@@ -132,10 +136,10 @@ async function getFoamPartiesData(): Promise<FoamPartiesData> {
         {
           image: {
             type: 'image',
-            url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a453fb7ee1c12aa7752dcc.jpeg',
-            alt: 'Birthday with foam machines'
+            url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a4498d9b155f5f4b70128e.jpeg', // Updated image URL
+            alt: 'Kids enjoying a foam party with colorful buckets' // Updated alt text
           },
-          caption: 'Birthday foam celebration'
+          caption: 'Fun in the Foam' // Updated or generic caption
         }
       ],
       faqs: [
@@ -226,6 +230,13 @@ export default async function FoamPartiesPage() {
           {/* Main Content */}
           <section className="bg-white py-16">
             <div className="container mx-auto px-6">
+              {/* Top Note - Updated to emphasize Water Battles */}
+              <div className="text-center mb-12">
+                <p className="text-xl md:text-2xl text-blue-700 font-semibold bg-blue-50 p-4 rounded-lg inline-block shadow">
+                  Awesome as a stand-alone party, or <Link href="/water-games" className="underline hover:text-blue-800">pair with our Water Battle Games</Link> for an epic combo!
+                </p>
+              </div>
+
               <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
                 <span className="text-emerald-600">{data.contentSection.title}</span>
               </h2>
@@ -264,100 +275,17 @@ export default async function FoamPartiesPage() {
                 </div>
               </div>
               
-              {/* Foam Packages */}
-              {data.foamPackages && data.foamPackages.length > 0 && (
-                <div className="mb-16">
-                  <h3 className="text-2xl font-bold text-center text-emerald-600 mb-8">Foam Party Packages</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {data.foamPackages.map((pkg, index) => (
-                      <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden border border-emerald-100">
-                        <div className="relative h-64">
-                          <Image 
-                            src={pkg.image.url}
-                            alt={pkg.image.alt}
-                            fill
-                            className="object-cover"
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                          />
-                        </div>
-                        <div className="p-6">
-                          <h4 className="text-2xl font-bold text-emerald-600 mb-2">{pkg.title}</h4>
-                          {pkg.price && (
-                          <p className="text-lg text-emerald-500 font-semibold mb-3">{pkg.price}</p>
-                          )}
-                          <p className="text-gray-700 mb-4">{pkg.description}</p>
-                        
-                          {pkg.features && (
-                            <ul className="space-y-2">
-                              {pkg.features.map((feature, idx) => (
-                                <li key={idx} className="flex items-start">
-                                <svg className="w-5 h-5 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                  <span className="text-gray-700">{feature}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          )}
-                        
-                        <div className="mt-6 pt-4 border-t border-gray-100">
-                          <Link 
-                            href="/contact-us" 
-                            className="inline-block px-6 py-2.5 bg-emerald-600 text-white font-medium rounded-full hover:bg-emerald-700 transition-colors shadow-sm hover:shadow-md"
-                          >
-                            Book This Package
-                          </Link>
-                        </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-              
-            {/* Color Run Section */}
-              {data.colorRun && (
-              <div className="bg-emerald-50 rounded-xl p-8 mb-16">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-                  <div className="order-2 lg:order-1">
-                    <h3 className="text-2xl font-bold text-emerald-700 mb-4">{data.colorRun.title}</h3>
-                      <p className="text-gray-700 mb-6">{data.colorRun.description}</p>
-                    
-                      {data.colorRun.benefits && (
-                        <ul className="space-y-2">
-                          {data.colorRun.benefits.map((benefit, idx) => (
-                            <li key={idx} className="flex items-start">
-                            <svg className="w-5 h-5 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                              <span className="text-gray-700">{benefit}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    
-                    <div className="mt-6">
-                      <Link 
-                        href="/contact-us" 
-                        className="inline-block px-6 py-2.5 bg-emerald-600 text-white font-medium rounded-full hover:bg-emerald-700 transition-colors shadow-sm hover:shadow-md"
-                      >
-                        Inquire About Color Runs
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="relative h-[350px] rounded-lg overflow-hidden shadow-lg order-1 lg:order-2">
-                      <Image 
-                        src={data.colorRun.image.url}
-                        alt={data.colorRun.image.alt}
-                        fill
-                        className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      />
-                    </div>
-                  </div>
-                </div>
-              )}
-                      </div>
+              {/* CTA for Color Run Page */}
+              <div className="my-16 text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                  Looking for Even More Colorful Fun?
+                </h3>
+                <Link href="/color-run" className="inline-block bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-pink-300/40">
+                  Explore Our Color Run Experience!
+                </Link>
+              </div>
+
+            </div>
         </section>
             
               {/* Gallery Section */}
@@ -380,11 +308,11 @@ export default async function FoamPartiesPage() {
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         />
                     </div>
-                    {item.caption && (
+                    {/* {item.caption && (
                       <div className="p-4">
                         <p className="text-gray-700 font-medium text-center">{item.caption}</p>
                       </div>
-                    )}
+                    )} */}
                   </div>
                 ))}
               </div>
@@ -417,7 +345,7 @@ export default async function FoamPartiesPage() {
             <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Plan Your Foam Party?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Contact us today to discuss how we can make your next event unforgettable with our foam parties and color runs!
+              Contact us today to discuss how we can make your next event unforgettable with our foam parties and <Link href="/water-games" className="underline hover:text-emerald-200">Water Battle Games</Link>!
             </p>
             <Link 
               href={data.cta.url}

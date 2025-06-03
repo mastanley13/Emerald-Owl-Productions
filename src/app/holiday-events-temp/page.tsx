@@ -115,16 +115,16 @@ const pageData = {
     }
   ],
   testimonials: [
-    {
-      quote: "Emerald Owl Productions transformed our community center into an amazing winter wonderland. The children were mesmerized by the snow effects and light displays!",
-      author: "Maria Rodriguez",
-      role: "Community Center Director"
-    },
-    {
-      quote: "The Halloween production exceeded our expectations. The atmospheric effects and interactive elements created the perfect spooky-but-fun environment our school was looking for.",
-      author: "James Wilson",
-      role: "PTA President"
-    }
+    // {
+    //   quote: "Emerald Owl Productions transformed our community center into an amazing winter wonderland. The children were mesmerized by the snow effects and light displays!",
+    //   author: "Maria Rodriguez",
+    //   role: "Community Center Director"
+    // },
+    // {
+    //   quote: "The Halloween production exceeded our expectations. The atmospheric effects and interactive elements created the perfect spooky-but-fun environment our school was looking for.",
+    //   author: "James Wilson",
+    //   role: "PTA President"
+    // }
   ],
   cta: {
     text: "Book Your Holiday Event",

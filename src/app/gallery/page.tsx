@@ -166,7 +166,7 @@ export default function GalleryPage() {
         </section>
         
         {/* Testimonial Section */}
-        <section className="py-16 bg-emerald-50">
+        {/* <section className="py-16 bg-emerald-50">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
               <div className="p-8">
@@ -215,8 +215,7 @@ export default function GalleryPage() {
               </div>
             </div>
           </div>
-        </section>
-        
+        </section> */}        
         {/* Call To Action */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-6">

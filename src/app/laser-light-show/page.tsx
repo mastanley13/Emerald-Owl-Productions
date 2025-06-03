@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getLaserLightShowData } from '../../services/contentService';
 import { Metadata } from 'next';
+import ExperienceHeadline from '../../components/experiences/ExperienceHeadline';
 
 export async function generateMetadata(): Promise<Metadata> {
   // Fetch data
@@ -20,309 +21,222 @@ export default async function LaserLightShowPage() {
   // Fetch data
   const data = await getLaserLightShowData();
   
-  return (
+  const VideoSection = () => (
+    data.videoContent ? (
+      <section className="bg-black">
+        <div className="container mx-auto px-0">
+          <div className="relative aspect-video w-full">
+            <iframe 
+              width="100%" 
+              height="100%" 
+              src={`${data.videoContent.videoUrl}?autoplay=1&mute=1&playsinline=1&loop=1&playlist=${data.videoContent.videoUrl.split('/').pop()}`}
+              title={data.hero.title || "Experience Video"} 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen
+              className="absolute inset-0"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    ) : null
+  );
+
+  // Helper for Descriptive Content - MODIFIED
+  const DescriptiveContentSection = () => (
     <>
-      <Header />
-      <main className="pt-16">
-        {/* Hero Banner */}
-        <section className="relative min-h-[500px] flex items-center bg-gradient-to-b from-black via-black to-emerald-950 text-white">
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 to-emerald-950/80 backdrop-blur-[2px]" />
-            
-            {/* Decorative laser beams */}
-            <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-emerald-500/10 opacity-70 animate-pulse"></div>
-            <div className="absolute top-32 -left-32 w-64 h-64 rounded-full bg-emerald-400/10 opacity-60 animate-pulse" style={{ animationDuration: '8s' }}></div>
-            <div className="absolute -bottom-32 right-32 w-80 h-80 rounded-full bg-emerald-500/10 opacity-70 animate-pulse" style={{ animationDuration: '12s' }}></div>
+      {/* "Standard In-Person Light Show Section" (data.contentSection) REMOVED */}
+      
+      {/* "Choosing the Right Format" section */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">
+            Choosing the Right Format (In-Person vs Drive-In)
+          </h2>
+          <div className="max-w-3xl mx-auto prose lg:prose-lg text-gray-700">
+            <p>
+              Mike's explanatory copy will go here. It will discuss the differences between in-person and drive-in laser show formats, helping clients decide which is best for their event. 
+              This section will cover aspects like audience experience, venue requirements, and logistical considerations for each format.
+            </p>
           </div>
-          
-          <div className="container mx-auto px-6 z-10 relative py-16">
-            <div className="max-w-4xl">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                <span className="text-emerald-400 relative drop-shadow-md">
-                  {data.hero.title}
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl mb-10 text-gray-100 font-light max-w-2xl">
-                Spectacular laser displays for any event, creating unforgettable visual experiences
-              </p>
-              <div className="flex flex-wrap gap-5">
-                <Link 
-                  href={data.cta.url}
-                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 shadow-xl hover:shadow-emerald-300/60 hover:-translate-y-1 transform"
-                >
-                  {data.cta.text}
-                </Link>
-              </div>
-            </div>
+          {/* CTAs for Laser Safety and Benefits */}
+          <div className="mt-10 text-center flex flex-col sm:flex-row justify-center items-center gap-4">
+            <Link 
+              href="/laser-safety"
+              className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg"
+            >
+              Learn About Laser Safety
+            </Link>
+            <Link 
+              href="/laser-show-benefits"
+              className="bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg"
+            >
+              Discover Laser Show Benefits
+            </Link>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Standard In-Person Light Show Section */}
+      {/* "Why Lasers Section" (data.benefits) REMOVED - Content moving to a new page */}
+      
+      {/* Types of Laser Shows Section (simplified, no pricing focus) */}
+      {/* This section will be updated once data source for Beam/Graphic shows is clear */}
+      {data.packages && data.packages.length > 0 && (
         <section className="bg-white py-16">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
-              <span className="text-emerald-600">{data.contentSection.title}</span>
-            </h2>
-
-            <div className="max-w-4xl mx-auto">
-              <p className="text-gray-700 mb-6">
-                {data.contentSection.description}
-              </p>
-              
-              <p className="text-gray-700 font-medium mb-4">Other advantages of a laser show:</p>
-              
-              <ul className="list-disc pl-5 mb-8 space-y-2">
-                {data.contentSection.features?.map((feature, index) => (
-                  <li key={index} className="text-gray-700">{feature}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Why Lasers Section */}
-        <section className="bg-emerald-950 text-white py-16">
-          <div className="container mx-auto px-6">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold mb-6">
-                  <span className="text-emerald-400">Why Lasers?</span>
-                </h2>
-                {data.benefits && data.benefits.map((benefit, index) => (
-                  <p key={index} className="text-gray-200 mb-6">
-                    <strong>{benefit.title}:</strong> {benefit.description}
-                  </p>
-                ))}
-              </div>
-              <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl">
-                {data.videoContent && (
-                  <iframe 
-                    width="100%" 
-                    height="100%" 
-                    src={data.videoContent.videoUrl} 
-                    title="Laser Show Video" 
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowFullScreen
-                    className="absolute inset-0"
-                  ></iframe>
-                )}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Types of Laser Shows Section */}
-        <section className="bg-white py-16">
-          <div className="container mx-auto px-6">
-            <h2 className="text-4xl font-bold text-center mb-12">
-              <span className="text-emerald-600">Types of Laser Shows</span>
-            </h2>
-
-            {data.packages && data.packages.map((pkg, index) => (
-              <div key={index} className={`grid md:grid-cols-2 gap-16 ${index < data.packages!.length - 1 ? 'mb-16' : ''}`}>
-                {index % 2 === 0 ? (
-                  <>
-                    <div>
-                      <div className="mb-8 rounded-lg overflow-hidden">
-                        <Image 
-                          src={pkg.image.url}
-                          alt={pkg.image.alt || pkg.title}
-                          width={600}
-                          height={400}
-                          className="w-full object-cover"
-                        />
-                      </div>
+            {/* Title for this section might need to be dynamic if main headline changes */}
+            <h2 className="text-4xl font-bold text-center text-emerald-600 mb-12">Types of Laser Shows We Offer</h2>
+            <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-12">
+              {data.packages
+                .filter(pkg => !pkg.title.toLowerCase().includes("water effect")) // Filter out "Water Effects"
+                // .filter(pkg => pkg.title.includes("Beam") || pkg.title.includes("Graphic")) // Keep this for later when data source is clear
+                .map((pkg, index) => (
+                <div key={index} className="flex flex-col bg-gray-50 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl">
+                  {pkg.image && (
+                    <div className="relative h-64 w-full">
+                      <Image 
+                        src={pkg.image.url}
+                        alt={pkg.image.alt || pkg.title}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
-                    <div className="flex flex-col justify-center">
-                      <h3 className="text-2xl font-bold text-emerald-600 mb-4">{pkg.title}</h3>
-                      <p className="text-gray-700">{pkg.description}</p>
-                      {pkg.features && pkg.features.length > 0 && (
-                        <ul className="mt-4 list-disc pl-5 space-y-1">
+                  )}
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h3 className="text-2xl font-bold text-emerald-600 mb-3">{pkg.title}</h3>
+                    <p className="text-gray-700 mb-4 text-base flex-grow">{pkg.description}</p>
+                    {pkg.features && pkg.features.length > 0 && (
+                      <>
+                        <h4 className="text-md font-semibold text-gray-800 mt-3 mb-2">Includes:</h4>
+                        <ul className="list-disc pl-5 space-y-1 text-sm text-gray-600">
                           {pkg.features.map((feature, fidx) => (
-                            <li key={fidx} className="text-gray-700">{feature}</li>
+                            <li key={fidx}>{feature}</li>
                           ))}
                         </ul>
-                      )}
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className="flex flex-col justify-center md:order-1 order-2">
-                      <h3 className="text-2xl font-bold text-emerald-600 mb-4">{pkg.title}</h3>
-                      <p className="text-gray-700">{pkg.description}</p>
-                      {pkg.features && pkg.features.length > 0 && (
-                        <ul className="mt-4 list-disc pl-5 space-y-1">
-                          {pkg.features.map((feature, fidx) => (
-                            <li key={fidx} className="text-gray-700">{feature}</li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                    <div className="md:order-2 order-1 mb-8 md:mb-0">
-                      <div className="rounded-lg overflow-hidden">
-                        <Image 
-                          src={pkg.image.url}
-                          alt={pkg.image.alt || pkg.title}
-                          width={600}
-                          height={400}
-                          className="w-full object-cover"
-                        />
-                      </div>
-                    </div>
-                  </>
-                )}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Safety Section */}
-        <section className="bg-gradient-to-b from-emerald-950 to-black text-white py-16">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center mb-12">
-              <h2 className="text-4xl font-bold mb-6">
-                <span className="text-emerald-400">The Safest Experience in the Sky</span>
-              </h2>
-              <p className="text-gray-200">
-                Our laser shows provide spectacular entertainment with complete safety
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {data.safetyFeatures && data.safetyFeatures.map((feature, index) => (
-                <div key={index} className="bg-emerald-900/30 backdrop-blur-sm p-6 rounded-lg border border-emerald-500/20 transition-all duration-300 hover:transform hover:scale-105">
-                  <h3 className="text-xl font-bold text-emerald-400 mb-3">{feature.title}</h3>
-                  <p className="text-gray-200">{feature.description}</p>
+                      </>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
-            
-            <div className="text-center mt-12">
-              <Link 
-                href="/the-safest-experience-in-the-sky" 
-                className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-bold transition-colors"
-              >
-                Learn More About Laser Show Safety
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </Link>
-            </div>
           </div>
         </section>
+      )}
 
-        {/* Pricing Section */}
-        <section className="bg-white py-16">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-emerald-600 mb-6">LASER SHOW PRICING</h2>
-              <p className="text-gray-700 mb-8">
-                Laser shows are unique entertainment options where you need details to get an accurate quote. Different needs and budgets can be accommodated, scaling the spectacle up or down. To discuss a laser show for your event, call us at 252-764-7628 without any sales pressure.
-              </p>
-              <p className="text-gray-700 mb-8">
-                During the call, we&apos;ll discuss your objectives, desired show type (beam, graphic or combo), venue specifics, anticipated audience size, sound and power requirements, location, whether it&apos;s a solo event, customized music needs, and your budget. Our talented programmers design shows to music and offer package deals for multi-night events, reducing the cost per night significantly.
-              </p>
-              <p className="text-gray-700 mb-10">
-                One-time shows are pricier due to fixed overheads, but shared packages or revenue-split events can make them more affordable. At Emerald Owl Productions, we aim to find the right balance for a memorable laser show experience within your budget—multiple nightly shows also hardly impact the price.
-              </p>
-              <Link 
-                href={data.cta.url}
-                className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-emerald-300/40 hover:-translate-y-1 transform inline-block"
-              >
-                Contact Us for Pricing
-              </Link>
-            </div>
-          </div>
-        </section>
+      {/* "Safety Section" (data.safetyFeatures) REMOVED - Content moving to a new page */}
+    </>
+  );
 
-        {/* FAQ Section */}
-        {data.faqs && data.faqs.length > 0 && (
-          <section className="bg-emerald-950 text-white py-16">
-            <div className="container mx-auto px-6">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-4xl font-bold mb-12 text-center">
-                  <span className="text-emerald-400">Frequently Asked Questions</span>
-                </h2>
-                
-                <div className="space-y-8">
-                  {data.faqs.map((faq, index) => (
-                    <div key={index} className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-emerald-500/10">
-                      <h3 className="text-xl font-medium text-emerald-400 mb-3">{faq.question}</h3>
-                      <p className="text-gray-200">{faq.answer}</p>
-                    </div>
-                  ))}
+  // Helper for Event Gallery - UPDATED with new images
+  const EventGallerySection = () => {
+    const galleryImages = [
+      { url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a4432553f26ca0355ef06a.jpeg", alt: "Laser Show Image 1" },
+      { url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a443acaa4eeda623f7348f.jpeg", alt: "Laser Show Image 2" },
+      { url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a442f253f26c48535ef03f.jpeg", alt: "Laser Show Image 3" },
+      { url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a444175186f739a6dbd3f3.jpeg", alt: "Laser Show Image 4" },
+      { url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a44260aa4eedb151f721ee.jpeg", alt: "Laser Show Image 5" },
+      { url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a441729b155f0a656fe6a2.jpeg", alt: "Laser Show Image 6" },
+      { url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a441209b155f3dfd6fe5e4.jpeg", alt: "Laser Show Image 7" },
+      { url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/673caec4f788b0a03396f579.jpeg", alt: "Laser Show Image 8" },
+      { url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/673c349ed88b415815f4fb5b.jpeg", alt: "Laser Show Image 9" },
+    ];
+    const imagesToDisplay = galleryImages.map(img => ({ image: { url: img.url, alt: img.alt }, caption: null }));
+    
+    // Determine number of columns based on image count for better responsiveness
+    let gridColsClass = "lg:grid-cols-3"; // Default for many images
+    if (imagesToDisplay.length <= 4) {
+      gridColsClass = "lg:grid-cols-4";
+    } else if (imagesToDisplay.length === 5) {
+        gridColsClass = "lg:grid-cols-5"; // Or keep 3/4 and let it wrap
+    } else if (imagesToDisplay.length === 6) {
+        gridColsClass = "lg:grid-cols-3"; // 2 rows of 3
+    }
+
+    return imagesToDisplay.length > 0 ? (
+      <section className="bg-gray-100 py-16">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center text-emerald-600 mb-12">Event Gallery</h2>
+          <div className={`grid grid-cols-1 sm:grid-cols-2 ${gridColsClass} gap-4 md:gap-6`}> {/* Adjusted gap and dynamic cols */}
+            {imagesToDisplay.map((item, index) => (
+              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+                <div className="relative aspect-[4/3] w-full">
+                  {item.image && (
+                    <Image 
+                      src={item.image.url}
+                      alt={item.image.alt || 'Laser Light Show Gallery Image'}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      // Adjusted sizes prop for potentially more images - might need fine-tuning
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                    />
+                  )}
                 </div>
               </div>
-            </div>
-          </section>
-        )}
-
-        {/* Testimonials Section */}
-        {data.testimonials && data.testimonials.length > 0 && (
-          <section className="bg-white py-16">
-            <div className="container mx-auto px-6">
-              <h2 className="text-4xl font-bold text-center mb-12">
-                <span className="text-emerald-600">What Our Clients Say</span>
-              </h2>
-              
-              <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                {data.testimonials.map((testimonial, index) => (
-                  <div key={index} className="bg-gray-50 p-6 rounded-lg shadow-lg border border-gray-100">
-                    <p className="text-gray-700 italic mb-4">&quot;{testimonial.quote}&quot;</p>
-                    <div>
-                      <p className="font-bold text-gray-900">{testimonial.author}</p>
-                      {testimonial.role && (
-                        <p className="text-gray-600 text-sm">{testimonial.role}</p>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* Benefits Section */}
-        <section className="bg-emerald-950 text-white py-16">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center mb-12">
-              <h2 className="text-4xl font-bold mb-6">
-                <span className="text-emerald-400">Unique Benefits of Hosting a Laser Show</span>
-              </h2>
-              <p className="text-gray-200">
-                Transform your event into an unforgettable experience
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <div className="bg-black/30 backdrop-blur-sm p-6 rounded-lg border border-emerald-500/20 transition-all duration-300 hover:transform hover:scale-105">
-                <h3 className="text-xl font-bold text-emerald-400 mb-3">Customizable & Scalable</h3>
-                <p className="text-gray-200">Perfect for any scale - from intimate gatherings to major festivals. Fully tailored to your event&apos;s theme and goals.</p>
-              </div>
-              <div className="bg-black/30 backdrop-blur-sm p-6 rounded-lg border border-emerald-500/20 transition-all duration-300 hover:transform hover:scale-105">
-                <h3 className="text-xl font-bold text-emerald-400 mb-3">Cost-Effective</h3>
-                <p className="text-gray-200">Add extra shows or nights at minimal cost. Perfect for fundraising events and multi-day festivals.</p>
-              </div>
-              <div className="bg-black/30 backdrop-blur-sm p-6 rounded-lg border border-emerald-500/20 transition-all duration-300 hover:transform hover:scale-105">
-                <h3 className="text-xl font-bold text-emerald-400 mb-3">Versatile Integration</h3>
-                <p className="text-gray-200">Works perfectly as a standalone event or enhances existing performances with live music and entertainment.</p>
-              </div>
-            </div>
-            
-            <div className="text-center mt-12">
-              <Link 
-                href="/benefits-for-hosting-a-laser-show" 
-                className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-bold transition-colors"
-              >
-                Discover All Benefits
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </Link>
-            </div>
+            ))}
           </div>
+        </div>
+      </section>
+    ) : null;
+  };
+
+  const FaqSection = () => (
+    data.faqs && data.faqs.length > 0 ? (
+        <section className="bg-emerald-950 text-white py-16">
+        <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold mb-12 text-center"><span className="text-emerald-400">Frequently Asked Questions</span></h2>
+            <div className="space-y-6">
+                {data.faqs.map((faq, index) => (
+                <details key={index} className="bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-emerald-500/10 group">
+                    <summary className="flex justify-between items-center cursor-pointer text-xl font-medium text-emerald-300 group-hover:text-emerald-200">
+                    {faq.question}
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 transform transition-transform duration-200 group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                    </summary>
+                    <p className="text-gray-300 mt-3 pt-3 border-t border-emerald-500/20">{faq.answer}</p>
+                </details>
+                ))}
+            </div>
+            </div>
+        </div>
         </section>
+    ) : null
+  );
+
+  const TestimonialsSection = () => (
+    data.testimonials && data.testimonials.length > 0 ? (
+        <section className="bg-white py-16">
+        <div className="container mx-auto px-6">
+            <h2 className="text-4xl font-bold text-center text-emerald-600 mb-12">What Our Clients Say</h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {data.testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-gray-50 p-6 rounded-lg shadow-lg border border-gray-100 flex flex-col">
+                <p className="text-gray-700 italic mb-4 flex-grow">&quot;{testimonial.quote}&quot;</p>
+                <div className="mt-auto">
+                    <p className="font-bold text-gray-900">{testimonial.author}</p>
+                    {testimonial.role && (
+                    <p className="text-gray-600 text-sm">{testimonial.role}</p>
+                    )}
+                </div>
+                </div>
+            ))}
+            </div>
+        </div>
+        </section>
+    ) : null
+  );
+
+  return (
+    <>
+      <Header />
+      <main className="pt-0">
+        <VideoSection />
+        <ExperienceHeadline heroData={data.hero} /> {/* Title here is still data.hero.title */}
+        <DescriptiveContentSection />
+        <EventGallerySection />
+        <FaqSection />
+        <TestimonialsSection />
       </main>
       <Footer />
     </>

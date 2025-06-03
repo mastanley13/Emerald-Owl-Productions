@@ -241,6 +241,9 @@ export default function UpcomingEventsPage() {
             <h2 className="text-3xl font-bold text-emerald-800 mb-6">
               Stay Updated
             </h2>
+            <p className="text-lg md:text-xl text-emerald-700 font-medium mb-4">
+              Coming Soon
+            </p>
             <p className="text-lg text-gray-700 mb-8">
               Subscribe to our newsletter to receive updates about new events, early access to tickets, 
               and special promotions.

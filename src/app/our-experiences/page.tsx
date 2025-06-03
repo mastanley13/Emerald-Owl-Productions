@@ -1,9 +1,10 @@
-"use client";
-
+import React from 'react';
 import Header from '../../components/shared/Layout/Header';
 import Footer from '../../components/shared/Layout/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getExperiencesData } from '../../services/contentService';
+import ExperienceMenu from '../../components/home/ExperienceMenu';
 
 // Define a type for the color names
 type ServiceColor = 'emerald' | 'purple' | 'pink' | 'blue' | 'teal' | 'sky';
@@ -56,7 +57,7 @@ const services: Service[] = [
     id: 'sensory',
     title: 'Sensory Friendly Experiences',
     description: 'Inclusive experiences for all',
-    image: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67ab91924dcedf6404738967.png',
+    image: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a4cd3916dadebb8d0b3c22.jpeg',
     link: '/sensory-friendly-experiences',
     color: 'teal'
   },
@@ -64,7 +65,7 @@ const services: Service[] = [
     id: 'water-games',
     title: 'Water Games',
     description: 'Splash into fun with exciting water activities',
-    image: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a4d18823290240bf390f2f.jpeg',
+    image: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/673c35f2d88b411473f4fc7d.jpeg',
     link: '/water-games',
     color: 'sky'
   }
@@ -114,7 +115,9 @@ const getColorClasses = (color: ServiceColor) => {
   return colorMap[color] || colorMap.emerald;
 };
 
-export default function OurExperiencesPage() {
+export default async function OurExperiencesPage() {
+  const experiencesData = await getExperiencesData();
+
   return (
     <>
       <Header />
@@ -196,6 +199,12 @@ export default function OurExperiencesPage() {
             </div>
           </div>
         </section>
+
+        {/* Added ExperienceMenu component */}
+        {experiencesData && (
+          <ExperienceMenu experiences={experiencesData} />
+        )}
+
       </main>
       <Footer />
     </>

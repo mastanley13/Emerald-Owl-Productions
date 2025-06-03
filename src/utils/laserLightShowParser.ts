@@ -234,16 +234,16 @@ export function parseLaserLightShowData(rawData: any): LaserLightShowData {
         }
       ],
       testimonials: [
-        {
-          quote: "The laser light show was absolutely stunning! Our guests were mesmerized and it became the highlight of our event.",
-          author: 'Michael Johnson',
-          role: 'Event Planner'
-        },
-        {
-          quote: "We chose a laser show instead of fireworks for our celebration and couldn't be happier. It was unique, environmentally friendly, and truly spectacular.",
-          author: 'Sarah Williams',
-          role: 'Festival Coordinator'
-        }
+        // {
+        //   quote: "The laser light show was absolutely stunning! Our guests were mesmerized and it became the highlight of our event.",
+        //   author: 'Michael Johnson',
+        //   role: 'Event Planner'
+        // },
+        // {
+        //   quote: "We chose a laser show instead of fireworks for our celebration and couldn't be happier. It was unique, environmentally friendly, and truly spectacular.",
+        //   author: 'Sarah Williams',
+        //   role: 'Festival Coordinator'
+        // }
       ],
       faqs: [
         {

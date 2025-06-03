@@ -25,6 +25,9 @@ export default function Newsletter() {
           <h2 className="text-3xl font-bold text-white mb-4">
             Join Our Newsletter
           </h2>
+          <p className="text-lg md:text-xl text-green-300 font-medium mb-4">
+            Coming Soon
+          </p>
           <p className="text-green-200 mb-8">
             Stay updated with our latest events, promotions, and experiences. Be the first to know about special offers and upcoming experiences.
           </p>

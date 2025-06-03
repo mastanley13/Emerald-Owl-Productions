@@ -78,12 +78,36 @@ export default function Header() {
                   >
                     Neon Nights
                   </Link>
+                  {/* Sub-menu for Neon Nights - Desktop */}
+                  <div className="pl-4 border-l border-emerald-200 ml-2">
+                    <Link 
+                      href="/glow-foam-paint" 
+                      className="block px-3 py-1.5 text-sm text-emerald-600 hover:bg-emerald-100 hover:text-emerald-800"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      ↳ Glow Foam & Paint
+                    </Link>
+                    <Link 
+                      href="/glow-sports" 
+                      className="block px-3 py-1.5 text-sm text-emerald-600 hover:bg-emerald-100 hover:text-emerald-800"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      ↳ Glow Sports
+                    </Link>
+                  </div>
                   <Link 
                     href="/foam-parties" 
                     className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
                     onClick={() => setMenuOpen(false)}
                   >
-                    Foam Parties
+                    Foam Parties & Water Battles
+                  </Link>
+                  <Link 
+                    href="/color-run" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Color Run Experience
                   </Link>
                   <Link 
                     href="/water-games" 
@@ -134,12 +158,36 @@ export default function Header() {
                     >
                       Neon Nights
                     </Link>
+                    {/* Sub-menu for Neon Nights - Mobile */}
+                    <div className="pl-6">
+                      <Link 
+                        href="/glow-foam-paint" 
+                        className="block py-1 text-sm text-emerald-600 hover:bg-emerald-100 rounded-md"
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        ↳ Glow Foam & Paint
+                      </Link>
+                      <Link 
+                        href="/glow-sports" 
+                        className="block py-1 text-sm text-emerald-600 hover:bg-emerald-100 rounded-md"
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        ↳ Glow Sports
+                      </Link>
+                    </div>
                     <Link 
                       href="/foam-parties" 
                       className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
                       onClick={() => setMenuOpen(false)}
                     >
-                      Foam Parties
+                      Foam Parties & Water Battles
+                    </Link>
+                    <Link 
+                      href="/color-run" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Color Run Experience
                     </Link>
                     <Link 
                       href="/water-games" 
@@ -197,13 +245,6 @@ export default function Header() {
               <div className="hidden lg:group-hover:block absolute left-0 top-full backdrop-blur-md shadow-lg rounded-md min-w-[220px] z-50 lg:bg-white/90">
                 <div className="py-2">
                   <Link 
-                    href="/upcoming-events" 
-                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Upcoming Events
-                  </Link>
-                  <Link 
                     href="/holiday-events" 
                     className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
                     onClick={() => setMenuOpen(false)}
@@ -238,13 +279,6 @@ export default function Header() {
               <div className="lg:hidden pl-4 mt-1 space-y-1">
                 {menuOpen && (
                   <React.Fragment>
-                    <Link 
-                      href="/upcoming-events" 
-                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      Upcoming Events
-                    </Link>
                     <Link 
                       href="/holiday-events" 
                       className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
@@ -317,27 +351,6 @@ export default function Header() {
                   >
                     Our Team
                   </Link>
-                  <Link 
-                    href="/gallery" 
-                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Gallery
-                  </Link>
-                  <Link 
-                    href="/blog" 
-                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Blog
-                  </Link>
-                  <Link 
-                    href="/careers" 
-                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Careers
-                  </Link>
                 </div>
               </div>
               
@@ -358,27 +371,6 @@ export default function Header() {
                       onClick={() => setMenuOpen(false)}
                     >
                       Our Team
-                    </Link>
-                    <Link 
-                      href="/gallery" 
-                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      Gallery
-                    </Link>
-                    <Link 
-                      href="/blog" 
-                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      Blog
-                    </Link>
-                    <Link 
-                      href="/careers" 
-                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      Careers
                     </Link>
                   </React.Fragment>
                 )}

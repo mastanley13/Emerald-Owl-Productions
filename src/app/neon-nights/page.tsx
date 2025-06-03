@@ -62,8 +62,30 @@ export default async function NeonNightsPage() {
                   href={data.cta.url} 
                   className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-xl hover:shadow-purple-300/30"
                 >
-                  {data.cta.text}
+                  Take the Next Step
                 </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* What is an EOP Laser-Light Glow Party? */}
+        <section className="bg-black text-white py-16">
+          <div className="container mx-auto px-6">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl font-bold mb-8 text-purple-400 text-center">
+                What is an EOP Laser-Light Glow Party?
+              </h2>
+              <div className="space-y-6 text-lg text-gray-300 prose prose-invert lg:prose-xl max-w-none">
+                <p>
+                  Previously known as a <strong className="text-purple-400">Laser Light Glow Party,</strong> Neon Nights is our <strong className="text-purple-400">marquee</strong>, yet perhaps most <strong className="text-purple-400">misunderstood</strong>, experience.
+                </p>
+                <p className="italic text-purple-200">
+                  This is <strong className="text-pink-400">NOT</strong> your typical (and often underwhelming) &quot;Glow Party.&quot; The <strong className="text-purple-400">interaction we create</strong>, combined with the <strong className="text-purple-400">professional production</strong>, is the <strong className="text-pink-400">&quot;secret sauce&quot;</strong> that makes this event so <strong className="text-purple-400">memorable and unique</strong>. And yes, it is <strong className="text-purple-400">family friendly</strong>, even if you think it looks a bit like a &quot;rave!&quot;
+                </p>
+                <p>
+                  Our first <strong className="text-purple-400">Laser Light Glow Party,</strong> was in <strong className="text-purple-400">Emerald Isle</strong> on the Bogue Inlet Pier. We thought it would be mostly kids with their parents. And while that crowd certainly showed up, <strong className="text-pink-400">so did everyone else!</strong> We saw <strong className="text-purple-400">grandparents leading dances</strong> being cheered on by <strong className="text-purple-400">teenagers on a double date!</strong> This one truly brings people of <strong className="text-purple-400">all generations together</strong> for an <strong className="text-pink-400">incredible evening!</strong>
+                </p>
               </div>
             </div>
           </div>
@@ -147,29 +169,24 @@ export default async function NeonNightsPage() {
             <h2 className="text-3xl font-bold mb-12 text-center text-purple-400">
               Glow in the Dark Activities
             </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
-              <div className="bg-black/50 p-8 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-bold mb-4 text-purple-400">Glow in the Dark Foam & Paint</h3>
-                <p className="mb-4">
-                  If you think the foam party looks fun, imagine at night with glow in the dark foam and paint! Bring a change of clothes and a towel for this one - the fun memories you&apos;ll leave with are going to last a long time!
+
+            {/* CTAs for Sub-Experiences */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
+              <Link href="/glow-foam-paint" className="block bg-black/50 p-8 rounded-lg shadow-lg hover:shadow-pink-500/30 transition-shadow duration-300">
+                <h3 className="text-2xl font-bold mb-4 text-pink-400">Glow in the Dark Foam & Paint</h3>
+                <p className="mb-4 text-gray-300">
+                  Dive into a vibrant world of glowing foam and paint! An unforgettable experience that combines messy fun with dazzling neon colors under blacklights.
                 </p>
-                <p>
-                  These can be done as stand-alone smaller events, or add a &quot;SPLASH ZONE&quot; at your outdoor laser light glow party!
-                </p>
-              </div>
+                <span className="text-pink-400 font-semibold hover:underline">Explore Glow Foam & Paint &rarr;</span>
+              </Link>
               
-              <div className="bg-black/50 p-8 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-bold mb-4 text-purple-400">Glow in the Dark Sports</h3>
-                <p className="mb-4">
-                  We take any fun activity to a new level by making it glow in the dark. Some ideas include:
+              <Link href="/glow-sports" className="block bg-black/50 p-8 rounded-lg shadow-lg hover:shadow-teal-500/30 transition-shadow duration-300">
+                <h3 className="text-2xl font-bold mb-4 text-teal-400">Glow in the Dark Sports</h3>
+                <p className="mb-4 text-gray-300">
+                  Experience your favorite sports like never before – under the vibrant glow of blacklights! Perfect for parties, team building, and unique events.
                 </p>
-                <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Glow in the Dark Dodgeball</li>
-                  <li>Glow in the Dark Basketball</li>
-                  <li>Glow in the Dark Kickball</li>
-                </ul>
-              </div>
+                <span className="text-teal-400 font-semibold hover:underline">Explore Glow Sports &rarr;</span>
+              </Link>
             </div>
             
             {/* Gallery Section (if available from data) */}
@@ -191,28 +208,28 @@ export default async function NeonNightsPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="relative h-[250px] rounded-lg overflow-hidden">
                   <Image 
-                    src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67104d556dbca5b137091876.jpeg"
+                    src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67384380e921027610441d75.png"
                     alt="Glow Activity 1"
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
                 <div className="relative h-[250px] rounded-lg overflow-hidden">
                   <Image 
-                    src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67104d5aaf962467f724d4ee.jpeg"
+                    src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67384328732b00e1df2b34e5.jpeg"
                     alt="Glow Activity 2"
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
                 <div className="relative h-[250px] rounded-lg overflow-hidden">
                   <Image 
-                    src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67104d8c97369c8df9ed80c9.jpeg"
+                    src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/6738435ef5dd352ecc77c78b.jpeg"
                     alt="Glow Activity 3"
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
@@ -240,69 +257,21 @@ export default async function NeonNightsPage() {
           </section>
         )}
 
-        {/* Packages Section (if available) */}
-        {data.packages && data.packages.length > 0 && (
-          <section className="bg-gray-900 text-white py-16">
-            <div className="container mx-auto px-6">
-              <h2 className="text-3xl font-bold mb-10 text-center text-purple-400">
-                Our Packages
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {data.packages.map((pkg, index) => (
-                  <div key={index} className="bg-black p-6 rounded-lg border border-purple-500/20 hover:border-purple-500/40 transition-colors duration-300">
-                    <div className="relative h-48 mb-6 rounded-lg overflow-hidden">
-                      <Image
-                        src={pkg.image.url}
-                        alt={pkg.image.alt || `${pkg.title} package`}
-                        fill
-                        style={{ objectFit: 'cover' }}
-                      />
-                    </div>
-                    <h3 className="text-2xl font-bold mb-3 text-purple-400">{pkg.title}</h3>
-                    <p className="text-gray-300 mb-4">{pkg.description}</p>
-                    
-                    {pkg.price && (
-                      <p className="text-xl font-bold mb-4 text-purple-300">{pkg.price}</p>
-                    )}
-                    
-                    {pkg.features && pkg.features.length > 0 && (
-                      <ul className="mb-6 space-y-2">
-                        {pkg.features.map((feature, i) => (
-                          <li key={i} className="flex items-start text-gray-300">
-                            <span className="text-purple-400 mr-2">✓</span>
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                    
-                    <Link href={pkg.ctaUrl || data.cta.url}>
-                      <span className="block w-full px-6 py-3 bg-purple-600 text-white font-bold rounded-lg hover:bg-purple-700 transition duration-300 text-center">
-                        {pkg.ctaText || "Book Now"}
-                      </span>
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-
         {/* Pricing & Booking */}
         <section className="bg-gray-900 text-white py-16">
           <div className="container mx-auto px-6">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-8 text-purple-400">
-                Pricing Information
+                Ready to Glow?
               </h2>
               <p className="mb-6 text-lg">
                 Neon Nights are priced uniquely based on your specific needs. Different needs and budgets can be accommodated, scaling the spectacle up or down to meet your requirements.
               </p>
               <p className="mb-8 text-lg">
-                To discuss Neon Nights for your event, call us at <a href="tel:252-764-7628" className="text-purple-400 font-bold">252-764-7628</a> without any sales pressure.
+                To discuss Neon Nights for your event, call us at <a href="tel:252-764-7628" className="text-purple-400 font-bold">252-764-7628</a> or click the button below to send us a message. We're here to help without any sales pressure!
               </p>
-              <Link 
-                href={data.cta.url} 
+              <Link
+                href={data.cta.url}
                 className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 inline-block"
               >
                 {data.cta.text || "Contact Us for a Quote"}

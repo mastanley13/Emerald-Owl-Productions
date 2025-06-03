@@ -64,21 +64,67 @@ export function parseFoamPartiesData(rawData: any): FoamPartiesData {
   // Categorize resources
   const resources = categorizeResources(rawData.resources || []);
   
-  // Extract gallery items
-  const galleryItems: GalleryItem[] = resources.byCategory.galleryImages.map(image => ({
-    image,
-    caption: image.alt
-  }));
+  // Define specific gallery items for Foam Parties
+  const foamPartyGalleryImages: GalleryItem[] = [
+    {
+      image: {
+        type: 'image',
+        url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a44e5c7ee1c14549751fc8.jpeg',
+        alt: 'Excited children playing in a mountain of bubbles at a Foam Party by Emerald Owl Productions.'
+      },
+      caption: 'Excited children playing in a mountain of bubbles at a Foam Party by Emerald Owl Productions.'
+    },
+    {
+      image: {
+        type: 'image',
+        url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a449c97ee1c16aea750681.jpeg',
+        alt: 'Outdoor fun with a large foam cannon at an Emerald Owl Productions Foam Party.'
+      },
+      caption: 'Outdoor fun with a large foam cannon at an Emerald Owl Productions Foam Party.'
+    },
+    {
+      image: {
+        type: 'image',
+        url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a449f253f26c8bef5ef4af.jpeg',
+        alt: 'Guests enjoying a sunny day covered in foam at a community Foam Party by Emerald Owl Productions.'
+      },
+      caption: 'Guests enjoying a sunny day covered in foam at a community Foam Party by Emerald Owl Productions.'
+    },
+    {
+      image: {
+        type: 'image',
+        url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/673ae494f980e185eb7731bb.jpeg',
+        alt: 'Safe and fun foam pit for all ages at an Emerald Owl Productions Foam Party.'
+      },
+      caption: 'Safe and fun foam pit for all ages at an Emerald Owl Productions Foam Party.'
+    },
+    {
+      image: {
+        type: 'image',
+        url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67111c429663ed06310b88bf.jpeg',
+        alt: 'Action shot of foam being sprayed over a happy crowd at an Emerald Owl Productions event.'
+      },
+      caption: 'Action shot of foam being sprayed over a happy crowd at an Emerald Owl Productions event.'
+    },
+    {
+      image: {
+        type: 'image',
+        url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/671115b56a23197f7a8f63d8.jpeg',
+        alt: 'Memorable moments from an Emerald Owl Productions Foam Party celebration.'
+      },
+      caption: 'Memorable moments from an Emerald Owl Productions Foam Party celebration.'
+    }
+  ];
 
   // Extract foam package options
   const foamPackages: PackageOption[] = [
     {
       title: 'Basic Foam Package',
       description: 'Perfect for smaller events and parties!',
-      image: resources.byCategory.packageImages[0] || {
+      image: {
         type: 'image',
-        url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a453fb7ee1c12aa7752dcc.jpeg',
-        alt: 'Basic Foam Package'
+        url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67111c601ff902234d3256b4.jpeg',
+        alt: 'Fun and affordable Basic Foam Package by Emerald Owl Productions, perfect for parties.'
       },
       features: [
         'Up to 2 hours of foam',
@@ -91,10 +137,10 @@ export function parseFoamPartiesData(rawData: any): FoamPartiesData {
     {
       title: 'Premium Foam Experience',
       description: 'Our most popular option for medium to large events!',
-      image: resources.byCategory.packageImages[1] || resources.byCategory.packageImages[0] || {
+      image: {
         type: 'image',
-        url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a453fb7ee1c12aa7752dcc.jpeg',
-        alt: 'Premium Foam Experience'
+        url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67111c53970dedac4ff481a6.jpeg',
+        alt: 'Ultimate Premium Foam Experience with extra foam and fun from Emerald Owl Productions.'
       },
       features: [
         'Up to 3 hours of foam',
@@ -111,10 +157,10 @@ export function parseFoamPartiesData(rawData: any): FoamPartiesData {
   const colorRun: ColorRunOption = {
     title: 'Color Run Experience',
     description: 'Add vibrant color powder to your event for an unforgettable experience! Our color powder is safe, non-toxic, and washes away easily with water.',
-    image: resources.byCategory.colorRunImages[0] || {
+    image: {
       type: 'image',
-      url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a453fb7ee1c12aa7752dcc.jpeg',
-      alt: 'Color Run Experience'
+      url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a44e325186f7f9bbdbea13.jpeg',
+      alt: 'Participants celebrating in a cloud of vibrant colors at an Emerald Owl Productions Color Run event.'
     },
     benefits: [
       'Biodegradable and environmentally friendly colors',
@@ -179,16 +225,7 @@ export function parseFoamPartiesData(rawData: any): FoamPartiesData {
     },
     foamPackages: foamPackages,
     colorRun: colorRun,
-    gallery: galleryItems.length > 0 ? galleryItems : [
-      {
-        image: {
-          type: 'image',
-          url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a453fb7ee1c12aa7752dcc.jpeg',
-          alt: 'Foam Party Experience'
-        },
-        caption: 'Foam Party Experience'
-      }
-    ],
+    gallery: foamPartyGalleryImages,
     faqs: faqs,
     cta: {
       text: 'Book Your Foam Party',
