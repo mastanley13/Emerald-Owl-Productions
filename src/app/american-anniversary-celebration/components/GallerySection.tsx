@@ -70,7 +70,7 @@ export default function GallerySection() {
             </h2>
             
             <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-              Witness the spectacular laser light displays that bring America's 250-year journey to life through cutting-edge visual technology
+              Witness the spectacular laser light displays that bring America&apos;s 250-year journey to life through cutting-edge visual technology
             </p>
           </div>
 
@@ -114,7 +114,7 @@ export default function GallerySection() {
                 Ready to Experience History?
               </h3>
               <p className="text-slate-600 mb-6 leading-relaxed">
-                These images represent just a glimpse of what your community will experience during America's 250th Anniversary celebration.
+                These images represent just a glimpse of what your community will experience during America&apos;s 250th Anniversary celebration.
               </p>
               <a 
                 href="/contact-us"

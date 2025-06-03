@@ -268,7 +268,7 @@ export default async function NeonNightsPage() {
                 Neon Nights are priced uniquely based on your specific needs. Different needs and budgets can be accommodated, scaling the spectacle up or down to meet your requirements.
               </p>
               <p className="mb-8 text-lg">
-                To discuss Neon Nights for your event, call us at <a href="tel:252-764-7628" className="text-purple-400 font-bold">252-764-7628</a> or click the button below to send us a message. We're here to help without any sales pressure!
+                To discuss Neon Nights for your event, call us at <a href="tel:252-764-7628" className="text-purple-400 font-bold">252-764-7628</a> or click the button below to send us a message. We&apos;re here to help without any sales pressure!
               </p>
               <Link
                 href={data.cta.url}

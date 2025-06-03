@@ -2,7 +2,7 @@ export default function ContentSection() {
   const experienceFeatures = [
     {
       title: "Immersive Visual Storytelling",
-      description: "State-of-the-art laser technology creates breathtaking displays that chronicle America's remarkable journey from colonial beginnings to modern innovation",
+      description: "State-of-the-art laser technology creates breathtaking displays that chronicle America&apos;s remarkable journey from colonial beginnings to modern innovation",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -20,7 +20,7 @@ export default function ContentSection() {
     },
     {
       title: "Custom Event Design",
-      description: "Each celebration is uniquely tailored to your venue, audience, and community, ensuring an authentic and memorable anniversary experience",
+                    description: "Each celebration is uniquely tailored to your venue, audience, and community, ensuring an authentic and memorable anniversary experience",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a1 1 0 01-1-1V9a1 1 0 011-1h1a2 2 0 100-4H4a1 1 0 01-1-1V4a1 1 0 011-1h3a1 1 0 001-1z" />
@@ -52,7 +52,7 @@ export default function ContentSection() {
             </div>
             
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-slate-900">
-              <span className="block">Celebrating America's</span>
+              <span className="block">Celebrating America&apos;s</span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-red-600">
                 Historic Milestone
               </span>
@@ -61,7 +61,7 @@ export default function ContentSection() {
             <p className="text-xl text-slate-600 leading-relaxed max-w-4xl mx-auto">
               Experience the story of America through cutting-edge laser light technology. 
               Our revolutionary presentation honors <span className="font-semibold text-slate-900">250 years of democracy, innovation, and the American spirit</span> 
-              in a way that's never been possible before.
+              in a way that&apos;s never been possible before.
             </p>
           </div>
 
@@ -110,7 +110,7 @@ export default function ContentSection() {
                 </div>
                 
                 <blockquote className="text-2xl md:text-3xl text-white font-light italic leading-relaxed mb-8 max-w-4xl mx-auto">
-                  "America was not built on fear. America was built on courage, on imagination, and an unbeatable determination to do the job at hand."
+                  &quot;America was not built on fear. America was built on courage, on imagination, and an unbeatable determination to do the job at hand.&quot;
                 </blockquote>
                 
                 <cite className="text-slate-300 font-medium">— Harry S. Truman</cite>

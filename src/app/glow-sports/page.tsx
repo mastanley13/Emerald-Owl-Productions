@@ -127,7 +127,7 @@ export default async function GlowSportsPage() {
                 <li><strong className="text-teal-400">And many more!</strong> We can adapt various sports like volleyball, soccer, and tag to a glow-in-the-dark format.</li>
               </ul>
               <p>
-                Glow in the Dark Sports are perfect for <strong className="text-teal-400">birthday parties, corporate team-building events, school functions, fundraisers, or any gathering</strong> looking for a unique and active entertainment option. It's an engaging experience for all ages and skill levels.
+                Glow in the Dark Sports are perfect for <strong className="text-teal-400">birthday parties, corporate team-building events, school functions, fundraisers, or any gathering</strong> looking for a unique and active entertainment option. It&apos;s an engaging experience for all ages and skill levels.
               </p>
               {/* Add more content specific to Glow Sports here */}
             </div>

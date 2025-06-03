@@ -30,7 +30,7 @@ export default function CtaSection() {
           {/* Description */}
           <div className="mb-12 max-w-4xl mx-auto">
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-6 font-light">
-              Join communities nationwide in commemorating America's most significant milestone
+              Join communities nationwide in commemorating America&apos;s most significant milestone
             </p>
             <p className="text-lg text-white/70 leading-relaxed">
               Our 250th Anniversary laser light experience is designed exclusively for this historic moment. 

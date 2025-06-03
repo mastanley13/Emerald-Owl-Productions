@@ -43,7 +43,7 @@ async function getWaterGamesData(): Promise<WaterGamesData> {
     // Overwrite with Water Wars specific content
     parsedData.meta.title = "Water Battle Games | Emerald Owl Productions";
     parsedData.meta.description = "Get ready for an all-out water war! Fun for kids and adults, complete with water blasters, buckets, and filling stations.";
-    parsedData.meta.keywords = ['water wars', 'water battle', 'water games', 'outdoor activities', 'event entertainment', 'slime wars', 'paint wars'];
+    parsedData.meta.keywords = 'water wars, water battle, water games, outdoor activities, event entertainment, slime wars, paint wars';
     parsedData.hero.title = "Water Battle Games";
     // Update hero description to be the first sentence of the new content
     parsedData.hero.description = "Who does not love a great all out water war? This activity is fun for kids and adults!"; 
@@ -150,7 +150,7 @@ function getDefaultWaterWarsData(): WaterGamesData {
     meta: {
       title: "Water Battle Games | Emerald Owl Productions",
       description: "Get ready for an all-out water war! Fun for kids and adults, complete with water blasters, buckets, and filling stations.",
-      keywords: ['water wars', 'water battle', 'water games', 'outdoor activities', 'event entertainment', 'slime wars', 'paint wars'],
+      keywords: 'water wars, water battle, water games, outdoor activities, event entertainment, slime wars, paint wars',
     },
     hero: {
       title: "Water Battle Games",

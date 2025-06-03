@@ -218,7 +218,7 @@ export default async function HolidayEventsPage() {
               <div className="text-center max-w-3xl mx-auto mb-12">
                 <span className="inline-block bg-emerald-100 text-emerald-800 rounded-full px-4 py-1 text-sm font-medium mb-3">Our Offerings</span>
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">Featured Holiday Events</h3>
-                <p className="text-gray-600">From spooky Halloween festivities to elegant New Year's celebrations, we create unforgettable seasonal experiences.</p>
+                <p className="text-gray-600">From spooky Halloween festivities to elegant New Year&apos;s celebrations, we create unforgettable seasonal experiences.</p>
               </div>
               
               {revisedHolidayEvents.map((event, index) => (

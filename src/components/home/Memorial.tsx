@@ -36,7 +36,7 @@ const Memorial: React.FC = () => {
                   Laser Technician, Mr. Matthew Keenan, who died in an auto accident on August 
                   14 in North Carolina. His passion, creativity, and dedication to EOP were 
                   unparalleled, and he cherished making children smile with his work. Matt 
-                  shared the vision for EOP's future and will always be remembered and missed 
+                  shared the vision for EOP&apos;s future and will always be remembered and missed 
                   by the team.
                 </p>
                 <p className="text-emerald-300 font-semibold mt-4 text-lg">
@@ -69,7 +69,7 @@ const Memorial: React.FC = () => {
           {/* Bottom Message */}
           <div className="mt-12 pt-8 border-t border-gray-700">
             <p className="text-gray-300 text-lg italic">
-              "His legacy lives on in every smile we create and every magical moment we bring to life."
+              &quot;His legacy lives on in every smile we create and every magical moment we bring to life.&quot;
             </p>
           </div>
         </div>

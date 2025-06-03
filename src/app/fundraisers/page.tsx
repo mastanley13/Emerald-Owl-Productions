@@ -37,7 +37,7 @@ export default function FundraisersPage() {
 
               {/* Description */}
               <p className="text-xl md:text-2xl text-slate-600 leading-relaxed mb-6 max-w-3xl mx-auto">
-                We're developing an innovative fundraising solution that will transform how organizations raise money through unforgettable events.
+                We&apos;re developing an innovative fundraising solution that will transform how organizations raise money through unforgettable events.
               </p>
 
               <p className="text-lg text-slate-500 mb-12 max-w-2xl mx-auto">

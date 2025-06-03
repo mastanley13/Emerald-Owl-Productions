@@ -55,7 +55,7 @@ export default async function LaserLightShowPage() {
           </h2>
           <div className="max-w-3xl mx-auto prose lg:prose-lg text-gray-700">
             <p>
-              Mike's explanatory copy will go here. It will discuss the differences between in-person and drive-in laser show formats, helping clients decide which is best for their event. 
+              Mike&apos;s explanatory copy will go here. It will discuss the differences between in-person and drive-in laser show formats, helping clients decide which is best for their event. 
               This section will cover aspects like audience experience, venue requirements, and logistical considerations for each format.
             </p>
           </div>
