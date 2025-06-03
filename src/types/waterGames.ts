@@ -18,6 +18,7 @@ export interface MetaInfo {
  */
 export interface HeroBannerData {
   title: string;
+  description?: string;
   backgroundImage: Resource;
 }
 
@@ -38,6 +39,7 @@ export interface ContentSectionData {
   title: string;
   description: string;
   features?: string[];
+  image?: Resource;
 }
 
 /**
@@ -75,6 +77,15 @@ export interface TestimonialData {
 }
 
 /**
+ * Event Idea data
+ */
+export interface EventIdeaData {
+  title: string;
+  description: string;
+  footer?: string;
+}
+
+/**
  * Complete Water Games data
  */
 export interface WaterGamesData {
@@ -86,11 +97,14 @@ export interface WaterGamesData {
   testimonials?: TestimonialData[];
   faqs?: FaqItem[];
   cta: CtaData;
+  eventIdea?: EventIdeaData;
   resources: {
     byCategory: {
       heroBackground: Resource[];
       videoThumbnails: Resource[];
       galleryImages: Resource[];
+      packageImages?: Resource[];
+      colorRunImages?: Resource[];
       all: Resource[];
     };
   };

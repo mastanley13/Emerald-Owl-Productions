@@ -3,6 +3,7 @@ export interface Experience {
   title: string;
   hook: string;
   visual: string;
+  link?: string; // Optional URL link for the experience
 }
 
 export interface ExperienceCategory {
