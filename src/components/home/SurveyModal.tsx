@@ -370,7 +370,7 @@ export default function SurveyModal({ isOpen, onClose }: SurveyModalProps) {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  What power is available and amperage if known? (If no power, write "NONE AVAILABLE")
+                  What power is available and amperage if known? (If no power, write &quot;NONE AVAILABLE&quot;)
                 </label>
                 <input
                   type="text"
@@ -476,7 +476,7 @@ export default function SurveyModal({ isOpen, onClose }: SurveyModalProps) {
                     '$25,000 – $50,000',
                     '$50,000 – $100,000',
                     '$100,000 and up',
-                    'Not sure yet — let\'s discuss'
+                    'Not sure yet — let&apos;s discuss'
                   ].map((range) => (
                     <label key={range} className="flex items-center text-sm">
                       <input
@@ -502,7 +502,7 @@ export default function SurveyModal({ isOpen, onClose }: SurveyModalProps) {
             <div className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Is there a theme or style of music you'd like this show to follow? Or a mixture?
+                  Is there a theme or style of music you&apos;d like this show to follow? Or a mixture?
                 </label>
                 <textarea
                   name="musicTheme"
@@ -528,7 +528,7 @@ export default function SurveyModal({ isOpen, onClose }: SurveyModalProps) {
                       onChange={handleInputChange}
                       className="mr-2 text-emerald-600 focus:ring-emerald-500"
                     />
-                    Yes, I'm open to pre-programmed content
+                    Yes, I&apos;m open to pre-programmed content
                   </label>
                   <label className="flex items-center">
                     <input
@@ -577,322 +577,7 @@ export default function SurveyModal({ isOpen, onClose }: SurveyModalProps) {
                   onChange={handleInputChange}
                   className="mr-2 text-emerald-600 focus:ring-emerald-500"
                 />
-                Yes, I'd like to learn more
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="radio"
-                  name="profitSharing"
-                  value="no"
-                  checked={formData.profitSharing === 'no'}
-                  onChange={handleInputChange}
-                  className="mr-2 text-emerald-600 focus:ring-emerald-500"
-                />
-                No, we prefer a flat-rate arrangement
-              </label>
-              <label className="flex items-center">
-                <input
-                  type="radio"
-                  name="profitSharing"
-                  value="not-sure"
-                  checked={formData.profitSharing === 'not-sure'}
-                  onChange={handleInputChange}
-                  className="mr-2 text-emerald-600 focus:ring-emerald-500"
-                />
-                Not sure yet
-              </label>
-            </div>
-          </div>
-
-          {/* Section 2: Venue Requirements */}
-          <div>
-            <h3 className="text-xl font-semibold text-emerald-600 mb-4">Section 2: Venue Requirements</h3>
-            <p className="text-sm text-gray-600 mb-4">
-              Laser shows project horizontally over the audience. This means we must establish a clear viewing area.
-              Wider venue = more lasers needed • Longer venue = brighter lasers needed (higher wattage)
-            </p>
-            
-            <div className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Venue Name
-                  </label>
-                  <input
-                    type="text"
-                    name="venueName"
-                    value={formData.venueName}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Address
-                  </label>
-                  <input
-                    type="text"
-                    name="venueAddress"
-                    value={formData.venueAddress}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Venue Type
-                </label>
-                <div className="flex space-x-4">
-                  <label className="flex items-center">
-                    <input
-                      type="radio"
-                      name="venueType"
-                      value="indoor"
-                      checked={formData.venueType === 'indoor'}
-                      onChange={handleInputChange}
-                      className="mr-2 text-emerald-600 focus:ring-emerald-500"
-                    />
-                    Indoor
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="radio"
-                      name="venueType"
-                      value="outdoor"
-                      checked={formData.venueType === 'outdoor'}
-                      onChange={handleInputChange}
-                      className="mr-2 text-emerald-600 focus:ring-emerald-500"
-                    />
-                    Outdoor
-                  </label>
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  What is the venue? (Stadium, Field, Park, Parking lot, Downtown Street, etc.)
-                </label>
-                <input
-                  type="text"
-                  name="venueDescription"
-                  value={formData.venueDescription}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  What power is available and amperage if known? (If no power, write "NONE AVAILABLE")
-                </label>
-                <input
-                  type="text"
-                  name="powerAvailable"
-                  value={formData.powerAvailable}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Coverage Area: Does your entire venue require laser coverage, or can we consider reducing costs by creating a designated viewing area?
-                </label>
-                <div className="space-y-2">
-                  <label className="flex items-center">
-                    <input
-                      type="radio"
-                      name="coverageArea"
-                      value="full-venue"
-                      checked={formData.coverageArea === 'full-venue'}
-                      onChange={handleInputChange}
-                      className="mr-2 text-emerald-600 focus:ring-emerald-500"
-                    />
-                    Full Venue
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="radio"
-                      name="coverageArea"
-                      value="designated-area"
-                      checked={formData.coverageArea === 'designated-area'}
-                      onChange={handleInputChange}
-                      className="mr-2 text-emerald-600 focus:ring-emerald-500"
-                    />
-                    Designated Viewing Area Only
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Section 3: Budget & Financial Goals */}
-          <div>
-            <h3 className="text-xl font-semibold text-emerald-600 mb-4">Section 3: Budget & Financial Goals</h3>
-            
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  1. What are your financial goals for this event?
-                </label>
-                <div className="space-y-2">
-                  {[
-                    { value: 'free-public', label: 'Free to the public' },
-                    { value: 'recover-portion', label: 'Recover a portion of investment' },
-                    { value: 'break-even', label: 'Break-even' },
-                    { value: 'fundraiser', label: 'Fundraiser / Generate Profit' }
-                  ].map((option) => (
-                    <label key={option.value} className="flex items-center">
-                      <input
-                        type="radio"
-                        name="financialGoals"
-                        value={option.value}
-                        checked={formData.financialGoals === option.value}
-                        onChange={handleInputChange}
-                        className="mr-2 text-emerald-600 focus:ring-emerald-500"
-                      />
-                      {option.label}
-                    </label>
-                  ))}
-                  <div className="flex items-center space-x-2">
-                    <input
-                      type="radio"
-                      name="financialGoals"
-                      value="other"
-                      checked={formData.financialGoals === 'other'}
-                      onChange={handleInputChange}
-                      className="text-emerald-600 focus:ring-emerald-500"
-                    />
-                    <span>Other:</span>
-                    <input
-                      type="text"
-                      name="financialGoalsOther"
-                      value={formData.financialGoalsOther}
-                      onChange={handleInputChange}
-                      className="flex-1 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  2. Approximate Budget Range (Check all that apply)
-                </label>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-                  {[
-                    'Under $6,000',
-                    '$6,000 – $10,000',
-                    '$11,000 – $15,000',
-                    '$16,000 – $20,000',
-                    '$21,000 – $25,000',
-                    '$25,000 – $50,000',
-                    '$50,000 – $100,000',
-                    '$100,000 and up',
-                    'Not sure yet — let\'s discuss'
-                  ].map((range) => (
-                    <label key={range} className="flex items-center text-sm">
-                      <input
-                        type="checkbox"
-                        name="budgetRange"
-                        value={range}
-                        checked={formData.budgetRange.includes(range)}
-                        onChange={handleInputChange}
-                        className="mr-2 text-emerald-600 focus:ring-emerald-500"
-                      />
-                      {range}
-                    </label>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Music Section */}
-          <div>
-            <h3 className="text-xl font-semibold text-emerald-600 mb-4">Music</h3>
-            
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Is there a theme or style of music you'd like this show to follow? Or a mixture?
-                </label>
-                <textarea
-                  name="musicTheme"
-                  value={formData.musicTheme}
-                  onChange={handleInputChange}
-                  rows={3}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Are you open to using some of our pre-programmed content to significantly reduce or eliminate design costs?
-                </label>
-                <p className="text-xs text-gray-500 mb-2">(Note: This option does not allow for custom song selection.)</p>
-                <div className="space-y-2">
-                  <label className="flex items-center">
-                    <input
-                      type="radio"
-                      name="prerogrammedContent"
-                      value="yes"
-                      checked={formData.prerogrammedContent === 'yes'}
-                      onChange={handleInputChange}
-                      className="mr-2 text-emerald-600 focus:ring-emerald-500"
-                    />
-                    Yes, I'm open to pre-programmed content
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="radio"
-                      name="prerogrammedContent"
-                      value="no"
-                      checked={formData.prerogrammedContent === 'no'}
-                      onChange={handleInputChange}
-                      className="mr-2 text-emerald-600 focus:ring-emerald-500"
-                    />
-                    No, I prefer custom programming
-                  </label>
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Are there any specific songs that must be included in the show? Please list the song title(s) and artist(s).
-                </label>
-                <textarea
-                  name="specificSongs"
-                  value={formData.specificSongs}
-                  onChange={handleInputChange}
-                  rows={3}
-                  placeholder="Song Title - Artist Name"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Profit Sharing Option */}
-          <div>
-            <h3 className="text-xl font-semibold text-emerald-600 mb-4">Profit Sharing Option</h3>
-            <p className="text-sm text-gray-600 mb-4">
-              We understand that first-time events often come with tighter budgets and higher uncertainty. If financial risk is a concern but you believe the event has strong marketing or attendance potential, would you be interested in exploring a shared revenue model as a possible fit?
-            </p>
-            
-            <div className="space-y-2">
-              <label className="flex items-center">
-                <input
-                  type="radio"
-                  name="profitSharing"
-                  value="yes"
-                  checked={formData.profitSharing === 'yes'}
-                  onChange={handleInputChange}
-                  className="mr-2 text-emerald-600 focus:ring-emerald-500"
-                />
-                Yes, I'd like to learn more
+                Yes, I&apos;d like to learn more
               </label>
               <label className="flex items-center">
                 <input
