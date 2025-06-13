@@ -83,44 +83,60 @@ export default function AmericaBanner({ data }: AmericaBannerProps) {
             <div className="relative">
               {/* Feature Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-colors">
-                  <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
-                    <svg className="w-5 h-5 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                    </svg>
+                <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-colors overflow-hidden">
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center rounded-xl"
+                    style={{
+                      backgroundImage: 'url(https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a4d1ca9769a795ba5981de.jpeg)',
+                      opacity: 0.3
+                    }}
+                  ></div>
+                  <div className="relative z-10">
+                    <h3 className="text-white font-semibold mb-2">Laser Technology</h3>
+                    <p className="text-white/90 text-sm">Advanced visual storytelling</p>
                   </div>
-                  <h3 className="text-white font-semibold mb-2">Laser Technology</h3>
-                  <p className="text-white/70 text-sm">Advanced visual storytelling</p>
                 </div>
 
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-colors">
-                  <div className="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center mb-4">
-                    <svg className="w-5 h-5 text-red-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-                    </svg>
+                <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-colors overflow-hidden">
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center rounded-xl"
+                    style={{
+                      backgroundImage: 'url(https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a4d1281890c66c679de1bb.jpeg)',
+                      opacity: 0.3
+                    }}
+                  ></div>
+                  <div className="relative z-10">
+                    <h3 className="text-white font-semibold mb-2">Audio Experience</h3>
+                    <p className="text-white/90 text-sm">Historical soundscapes</p>
                   </div>
-                  <h3 className="text-white font-semibold mb-2">Audio Experience</h3>
-                  <p className="text-white/70 text-sm">Historical soundscapes</p>
                 </div>
 
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-colors">
-                  <div className="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center mb-4">
-                    <svg className="w-5 h-5 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
+                <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-colors overflow-hidden">
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center rounded-xl"
+                    style={{
+                      backgroundImage: 'url(https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a4d14f9769a74712598159.jpeg)',
+                      opacity: 0.3
+                    }}
+                  ></div>
+                  <div className="relative z-10">
+                    <h3 className="text-white font-semibold mb-2">Community Focus</h3>
+                    <p className="text-white/90 text-sm">Celebrations for all</p>
                   </div>
-                  <h3 className="text-white font-semibold mb-2">Community Focus</h3>
-                  <p className="text-white/70 text-sm">Celebrations for all</p>
                 </div>
 
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-colors">
-                  <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
-                    <svg className="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a1 1 0 01-1-1V9a1 1 0 011-1h1a2 2 0 100-4H4a1 1 0 01-1-1V4a1 1 0 011-1h3a1 1 0 001-1z" />
-                    </svg>
+                <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-colors overflow-hidden">
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center rounded-xl"
+                    style={{
+                      backgroundImage: 'url(https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a445db9b155f2998700f62.jpeg)',
+                      opacity: 0.3
+                    }}
+                  ></div>
+                  <div className="relative z-10">
+                    <h3 className="text-white font-semibold mb-2">Custom Design</h3>
+                    <p className="text-white/90 text-sm">Tailored experiences</p>
                   </div>
-                  <h3 className="text-white font-semibold mb-2">Custom Design</h3>
-                  <p className="text-white/70 text-sm">Tailored experiences</p>
                 </div>
               </div>
 

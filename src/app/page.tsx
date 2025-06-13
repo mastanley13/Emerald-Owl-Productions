@@ -4,8 +4,6 @@ import Header from '../components/shared/Layout/Header';
 import HeroBanner from '../components/home/HeroBanner';
 import AmericaBanner from '../components/home/AmericaBanner';
 import VideoHighlight from '../components/home/VideoHighlight';
-import ServiceHighlights from '../components/home/ServiceHighlights';
-import FeaturedSlider from '../components/home/FeaturedSlider';
 import Newsletter from '../components/shared/UI/Newsletter';
 import Footer from '../components/shared/Layout/Footer';
 import Memorial from '../components/home/Memorial';
@@ -66,8 +64,6 @@ export default async function Home() {
           <VideoHighlight data={homepageData.videoHighlight} />
           <AmericaBanner data={homepageData.americaBanner} />
           <ExperienceMenu experiences={experiencesData} />
-          <ServiceHighlights services={homepageData.services} />
-          <FeaturedSlider data={homepageData.featuredContent} />
           <Memorial />
         </main>
         <Footer />
@@ -83,7 +79,6 @@ export default async function Home() {
         <Header />
         <main>
           <HeroBanner data={FALLBACK_DATA.hero} />
-          <ServiceHighlights services={FALLBACK_DATA.services} />
           <ExperienceMenu experiences={experiencesData} />
           <Memorial />
         </main>

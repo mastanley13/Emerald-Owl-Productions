@@ -9,21 +9,23 @@ interface ExperienceMenuProps {
   experiences: ExperienceCategory;
 }
 
-type CategoryKey = keyof ExperienceCategory;
+type CategoryKey = keyof ExperienceCategory | 'entireMenu';
 
 const ExperienceMenu: React.FC<ExperienceMenuProps> = ({ experiences }) => {
   const [activeCategory, setActiveCategory] = useState<CategoryKey>('mainCourses');
 
   const categoryTitles: Record<CategoryKey, string> = {
-    mainCourses: 'Main Experiences',
-    appetizers: 'Add-On Experiences',
-    desserts: 'Community Initiatives',
+    mainCourses: 'Entrees (Large Experiences)',
+    appetizers: 'Appetizers (Small/Add-on Experiences)',
+    desserts: 'Desserts (All Experiences)',
+    entireMenu: 'Entire Menu (All Experiences)',
   };
 
   const categoryDescriptions: Record<CategoryKey, string> = {
     mainCourses: 'Our signature experiences that create unforgettable memories',
     appetizers: 'Perfect additions to enhance any main experience',
     desserts: 'Support our community through these meaningful initiatives',
+    entireMenu: 'Browse our complete collection of experiences across all categories',
   };
 
   // Intelligent URL mapping function
@@ -199,7 +201,7 @@ const ExperienceMenu: React.FC<ExperienceMenuProps> = ({ experiences }) => {
         <div className="flex justify-center mb-16">
           <div className="bg-black/20 backdrop-blur-sm p-2 rounded-2xl shadow-xl border border-emerald-600/30">
             <div className="flex flex-col sm:flex-row gap-2">
-              {(Object.keys(experiences) as CategoryKey[]).map((key) => (
+              {(['mainCourses', 'appetizers', 'desserts', 'entireMenu'] as CategoryKey[]).map((key) => (
                 <button
                   key={key}
                   onClick={() => setActiveCategory(key)}
@@ -230,7 +232,13 @@ const ExperienceMenu: React.FC<ExperienceMenuProps> = ({ experiences }) => {
 
         {/* Experience Cards */}
         <div className="mb-16">
-          {renderExperienceCards(experiences[activeCategory], activeCategory)}
+          {activeCategory === 'entireMenu' 
+            ? renderExperienceCards(
+                [...experiences.mainCourses, ...experiences.appetizers, ...experiences.desserts], 
+                activeCategory
+              )
+            : renderExperienceCards(experiences[activeCategory as keyof ExperienceCategory], activeCategory)
+          }
         </div>
 
         {/* Bottom CTA Section */}

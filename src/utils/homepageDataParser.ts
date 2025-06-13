@@ -142,7 +142,7 @@ export function parseHomepageData(rawData: any): HomepageData {
           action: 'scrollToExperiences'
         }
       },
-      trustIndicators: ['5-Star Rated', 'Premium Experience']
+      trustIndicators: ['Premium Experience']
     },
     americaBanner: {
       title: "America's 250th Anniversary",
