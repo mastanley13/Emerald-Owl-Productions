@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { HeroBannerData } from '../../types/homepage';
+import SurveyModal from './SurveyModal';
 
 interface HeroBannerProps {
   data: HeroBannerData;
@@ -11,6 +12,7 @@ interface HeroBannerProps {
 
 export default function HeroBanner({ data }: HeroBannerProps) {
   const [isVisible, setIsVisible] = useState(false);
+  const [isSurveyOpen, setIsSurveyOpen] = useState(false);
   
   useEffect(() => {
     setIsVisible(true);
@@ -89,7 +91,7 @@ export default function HeroBanner({ data }: HeroBannerProps) {
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-45 transform -translate-x-full transition-transform duration-1000 ease-in-out group-hover:translate-x-full"></span>
               </button>
               <button
-                onClick={() => console.log('"Take the First Step" button clicked - placeholder action')}
+                onClick={() => setIsSurveyOpen(true)}
                 className="group relative overflow-hidden bg-white/90 backdrop-blur-sm border-2 border-emerald-600 py-4 px-10 rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 <span className="relative z-10 text-emerald-600 group-hover:text-white transition-colors duration-300 font-bold">
@@ -135,6 +137,12 @@ export default function HeroBanner({ data }: HeroBannerProps) {
           </div>
         </div>
       </div>
+      
+      {/* Survey Modal */}
+      <SurveyModal 
+        isOpen={isSurveyOpen} 
+        onClose={() => setIsSurveyOpen(false)} 
+      />
     </section>
   );
 }
