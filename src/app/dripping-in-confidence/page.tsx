@@ -100,12 +100,6 @@ export default async function DrippingInConfidencePage() {
                 >
                   {data.cta.text}
                 </Link>
-                <Link 
-                  href="/gunge" 
-                  className="bg-transparent border-2 border-pink-400 hover:bg-pink-600/10 text-white font-bold py-4 px-10 rounded-full transition-all duration-300"
-                >
-                  Learn About Gunge
-                </Link>
               </div>
             </div>
           </div>

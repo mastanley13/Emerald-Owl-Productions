@@ -61,7 +61,11 @@ export default function ContactUsPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-emerald-800">Phone</h3>
-                      <p className="text-gray-700">(252) 563-5436</p>
+                      <p className="text-gray-700">
+                        <a href="tel:833-456-3674" className="hover:text-emerald-600 transition-colors">
+                          833-GLO-EOP
+                        </a> or <a href="tel:252-666-6666" className="hover:text-emerald-600 transition-colors">252-6666</a>
+                      </p>
                     </div>
                   </div>
                   

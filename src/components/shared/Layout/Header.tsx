@@ -117,18 +117,13 @@ export default function Header() {
                     Water Games
                   </Link>
                   <Link 
-                    href="/dripping-in-confidence" 
+                    href="https://drippinginconfidence.com" 
                     className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
                     onClick={() => setMenuOpen(false)}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Dripping in Confidence
-                  </Link>
-                  <Link 
-                    href="/gunge" 
-                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Gunge
                   </Link>
                   <Link 
                     href="/sensory-friendly-experiences" 
@@ -197,18 +192,13 @@ export default function Header() {
                       Water Games
                     </Link>
                     <Link 
-                      href="/dripping-in-confidence" 
+                      href="https://drippinginconfidence.com" 
                       className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
                       onClick={() => setMenuOpen(false)}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Dripping in Confidence
-                    </Link>
-                    <Link 
-                      href="/gunge" 
-                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      Gunge
                     </Link>
                     <Link 
                       href="/sensory-friendly-experiences" 

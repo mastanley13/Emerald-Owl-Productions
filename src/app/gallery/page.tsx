@@ -50,9 +50,9 @@ export default function GalleryPage() {
     {
       id: 6,
       src: 'https://via.placeholder.com/600x400/86efac/1e3a8a',
-      alt: 'Gunge event',
-      caption: 'Charity Gunge Tank Challenge',
-      category: 'Gunge',
+              alt: 'Slime event',
+        caption: 'Charity Slime Tank Challenge',
+        category: 'Slime',
     },
     {
       id: 7,

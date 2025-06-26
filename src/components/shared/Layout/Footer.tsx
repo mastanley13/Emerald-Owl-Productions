@@ -74,6 +74,17 @@ export default function Footer() {
           <div>
             <h3 className="text-emerald-600 font-bold text-lg mb-4">Contact Us</h3>
             <address className="not-italic text-gray-600">
+              <p className="mb-2">
+                <span className="font-medium">Phone:</span><br />
+                <a href="tel:833-456-3674" className="hover:text-emerald-600 transition-colors">
+                  833-GLO-EOP
+                </a> or <a href="tel:252-666-6666" className="hover:text-emerald-600 transition-colors">252-6666</a>
+              </p>
+              <p className="mb-2">
+                <span className="font-medium">Address:</span><br />
+                P.O. Box 4911<br />
+                Emerald Isle, North Carolina 28594
+              </p>
               <p className="mb-4">
                 <a href="mailto:info@emeraldowlproductions.com" className="hover:text-emerald-600 transition-colors">
                   info@emeraldowlproductions.com

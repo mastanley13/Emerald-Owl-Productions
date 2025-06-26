@@ -48,8 +48,6 @@ const ExperienceMenu: React.FC<ExperienceMenuProps> = ({ experiences }) => {
       'foam paint': '/glow-foam-paint',
       'glow sports': '/glow-sports',
       'glow sport': '/glow-sports',
-      'gunge experience': '/gunge',
-      'gunge': '/gunge',
       'laser light show': '/laser-light-show',
       'laser show': '/laser-light-show',
       'laser light': '/laser-light-show',
@@ -59,7 +57,8 @@ const ExperienceMenu: React.FC<ExperienceMenuProps> = ({ experiences }) => {
       'water game': '/water-games',
       'water wars': '/water-games',
       'water battle': '/water-games',
-      'dripping in confidence': '/dripping-in-confidence',
+      'dripping in confidence': 'https://drippinginconfidence.com',
+      'slime / dripping in confidence': 'https://drippinginconfidence.com',
       'color run': '/color-run',
       'colour run': '/color-run',
       'holiday events': '/holiday-events',
@@ -100,7 +99,8 @@ const ExperienceMenu: React.FC<ExperienceMenuProps> = ({ experiences }) => {
     if (title.includes('laser')) return '/laser-light-show';
     if (title.includes('neon')) return '/neon-nights';
     if (title.includes('water')) return '/water-games';
-    if (title.includes('gunge') || title.includes('slime')) return '/gunge';
+    if (title.includes('dripping') && title.includes('confidence')) return 'https://drippinginconfidence.com';
+    if (title.includes('slime')) return 'https://drippinginconfidence.com';
     if (title.includes('sensory')) return '/sensory-friendly-experiences';
     if (title.includes('color') || title.includes('colour')) return '/color-run';
     if (title.includes('holiday')) return '/holiday-events';
@@ -126,12 +126,15 @@ const ExperienceMenu: React.FC<ExperienceMenuProps> = ({ experiences }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {items.map((item) => {
           const experienceUrl = getExperienceUrl(item);
+          const isExternalUrl = experienceUrl.startsWith('http');
           
           return (
             <Link 
               key={item.id} 
               href={experienceUrl}
               className="group block"
+              target={isExternalUrl ? "_blank" : undefined}
+              rel={isExternalUrl ? "noopener noreferrer" : undefined}
             >
               <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-2 h-full flex flex-col">
                 <div className="relative w-full h-56">

@@ -42,7 +42,7 @@ const services: Service[] = [
     title: 'Dripping in Confidence',
     description: 'Fun and messy experiences',
     image: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67ab94d979284b777a6a7660.jpeg',
-    link: '/dripping-in-confidence',
+    link: 'https://drippinginconfidence.com',
     color: 'pink'
   },
   {
@@ -153,9 +153,16 @@ export default async function OurExperiencesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {services.map(service => {
                 const colors = getColorClasses(service.color);
+                const isExternalUrl = service.link.startsWith('http');
                 
                 return (
-                  <Link href={service.link} key={service.id} className="group">
+                  <Link 
+                    href={service.link} 
+                    key={service.id} 
+                    className="group"
+                    target={isExternalUrl ? "_blank" : undefined}
+                    rel={isExternalUrl ? "noopener noreferrer" : undefined}
+                  >
                     <div className="bg-white border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-lg h-full flex flex-col">
                       <div className="relative h-64">
                         <Image 

@@ -99,7 +99,7 @@ export function parseSensoryFriendlyExperiencesData(data: any): SensoryFriendlyE
       pricing: {
         heading: 'Sensory Friendly Pricing',
         description: [
-          'We understand the importance of making Sensory Friendly Events engaging yet calming. With flexible pricing and customizable options, Emerald Owl Productions will work with your team to design an event tailored to sensory needs, all within your budget including foam, gunge, and other fun activities.',
+          'We understand the importance of making Sensory Friendly Events engaging yet calming. With flexible pricing and customizable options, Emerald Owl Productions will work with your team to design an event tailored to sensory needs, all within your budget including foam, slime activities, and other fun activities.',
           'Our package deals for multiple events can also help reduce costs, while providing continuity in planning for future sensory-friendly gatherings.'
         ],
         buttonText: 'Contact Us for Pricing',
