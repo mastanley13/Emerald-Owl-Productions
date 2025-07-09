@@ -35,6 +35,7 @@ export interface VideoContent {
   description?: string;
   videoUrl: string;
   thumbnailUrl?: string;
+  note?: string;
 }
 
 /**
@@ -44,6 +45,50 @@ export interface ContentSection {
   title: string;
   description: string;
   features?: string[];
+  includes?: string;
+}
+
+/**
+ * Forever Memory section
+ */
+export interface ForeverMemory {
+  title: string;
+  description: string;
+  comparison: string;
+  result: string;
+}
+
+/**
+ * Interactive Experience section
+ */
+export interface InteractiveExperience {
+  title: string;
+  description: string;
+}
+
+/**
+ * Value Proposition section
+ */
+export interface ValueProposition {
+  title: string;
+  description: string;
+}
+
+/**
+ * Add-ons section
+ */
+export interface AddOns {
+  title: string;
+  list: string[];
+}
+
+/**
+ * Pricing section
+ */
+export interface Pricing {
+  title: string;
+  description: string;
+  contactInfo: string;
 }
 
 /**
@@ -62,6 +107,8 @@ export interface TestimonialData {
   quote: string;
   author: string;
   role?: string;
+  location?: string;
+  event?: string;
   image?: Resource;
 }
 
@@ -95,6 +142,11 @@ export interface NeonNightsData {
   cta: NeonNightsCTA;
   videoContent?: VideoContent;
   contentSection: ContentSection;
+  foreverMemory?: ForeverMemory;
+  interactiveExperience?: InteractiveExperience;
+  valueProposition?: ValueProposition;
+  addOns?: AddOns;
+  pricing?: Pricing;
   gallery?: GalleryItem[];
   testimonials?: TestimonialData[];
   faqs?: FaqItem[];

@@ -70,7 +70,7 @@ export function parseNeonNightsData(rawData: any): NeonNightsData {
     title: rawData.hero?.title || 'Neon Nights',
     subtitle: rawData.hero?.subtitle || '',
     description: rawData.hero?.description || '',
-    backgroundImage: resources.heroBackground[0] || null,
+    backgroundImage: rawData.hero?.backgroundImage || resources.heroBackground[0] || null,
   };
 
   // Parse CTA data
@@ -86,6 +86,7 @@ export function parseNeonNightsData(rawData: any): NeonNightsData {
         description: rawData.videoContent.description || '',
         videoUrl: rawData.videoContent.videoUrl || '',
         thumbnailUrl: rawData.videoContent.thumbnailUrl || resources.videoThumbnails[0]?.url || '',
+        note: rawData.videoContent.note || '',
       }
     : undefined;
 
@@ -96,7 +97,51 @@ export function parseNeonNightsData(rawData: any): NeonNightsData {
       rawData.contentSection?.description ||
       'Our Neon Nights experiences transform any venue into a vibrant, glowing wonderland of color and excitement.',
     features: rawData.contentSection?.features || [],
+    includes: rawData.contentSection?.includes || '',
   };
+
+  // Parse forever memory section
+  const foreverMemory = rawData.foreverMemory
+    ? {
+        title: rawData.foreverMemory.title || 'Creating Forever Memories',
+        description: rawData.foreverMemory.description || '',
+        comparison: rawData.foreverMemory.comparison || '',
+        result: rawData.foreverMemory.result || '',
+      }
+    : undefined;
+
+  // Parse interactive experience section
+  const interactiveExperience = rawData.interactiveExperience
+    ? {
+        title: rawData.interactiveExperience.title || 'High Energy & Interactive',
+        description: rawData.interactiveExperience.description || '',
+      }
+    : undefined;
+
+  // Parse value proposition section
+  const valueProposition = rawData.valueProposition
+    ? {
+        title: rawData.valueProposition.title || 'Most Bang for Your Buck',
+        description: rawData.valueProposition.description || '',
+      }
+    : undefined;
+
+  // Parse add-ons section
+  const addOns = rawData.addOns
+    ? {
+        title: rawData.addOns.title || 'Common Add-On Experiences',
+        list: rawData.addOns.list || [],
+      }
+    : undefined;
+
+  // Parse pricing section
+  const pricing = rawData.pricing
+    ? {
+        title: rawData.pricing.title || 'Flexible Pricing',
+        description: rawData.pricing.description || '',
+        contactInfo: rawData.pricing.contactInfo || '',
+      }
+    : undefined;
 
   // Parse gallery items if available
   const gallery: GalleryItem[] = rawData.gallery
@@ -117,6 +162,8 @@ export function parseNeonNightsData(rawData: any): NeonNightsData {
         quote: testimonial.quote || '',
         author: testimonial.author || '',
         role: testimonial.role || '',
+        location: testimonial.location || '',
+        event: testimonial.event || '',
         image: testimonial.image || null,
       }))
     : [];
@@ -170,6 +217,11 @@ export function parseNeonNightsData(rawData: any): NeonNightsData {
     cta,
     videoContent,
     contentSection,
+    foreverMemory,
+    interactiveExperience,
+    valueProposition,
+    addOns,
+    pricing,
     gallery: gallery.length > 0 ? gallery : undefined,
     testimonials: testimonials.length > 0 ? testimonials : undefined,
     faqs,

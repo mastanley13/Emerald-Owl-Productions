@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "Neon Nights | Emerald Owl Productions",
+    "description": "Using Technology to Bring People Together Again - Our specialty experience that unites people of all backgrounds and ages with professional lasers, moving lights, LED UV lighting, sound, haze machines, DJ, and event coordinator.",
+    "keywords": ["neon nights", "laser light glow party", "uv lighting", "glow party", "interactive event", "family friendly", "emerald owl productions"]
+  },
+  "hero": {
+    "title": "Neon Nights",
+    "subtitle": "(Formerly Laser Light Glow Party)",
+    "description": "Using Technology to Bring People Together Again",
+    "backgroundImage": {
+      "type": "image",
+      "url": "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a4558baa4eed1400f75c3a.jpeg",
+      "alt": "Neon Nights Experience"
+    }
+  },
+  "cta": {
+    "text": "Get Your Quote Today",
+    "url": "/contact-us"
+  },
+  "contentSection": {
+    "title": "A Truly Different Experience",
+    "description": "If you are looking for something truly different or your event is in need of a major energy boost, you have found your answer! This is our specialty experience that unites people of all backgrounds and ages! It will truly be one of the most memorable and unique events you ever host.",
+    "features": [
+      "Professional lasers and moving lights",
+      "LED UV lighting systems",
+      "Professional sound equipment",
+      "Haze machines for dramatic effects",
+      "Professional DJ services",
+      "Dedicated event coordinator",
+      "High energy and interactive experience",
+      "Suitable for all ages and backgrounds"
+    ],
+    "includes": "Neon Nights include professional lasers, moving lights, LED UV lighting, sound, haze machines, DJ, and event coordinator."
+  },
+  "foreverMemory": {
+    "title": "Creating Forever Memories",
+    "description": "You may often see your guests recording a fireworks display, band, or laser show. What is the likelihood they will watch it ten years from now? Virtually none.",
+    "comparison": "Now imagine your guests recording their kids glowing in the dark doing the Cha-Cha Slide with grandma in a pit of foam with laser lights flying overhead?",
+    "result": "What have we just created together? A FOREVER MEMORY! This is a video that will likely be saved and enjoyed by that family forever, even when the kids are adults and grandma is not with us anymore."
+  },
+  "interactiveExperience": {
+    "title": "High Energy & Interactive",
+    "description": "Neon Nights are high energy and very interactive. This is not a passive activity where your participants sit in a lawn chair. They are encouraged to be up and moving, which is how we create memories with this epic event! But don't worry, while our events are active, the activity level is suitable for mostly everyone. And yes, some people enjoy watching the fun which is fine too."
+  },
+  "valueProposition": {
+    "title": "Most Bang for Your Buck",
+    "description": "Neon Nights gives you the most \"bang for your buck.\" These parties usually last a few hours, often at a price that is less or comparable to a 30 minute fireworks show. Perhaps the best part is we handle all the entertainment related to our party so you can actually take time to enjoy and even participate in your event!"
+  },
+  "addOns": {
+    "title": "Common Add-On Experiences",
+    "list": [
+      "Short laser shows throughout the evening",
+      "Video projection",
+      "Live Dancers to Keep The Crowd Entertained",
+      "Glow in the Dark Splash Zone in warm weather (foam, water, and even glow gunge/slime)"
+    ]
+  },
+  "pricing": {
+    "title": "Flexible Pricing",
+    "description": "This experience is a bit easier to scale up or down to fit a variety of budgets. Rates are based on your vision for the event, the size of your venue, the size of your crowd, time of year, and if it is outdoor or indoor.",
+    "contactInfo": "Call us at (252) 764-7628 to discuss ways to make it happen!"
+  },
+  "faqs": [
+    {
+      "question": "What makes Neon Nights different from typical glow parties?",
+      "answer": "Neon Nights combines professional-grade equipment including lasers, moving lights, LED UV lighting, sound systems, and haze machines with interactive experiences and professional coordination. It's not just a passive light show - it's an immersive, high-energy experience that gets people moving and creating memories together."
+    },
+    {
+      "question": "Is Neon Nights suitable for all ages?",
+      "answer": "Absolutely! Neon Nights unites people of all backgrounds and ages. The activity level is suitable for mostly everyone, and while participants are encouraged to be active, those who prefer to watch can also enjoy the experience."
+    },
+    {
+      "question": "How long do Neon Nights events typically last?",
+      "answer": "Neon Nights parties usually last a few hours, providing extended entertainment value often at a price that is less or comparable to a 30-minute fireworks show."
+    },
+    {
+      "question": "What's included in a Neon Nights experience?",
+      "answer": "Neon Nights include professional lasers, moving lights, LED UV lighting, sound equipment, haze machines, DJ services, and a dedicated event coordinator. We handle all the entertainment so you can enjoy your event!"
+    },
+    {
+      "question": "Can I add extra experiences to my Neon Nights event?",
+      "answer": "Yes! Common add-ons include short laser shows throughout the evening, video projection, live dancers, and glow in the dark splash zones with foam, water, and glow gunge/slime for warm weather events."
+    },
+    {
+      "question": "How is pricing determined for Neon Nights?",
+      "answer": "Rates are based on your vision for the event, the size of your venue, the size of your crowd, time of year, and whether it's outdoor or indoor. This experience is easier to scale up or down to fit various budgets."
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "We thought it would be mostly kids with their parents, but so did everyone else! We saw grandparents leading dances being cheered on by teenagers on a double date! This truly brings people of all generations together for an incredible evening!",
+      "author": "Event Feedback",
+      "location": "Emerald Isle, Bogue Inlet Pier",
+      "event": "First Laser Light Glow Party"
+    }
+  ],
+  "gallery": [
+    {
+      "image": {
+        "type": "image",
+        "url": "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67384380e921027610441d75.png",
+        "alt": "Neon Nights Interactive Experience"
+      },
+      "caption": "Interactive glow activities for all ages"
+    },
+    {
+      "image": {
+        "type": "image",
+        "url": "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67384328732b00e1df2b34e5.jpeg",
+        "alt": "Professional laser and lighting setup"
+      },
+      "caption": "Professional lasers and LED UV lighting"
+    },
+    {
+      "image": {
+        "type": "image",
+        "url": "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/6738435ef5dd352ecc77c78b.jpeg",
+        "alt": "Multi-generational fun at Neon Nights"
+      },
+      "caption": "Bringing generations together through interactive fun"
+    }
+  ],
+  "videoContent": {
+    "videoUrl": "https://www.youtube.com/embed/97L5BAhkWY0",
+    "thumbnailUrl": "https://img.youtube.com/vi/97L5BAhkWY0/maxresdefault.jpg",
+    "title": "Watch Neon Nights in Action",
+    "note": "See how we create forever memories with interactive experiences!"
+  }
+}

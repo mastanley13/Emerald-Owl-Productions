@@ -988,7 +988,36 @@ function createFallbackNeonNightsData(): NeonNightsData {
         'Neon decorations',
         'Interactive glow activities',
         'Custom color schemes available'
+      ],
+      includes: 'Neon Nights include professional lasers, moving lights, LED UV lighting, sound, haze machines, DJ, and event coordinator.'
+    },
+    foreverMemory: {
+      title: 'Creating Forever Memories',
+      description: 'You may often see your guests recording a fireworks display, band, or laser show. What is the likelihood they will watch it ten years from now? Virtually none.',
+      comparison: 'Now imagine your guests recording their kids glowing in the dark doing the Cha-Cha Slide with grandma in a pit of foam with laser lights flying overhead?',
+      result: 'What have we just created together? A FOREVER MEMORY! This is a video that will likely be saved and enjoyed by that family forever, even when the kids are adults and grandma is not with us anymore.'
+    },
+    interactiveExperience: {
+      title: 'High Energy & Interactive',
+      description: 'Neon Nights are high energy and very interactive. This is not a passive activity where your participants sit in a lawn chair. They are encouraged to be up and moving, which is how we create memories with this epic event! But don\'t worry, while our events are active, the activity level is suitable for mostly everyone. And yes, some people enjoy watching the fun which is fine too.'
+    },
+    valueProposition: {
+      title: 'Most Bang for Your Buck',
+      description: 'Neon Nights gives you the most "bang for your buck." These parties usually last a few hours, often at a price that is less or comparable to a 30 minute fireworks show. Perhaps the best part is we handle all the entertainment related to our party so you can actually take time to enjoy and even participate in your event!'
+    },
+    addOns: {
+      title: 'Common Add-On Experiences',
+      list: [
+        'Short laser shows throughout the evening',
+        'Video projection',
+        'Live Dancers to Keep The Crowd Entertained',
+        'Glow in the Dark Splash Zone in warm weather (foam, water, and even glow gunge/slime)'
       ]
+    },
+    pricing: {
+      title: 'Flexible Pricing',
+      description: 'This experience is a bit easier to scale up or down to fit a variety of budgets. Rates are based on your vision for the event, the size of your venue, the size of your crowd, time of year, and if it is outdoor or indoor.',
+      contactInfo: 'Call us at (252) 764-7628 to discuss ways to make it happen!'
     },
     faqs: [
       {
@@ -1012,9 +1041,46 @@ function createFallbackNeonNightsData(): NeonNightsData {
         answer: 'Absolutely! Neon Nights pairs exceptionally well with our Foam Parties, Water Games, and other experiences for a multi-dimensional event.'
       }
     ],
-    testimonials: [],
-    gallery: [],
-    resources: []
+    testimonials: [
+      {
+        quote: 'We thought it would be mostly kids with their parents, but so did everyone else! We saw grandparents leading dances being cheered on by teenagers on a double date! This truly brings people of all generations together for an incredible evening!',
+        author: 'Event Feedback',
+        location: 'Emerald Isle, Bogue Inlet Pier',
+        event: 'First Laser Light Glow Party'
+      }
+    ],
+    gallery: [
+      {
+        image: {
+          type: 'image',
+          url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67384380e921027610441d75.png',
+          alt: 'Neon Nights Interactive Experience'
+        },
+        caption: 'Interactive glow activities for all ages'
+      },
+      {
+        image: {
+          type: 'image',
+          url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67384328732b00e1df2b34e5.jpeg',
+          alt: 'Professional laser and lighting setup'
+        },
+        caption: 'Professional lasers and LED UV lighting'
+      },
+      {
+        image: {
+          type: 'image',
+          url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/6738435ef5dd352ecc77c78b.jpeg',
+          alt: 'Multi-generational fun at Neon Nights'
+        },
+        caption: 'Bringing generations together through interactive fun'
+      }
+    ],
+    videoContent: {
+      videoUrl: 'https://www.youtube.com/embed/97L5BAhkWY0',
+      thumbnailUrl: 'https://img.youtube.com/vi/97L5BAhkWY0/maxresdefault.jpg',
+      title: 'Watch Neon Nights in Action',
+      note: 'See how we create forever memories with interactive experiences!'
+    }
   };
 }
 
