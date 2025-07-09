@@ -2,6 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Header from '../components/shared/Layout/Header';
 import HeroBanner from '../components/home/HeroBanner';
+import IntroSection from '../components/home/IntroSection';
 import AmericaBanner from '../components/home/AmericaBanner';
 import VideoHighlight from '../components/home/VideoHighlight';
 import Newsletter from '../components/shared/UI/Newsletter';
@@ -61,6 +62,7 @@ export default async function Home() {
         <Header />
         <main>
           <HeroBanner data={homepageData.hero} />
+          <IntroSection />
           <VideoHighlight data={homepageData.videoHighlight} />
           <AmericaBanner data={homepageData.americaBanner} />
           <ExperienceMenu experiences={experiencesData} />
@@ -79,6 +81,7 @@ export default async function Home() {
         <Header />
         <main>
           <HeroBanner data={FALLBACK_DATA.hero} />
+          <IntroSection />
           <ExperienceMenu experiences={experiencesData} />
           <Memorial />
         </main>

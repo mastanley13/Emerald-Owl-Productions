@@ -76,9 +76,9 @@ export default function Footer() {
             <address className="not-italic text-gray-600">
               <p className="mb-2">
                 <span className="font-medium">Phone:</span><br />
-                <a href="tel:833-456-3674" className="hover:text-emerald-600 transition-colors">
-                  833-GLO-EOP
-                </a> or <a href="tel:252-666-6666" className="hover:text-emerald-600 transition-colors">252-6666</a>
+                <a href="tel:833-456-9367" className="hover:text-emerald-600 transition-colors">
+                  833-GLOW-EOP
+                </a> or <a href="tel:252-764-7628" className="hover:text-emerald-600 transition-colors">(252) 764-7628</a>
               </p>
               <p className="mb-2">
                 <span className="font-medium">Address:</span><br />
