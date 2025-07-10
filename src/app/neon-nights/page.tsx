@@ -69,24 +69,128 @@ export default async function NeonNightsPage() {
           </div>
         </section>
 
-        {/* What is an EOP Laser-Light Glow Party? */}
+        {/* Neon Nights Overview */}
         <section className="bg-black text-white py-16">
           <div className="container mx-auto px-6">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold mb-8 text-purple-400 text-center">
-                What is an EOP Laser-Light Glow Party?
+                Neon Nights: (Formerly Laser Light Glow Party)<br />
+                <span className="text-2xl text-pink-400">Using Technology to Bring People Together Again</span>
               </h2>
               <div className="space-y-6 text-lg text-gray-300 prose prose-invert lg:prose-xl max-w-none">
                 <p>
-                  Previously known as a <strong className="text-purple-400">Laser Light Glow Party,</strong> Neon Nights is our <strong className="text-purple-400">marquee</strong>, yet perhaps most <strong className="text-purple-400">misunderstood</strong>, experience.
+                  If you are looking for something truly different or your event is in need of a major energy boost, you have found your answer! This is our specialty experience that unites people of all backgrounds and ages! It will truly be one of the most memorable and unique events you ever host. Neon Nights include professional lasers, moving lights, LED UV lighting, sound, haze machines, DJ, and event coordinator.
                 </p>
-                <p className="italic text-purple-200">
-                  This is <strong className="text-pink-400">NOT</strong> your typical (and often underwhelming) &quot;Glow Party.&quot; The <strong className="text-purple-400">interaction we create</strong>, combined with the <strong className="text-purple-400">professional production</strong>, is the <strong className="text-pink-400">&quot;secret sauce&quot;</strong> that makes this event so <strong className="text-purple-400">memorable and unique</strong>. And yes, it is <strong className="text-purple-400">family friendly</strong>, even if you think it looks a bit like a &quot;rave!&quot;
-                </p>
+                
+                <div className="bg-purple-900/30 p-6 rounded-lg border-l-4 border-purple-400">
+                  <h3 className="text-xl font-bold text-purple-400 mb-4">Here is the short summary of Neon Nights:</h3>
+                  <p className="mb-4">
+                    You may often see your guests recording a fireworks display, band, or laser show. What is the likelihood they will watch it ten years from now? Virtually none.
+                  </p>
+                  <p className="mb-4">
+                    Now imagine your guests recording their kids glowing in the dark doing the Cha-Cha Slide with grandma in a pit of foam with laser lights flying overhead?
+                  </p>
+                  <p className="text-pink-400 font-bold text-xl">
+                    What have we just created together? A FOREVER MEMORY! This is a video that will likely be saved and enjoyed by that family forever, even when the kids are adults and grandma is not with us anymore.
+                  </p>
+                </div>
+
                 <p>
-                  Our first <strong className="text-purple-400">Laser Light Glow Party,</strong> was in <strong className="text-purple-400">Emerald Isle</strong> on the Bogue Inlet Pier. We thought it would be mostly kids with their parents. And while that crowd certainly showed up, <strong className="text-pink-400">so did everyone else!</strong> We saw <strong className="text-purple-400">grandparents leading dances</strong> being cheered on by <strong className="text-purple-400">teenagers on a double date!</strong> This one truly brings people of <strong className="text-purple-400">all generations together</strong> for an <strong className="text-pink-400">incredible evening!</strong>
+                  Neon Nights are high energy and very interactive. This is not a passive activity where your participants sit in a lawn chair. They are encouraged to be up and moving, which is how we create memories with this epic event! But don&apos;t worry, while our events are active, the activity level is suitable for mostly everyone. And yes, some people enjoy watching the fun which is fine too.
+                </p>
+                
+                <p>
+                  Neon Nights gives you the most &quot;bang for your buck.&quot; These parties usually last a few hours, often at a price that is less or comparable to a 30 minute fireworks show. Perhaps the best part is we handle all the entertainment related to our party so you can actually take time to enjoy and even participate in your event!
+                </p>
+
+                <div className="bg-gray-900/50 p-6 rounded-lg">
+                  <h3 className="text-xl font-bold text-purple-400 mb-4">Common add-on experiences include:</h3>
+                  <ul className="space-y-2 text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-purple-400 mr-2">•</span>
+                      Short laser shows throughout the evening
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple-400 mr-2">•</span>
+                      Video projection
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple-400 mr-2">•</span>
+                      Live Dancers to Keep The Crowd Entertained
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple-400 mr-2">•</span>
+                      Glow in the Dark Splash Zone in warm weather (foam, water, and even glow gunge/slime)
+                    </li>
+                  </ul>
+                </div>
+
+                <p>
+                  This experience is a bit easier to scale up or down to fit a variety of budgets. Rates are based on your vision for the event, the size of your venue, the size of your crowd, time of year, and if it is outdoor or indoor. Call us at <a href="tel:252-764-7628" className="text-purple-400 font-bold">(252) 764-7628</a> to discuss ways to make it happen!
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Experience Videos */}
+        <section className="bg-gradient-to-b from-black to-purple-950/20 py-16">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl font-bold mb-10 text-center text-purple-400">
+              See Neon Nights in Action
+            </h2>
+            <p className="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
+              Experience the energy and excitement of our Neon Nights events. Watch real moments of joy, laughter, and unforgettable memories being created!
+            </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {/* Video 1 */}
+              <div className="relative rounded-lg overflow-hidden shadow-2xl shadow-purple-500/20">
+                <video 
+                  className="w-full h-auto rounded-lg"
+                  controls
+                  preload="metadata"
+                  poster=""
+                >
+                  <source 
+                    src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/686f19b69a51b826a4149f52.mp4" 
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
+              </div>
+              
+              {/* Video 2 */}
+              <div className="relative rounded-lg overflow-hidden shadow-2xl shadow-purple-500/20">
+                <video 
+                  className="w-full h-auto rounded-lg"
+                  controls
+                  preload="metadata"
+                  poster=""
+                >
+                  <source 
+                    src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/686f19b6677990e6fb4458b9.mp4" 
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
+              </div>
+            </div>
+            
+            <div className="text-center mt-12">
+              <p className="text-gray-400 text-sm mb-4">
+                These videos showcase real Neon Nights events - creating those &quot;Forever Memories&quot; we talked about!
+              </p>
+              <Link 
+                href="/contact-us" 
+                className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-xl hover:shadow-purple-300/30"
+              >
+                Start Planning Your Event
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </Link>
             </div>
           </div>
         </section>
@@ -189,52 +293,81 @@ export default async function NeonNightsPage() {
               </Link>
             </div>
             
-            {/* Gallery Section (if available from data) */}
-            {data.gallery && data.gallery.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {data.gallery.slice(0, 3).map((item, index) => (
-                  <div key={index} className="relative h-[250px] rounded-lg overflow-hidden">
-                    <Image 
-                      src={item.image.url}
-                      alt={item.image.alt || `Glow Activity ${index + 1}`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                  </div>
-                ))}
+            {/* Gallery Section */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div className="relative h-[250px] rounded-lg overflow-hidden shadow-lg hover:shadow-purple-500/30 transition-shadow duration-300">
+                <Image 
+                  src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/686f277ee9ff4c7f27b0a5cf.png"
+                  alt="Neon Nights Gallery 1"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                />
               </div>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="relative h-[250px] rounded-lg overflow-hidden">
-                  <Image 
-                    src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67384380e921027610441d75.png"
-                    alt="Glow Activity 1"
-                    fill
-                    className="object-cover object-top"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
-                <div className="relative h-[250px] rounded-lg overflow-hidden">
-                  <Image 
-                    src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67384328732b00e1df2b34e5.jpeg"
-                    alt="Glow Activity 2"
-                    fill
-                    className="object-cover object-top"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
-                <div className="relative h-[250px] rounded-lg overflow-hidden">
-                  <Image 
-                    src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/6738435ef5dd352ecc77c78b.jpeg"
-                    alt="Glow Activity 3"
-                    fill
-                    className="object-cover object-top"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
+              <div className="relative h-[250px] rounded-lg overflow-hidden shadow-lg hover:shadow-purple-500/30 transition-shadow duration-300">
+                <Image 
+                  src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/686f277eeb2c4f41af1ec11f.jpeg"
+                  alt="Neon Nights Gallery 2"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                />
               </div>
-            )}
+              <div className="relative h-[250px] rounded-lg overflow-hidden shadow-lg hover:shadow-purple-500/30 transition-shadow duration-300">
+                <Image 
+                  src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/686f277e9f20bf603e82b0f4.jpeg"
+                  alt="Neon Nights Gallery 3"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                />
+              </div>
+              <div className="relative h-[250px] rounded-lg overflow-hidden shadow-lg hover:shadow-purple-500/30 transition-shadow duration-300">
+                <Image 
+                  src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/686f277ee9ff4c306cb0a5ce.jpeg"
+                  alt="Neon Nights Gallery 4"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                />
+              </div>
+              <div className="relative h-[250px] rounded-lg overflow-hidden shadow-lg hover:shadow-purple-500/30 transition-shadow duration-300">
+                <Image 
+                  src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/686f277e6e4a646872c434ed.jpeg"
+                  alt="Neon Nights Gallery 5"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                />
+              </div>
+              <div className="relative h-[250px] rounded-lg overflow-hidden shadow-lg hover:shadow-purple-500/30 transition-shadow duration-300">
+                <Image 
+                  src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/686f277eeb2c4f61821ec120.jpeg"
+                  alt="Neon Nights Gallery 6"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                />
+              </div>
+              <div className="relative h-[250px] rounded-lg overflow-hidden shadow-lg hover:shadow-purple-500/30 transition-shadow duration-300">
+                <Image 
+                  src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/686f277e6e4a646940c434ee.jpeg"
+                  alt="Neon Nights Gallery 7"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                />
+              </div>
+              <div className="relative h-[250px] rounded-lg overflow-hidden shadow-lg hover:shadow-purple-500/30 transition-shadow duration-300">
+                <Image 
+                  src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/686f277ee9ff4c0eb3b0a5d0.jpeg"
+                  alt="Neon Nights Gallery 8"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                />
+              </div>
+            </div>
           </div>
         </section>
 
