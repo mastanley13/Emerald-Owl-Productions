@@ -223,7 +223,7 @@ export default function LaserSafetyPage() {
                   Laser beams are pre-zoned to avoid crowd exposure.
                 </p>
                 <p className="text-gray-700 mb-4">
-                  An emergency stop button ("E STOP") is always within reach of our laser technician.
+                  An emergency stop button (&ldquo;E STOP&rdquo;) is always within reach of our laser technician.
                 </p>
                 <p className="text-gray-700 mb-4">
                   There are no known reports of a serious injury to an audience member at a U.S. laser show when International Laser Display Association (ILDA) safety guidelines were followed.

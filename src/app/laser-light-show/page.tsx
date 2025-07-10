@@ -52,12 +52,12 @@ export default async function LaserLightShowPage() {
           {/* ILDA Quote */}
           <div className="bg-emerald-50 border-l-4 border-emerald-600 p-8 mb-12 rounded-r-lg">
             <blockquote className="text-lg text-gray-700 italic leading-relaxed mb-4">
-              "There's no light like it. Lasers create the most vivid and saturated color palette available. We can shower an audience with cascades of three dimensional beams and waves of moving light."
+              &ldquo;There&apos;s no light like it. Lasers create the most vivid and saturated color palette available. We can shower an audience with cascades of three dimensional beams and waves of moving light.&rdquo;
             </blockquote>
             <div className="space-y-2 text-gray-600 mb-4">
-              <p>• It's about enchanting an audience with dreamlike visions.</p>
-              <p>• It's about exciting crowds with visual effects that move faster than any other light-form.</p>
-              <p>• It's about captivating people with images that move with a unique animation style.</p>
+              <p>• It&apos;s about enchanting an audience with dreamlike visions.</p>
+              <p>• It&apos;s about exciting crowds with visual effects that move faster than any other light-form.</p>
+              <p>• It&apos;s about captivating people with images that move with a unique animation style.</p>
             </div>
             <cite className="text-sm text-emerald-600 font-medium">- International Laser Display Association (ILDA)</cite>
           </div>
@@ -192,7 +192,7 @@ export default async function LaserLightShowPage() {
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Drive-In Shows Work So Well</h3>
             <div className="bg-emerald-50 p-6 rounded-lg">
               <p className="text-gray-700 text-lg">
-                Laser beams are projected out over the audience, not straight up. This means the show can be enjoyed through a car's front windshield, offering a comfortable, weather-resistant option that still feels magical.
+                Laser beams are projected out over the audience, not straight up. This means the show can be enjoyed through a car&apos;s front windshield, offering a comfortable, weather-resistant option that still feels magical.
               </p>
             </div>
           </div>
@@ -213,7 +213,7 @@ export default async function LaserLightShowPage() {
                   <h4 className="text-lg font-bold text-gray-900">Cold & Wet Weather Friendly</h4>
                 </div>
                 <p className="text-gray-700">
-                  Drive-in shows can run in rain or snow, and in many cases, the weather enhances the experience—millions of raindrops or snowflakes catch and reflect the laser beams, creating a mesmerizing effect. Guests can stay warm in their vehicles or step outside for fresh air and a front-row feel.
+                  Drive-in shows can run in rain or snow, and in many cases, the weather enhances the experience&mdash;millions of raindrops or snowflakes catch and reflect the laser beams, creating a mesmerizing effect. Guests can stay warm in their vehicles or step outside for fresh air and a front-row feel.
                 </p>
               </div>
 
@@ -228,7 +228,7 @@ export default async function LaserLightShowPage() {
                   <h4 className="text-lg font-bold text-gray-900">Early Start Times</h4>
                 </div>
                 <p className="text-gray-700">
-                  Short winter days mean the show can begin earlier—perfect for families with young children, grandparents, or anyone with an early bedtime.
+                  Short winter days mean the show can begin earlier&mdash;perfect for families with young children, grandparents, or anyone with an early bedtime.
                 </p>
               </div>
 
@@ -243,7 +243,7 @@ export default async function LaserLightShowPage() {
                   <h4 className="text-lg font-bold text-gray-900">Multiple Showings = Less Wait Time = More Tickets Sold</h4>
                 </div>
                 <p className="text-gray-700 mb-3">
-                  Winter's early sunsets allow for multiple showtimes per evening—often two, three, or even four. This format offers flexibility and efficiency:
+                  Winter&apos;s early sunsets allow for multiple showtimes per evening&mdash;often two, three, or even four. This format offers flexibility and efficiency:
                 </p>
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>• More families can attend without overcrowding</li>
@@ -264,10 +264,10 @@ export default async function LaserLightShowPage() {
                   <h4 className="text-lg font-bold text-gray-900">Accessibility</h4>
                 </div>
                 <p className="text-gray-700 mb-3">
-                  Drive-in laser shows are incredibly accessible. Anyone who can ride in a car can attend—even those with mobility limitations. Families often share that this is the only holiday event a certain loved one can enjoy.
+                  Drive-in laser shows are incredibly accessible. Anyone who can ride in a car can attend&mdash;even those with mobility limitations. Families often share that this is the only holiday event a certain loved one can enjoy.
                 </p>
                 <p className="text-gray-700 text-sm">
-                  We've even welcomed buses from senior living communities. Residents can watch from inside or step outside. We simply park the bus sideways so everyone has a clear view.
+                  We&apos;ve even welcomed buses from senior living communities. Residents can watch from inside or step outside. We simply park the bus sideways so everyone has a clear view.
                 </p>
               </div>
 
@@ -283,7 +283,7 @@ export default async function LaserLightShowPage() {
                   <h4 className="text-lg font-bold text-gray-900">Affordability</h4>
                 </div>
                 <p className="text-gray-700">
-                  Drive-in shows charge per vehicle, not per person—making it an affordable holiday outing for families of all sizes compared to per-ticket attractions.
+                  Drive-in shows charge per vehicle, not per person&mdash;making it an affordable holiday outing for families of all sizes compared to per-ticket attractions.
                 </p>
               </div>
 
@@ -298,7 +298,7 @@ export default async function LaserLightShowPage() {
                   <h4 className="text-lg font-bold text-gray-900">No Noise Issues</h4>
                 </div>
                 <p className="text-gray-700">
-                  Music is broadcast via FM radio, so there's virtually no ambient sound—ideal for areas with noise restrictions. Optional speaker systems can also be added so guests can spread out around their vehicles and still hear the show clearly.
+                  Music is broadcast via FM radio, so there&apos;s virtually no ambient sound&mdash;ideal for areas with noise restrictions. Optional speaker systems can also be added so guests can spread out around their vehicles and still hear the show clearly.
                 </p>
               </div>
 
@@ -310,7 +310,7 @@ export default async function LaserLightShowPage() {
             <div className="bg-gradient-to-r from-emerald-600 to-sky-600 text-white p-8 rounded-lg">
               <h3 className="text-2xl font-bold mb-4">Laser Show Tailgating!</h3>
               <p className="text-lg leading-relaxed">
-                A new tradition has emerged: laser show tailgating! Guests bring crock pots, hot cocoa, and festive treats, dress in holiday gear, and enjoy food and fun before the show starts. It's become part of the magic.
+                A new tradition has emerged: laser show tailgating! Guests bring crock pots, hot cocoa, and festive treats, dress in holiday gear, and enjoy food and fun before the show starts. It&apos;s become part of the magic.
               </p>
             </div>
           </div>
@@ -343,7 +343,7 @@ export default async function LaserLightShowPage() {
                 </div>
               </div>
               <p className="text-gray-700 text-center text-lg font-medium">
-                No matter the format, you'll get the same spectacular lasers, synchronized music, and unforgettable experience that only The EOP Experience can deliver.
+                No matter the format, you&apos;ll get the same spectacular lasers, synchronized music, and unforgettable experience that only The EOP Experience can deliver.
               </p>
             </div>
           </div>
