@@ -42,7 +42,7 @@ async function getFoamPartiesData(): Promise<FoamPartiesData> {
     // Update title in the fetched data
     parsedData.meta.title = "Foam Parties & Water Battles | Emerald Owl Productions";
     parsedData.hero.title = "Foam Parties & Water Battles";
-    parsedData.meta.description = "High-energy foam parties, perfect with our exciting Water Battle Games for unforgettable events! We also offer vibrant Color Run experiences.";
+    parsedData.meta.description = "High-energy foam parties, perfect with our exciting Water Battle Games for unforgettable events!";
     parsedData.contentSection.description = parsedData.contentSection.description.replace("Our foam parties create", "Our exhilarating foam parties create");
     parsedData.meta.keywords = ['foam party', 'water battles', 'foam and water games', 'event entertainment', 'kids parties', 'outdoor fun'].join(', ');
     if (parsedData.colorRun) {
@@ -65,7 +65,7 @@ async function getFoamPartiesData(): Promise<FoamPartiesData> {
     return {
       meta: {
         title: 'Foam Parties & Water Battles | Emerald Owl Productions',
-        description: 'High-energy foam parties, perfect with our exciting Water Battle Games for unforgettable events! We also offer vibrant Color Run experiences.',
+        description: 'High-energy foam parties, perfect with our exciting Water Battle Games for unforgettable events!',
         keywords: ['foam party', 'water battles', 'foam and water games', 'event entertainment', 'kids parties', 'outdoor fun'].join(', '),
       },
       hero: {
@@ -83,7 +83,6 @@ async function getFoamPartiesData(): Promise<FoamPartiesData> {
           'Professional foam machines with customizable settings',
           'Non-toxic, skin-friendly foam',
           'Experienced staff for setup and supervision',
-          'Adaptable for indoor or outdoor venues',
           'Perfect for fundraisers, celebrations, and community events'
         ]
       },
@@ -150,10 +149,6 @@ async function getFoamPartiesData(): Promise<FoamPartiesData> {
         {
           question: 'How much space is needed for a foam party?',
           answer: 'For a standard setup, we recommend at least 20x20 feet of open space. Larger events may require more area. We can adapt to your venue and will advise on the best setup during consultation.'
-        },
-        {
-          question: 'Can color run events be held indoors?',
-          answer: 'While we primarily recommend outdoor venues for color runs, we do offer special indoor-safe color powder for gymnasium or large indoor spaces. Please inquire for specific requirements.'
         }
       ],
       cta: {

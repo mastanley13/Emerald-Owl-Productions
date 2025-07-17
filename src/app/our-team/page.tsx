@@ -62,17 +62,6 @@ const teamMembers = [
     ]
   },
   {
-    name: 'HAILEY DOWNS',
-    title: 'Creative Initiatives Director - Partnership Development Team',
-    category: 'Director',
-    imageUrl: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/6734435b17f51a6f809a5c34.jpeg',
-    emails: ['hailey@emeraldowlproductions.com'],
-    bio: [
-      "Hailey is currently studying business with a focus on marketing and networking at the University of Charlotte. She has a deep passion for connecting people and ideas, which has led her to explore various ways to engage with different communities, including nonprofit initiatives. Hailey is especially driven by the potential to use creative marketing strategies to support charitable causes, and believes in the power of events and campaigns to make a meaningful and positive impact.",
-      '"The opportunity to lead creative initiatives at EOP will allow me to make meaningful contributions to causes in which I am already passionate. I hope being part of this will also help me grow as a young professional, gaining valuable experience and insight that will shape my career moving forward."'
-    ]
-  },
-  {
     name: 'MICHAEL HARRIS',
     title: 'Greater Pittsburgh Regional Director',
     category: 'Director',

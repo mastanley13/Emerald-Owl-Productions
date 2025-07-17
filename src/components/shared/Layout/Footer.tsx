@@ -21,7 +21,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-gray-600 mb-4">
-              Creating unforgettable experiences and magical moments for events of all kinds.
+              Creating Memories and New Traditions Through Epic Events.
             </p>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/emeraldowlproductions/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-emerald-600">
@@ -53,6 +53,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/laser-light-show" className="text-gray-600 hover:text-emerald-600">Laser Light Show</Link></li>
               <li><Link href="/neon-nights" className="text-gray-600 hover:text-emerald-600">Neon Nights</Link></li>
+              <li><Link href="/glow-sports" className="text-gray-600 hover:text-emerald-600">Glow in the Dark Sports</Link></li>
               <li><Link href="/foam-parties" className="text-gray-600 hover:text-emerald-600">Foam Parties</Link></li>
               <li><Link href="/water-games" className="text-gray-600 hover:text-emerald-600">Water Games</Link></li>
               <li><Link href="/sensory-friendly-experiences" className="text-gray-600 hover:text-emerald-600">Sensory Friendly Experiences</Link></li>
@@ -64,8 +65,6 @@ export default function Footer() {
             <h3 className="text-emerald-600 font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li><Link href="/our-story" className="text-gray-600 hover:text-emerald-600">Our Story</Link></li>
-              <li><Link href="/gallery" className="text-gray-600 hover:text-emerald-600">Gallery</Link></li>
-              <li><Link href="/blog" className="text-gray-600 hover:text-emerald-600">Blog</Link></li>
               <li><Link href="/contact-us" className="text-gray-600 hover:text-emerald-600">Contact Us</Link></li>
             </ul>
           </div>
@@ -76,14 +75,14 @@ export default function Footer() {
             <address className="not-italic text-gray-600">
               <p className="mb-2">
                 <span className="font-medium">Phone:</span><br />
-                <a href="tel:833-456-9367" className="hover:text-emerald-600 transition-colors">
+                <a href="tel:833-GLOW-EOP" className="hover:text-emerald-600 transition-colors">
                   833-GLOW-EOP
                 </a> or <a href="tel:252-764-7628" className="hover:text-emerald-600 transition-colors">(252) 764-7628</a>
               </p>
               <p className="mb-2">
                 <span className="font-medium">Address:</span><br />
-                P.O. Box 4911<br />
-                Emerald Isle, North Carolina 28594
+                PO Box 4911<br />
+                Emerald Isle, NC 28594
               </p>
               <p className="mb-4">
                 <a href="mailto:info@emeraldowlproductions.com" className="hover:text-emerald-600 transition-colors">

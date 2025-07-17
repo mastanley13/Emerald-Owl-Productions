@@ -1,6 +1,6 @@
 export default function HeroBanner() {
   return (
-    <section className="relative w-full h-screen bg-slate-900 overflow-hidden">
+    <section className="relative w-full min-h-[calc(100vh-80px)] pt-20 pb-16 bg-slate-900 overflow-hidden">
       {/* Background Image with Professional Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
@@ -40,7 +40,7 @@ export default function HeroBanner() {
         </h1>
 
         {/* Refined Subtitle */}
-        <div className="mb-12 max-w-4xl mx-auto">
+        <div className="mb-6 max-w-4xl mx-auto">
           <p className="text-xl md:text-2xl text-white/90 font-light mb-4 leading-relaxed">
             A Revolutionary Laser Light Experience
           </p>
@@ -49,25 +49,46 @@ export default function HeroBanner() {
           </p>
         </div>
 
-        {/* Clean Timeline */}
-        <div className="mb-10 flex items-center justify-center space-x-8 text-white">
-          <div className="text-center">
-            <div className="text-3xl font-light text-blue-300">1776</div>
-            <div className="text-xs text-white/60 tracking-wider">FOUNDED</div>
+        {/* Video Section - Integrated and Responsive */}
+        <div className="flex flex-col items-center w-full max-w-2xl mx-auto mb-8">
+          <span className="text-yellow-300 font-semibold text-sm mb-2 tracking-wide drop-shadow">
+            PLEASE UNMUTE TO HEAR INFORMATION
+          </span>
+          <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg bg-black">
+            <video
+              className="w-full h-full object-cover"
+              controls
+              autoPlay
+              muted
+              playsInline
+              style={{ background: 'black' }}
+            >
+              <source
+                src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/673c32fe15ee06bf5fbfeed7.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
           </div>
-          <div className="flex items-center space-x-4">
-            <div className="w-8 h-px bg-gradient-to-r from-blue-400 to-red-400"></div>
-            <div className="w-2 h-2 bg-white rounded-full"></div>
-            <div className="w-8 h-px bg-gradient-to-r from-red-400 to-blue-400"></div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-light text-red-300">2026</div>
-            <div className="text-xs text-white/60 tracking-wider">ANNIVERSARY</div>
+        </div>
+
+        {/* Timeline */}
+        <div className="flex flex-col items-center mb-12">
+          <div className="flex items-center justify-center space-x-8 mb-2">
+            <div className="text-center">
+              <div className="text-3xl font-light text-blue-300">1776</div>
+              <div className="text-xs text-white/60 tracking-wider">FOUNDED</div>
+            </div>
+            <div className="w-24 h-px bg-gradient-to-r from-blue-400 to-red-400"></div>
+            <div className="text-center">
+              <div className="text-3xl font-light text-red-300">2026</div>
+              <div className="text-xs text-white/60 tracking-wider">ANNIVERSARY</div>
+            </div>
           </div>
         </div>
 
         {/* Professional CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 items-center">
+        <div className="flex flex-col sm:flex-row gap-4 items-center mb-6">
           <a 
             href="/contact-us"
             className="group relative inline-flex items-center justify-center px-8 py-4 bg-white text-slate-900 font-semibold text-lg rounded-lg transition-all duration-300 hover:bg-white/90 hover:shadow-2xl hover:shadow-white/20 hover:-translate-y-1"
@@ -93,17 +114,16 @@ export default function HeroBanner() {
           </a>
         </div>
 
-        {/* Subtle Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <div className="flex flex-col items-center text-white/50 animate-bounce">
-            <span className="text-xs mb-2 tracking-wider">EXPLORE</span>
-            <div className="w-px h-8 bg-gradient-to-b from-white/50 to-transparent"></div>
-          </div>
+        {/* Explore Indicator - moved below CTA buttons */}
+        <div className="flex flex-col items-center mb-12">
+          <span className="text-xs text-white/70 tracking-wider mb-2">EXPLORE</span>
+          <div className="w-px h-8 bg-gradient-to-b from-white/50 to-transparent animate-bounce"></div>
         </div>
+
       </div>
       
       {/* Professional Bottom Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-slate-900 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-slate-900 to-transparent pointer-events-none"></div>
     </section>
   );
 } 

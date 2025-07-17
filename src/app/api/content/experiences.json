@@ -4,19 +4,13 @@
       "id": "laser-shows",
       "title": "Laser Shows",
       "hook": "Dazzling laser light shows customized for your event.",
-      "visual": "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/671d07f56bdb4dfd0c0a60c4.jpeg"
+      "visual": "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/678fb2d6141a590c80b64c99.jpeg"
     },
     {
       "id": "neon-nights",
       "title": "Neon Nights",
       "hook": "Vibrant neon-themed parties that glow with energy.",
       "visual": "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a4558baa4eed1400f75c3a.jpeg"
-    },
-    {
-      "id": "foam-color-runs",
-      "title": "Foam & Color Runs",
-      "hook": "Exciting and colorful foam and powder runs for all ages.",
-      "visual": "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a453fb7ee1c12aa7752dcc.jpeg"
     }
   ],
   "appetizers": [
@@ -37,12 +31,6 @@
       "title": "Dunk Tank",
       "hook": "Classic dunk tank fun for any gathering.",
       "visual": "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/6824cd65a1908e2309d283c2.png"
-    },
-    {
-      "id": "gunge-slime",
-      "title": "Gunge (Slime / Dripping in Confidence)",
-      "hook": "Unique and messy fun with gunge and slime.",
-      "visual": "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a45111aa4eed2469f759a2.jpeg"
     },
     {
       "id": "dj-emcee-games",
@@ -75,12 +63,6 @@
       "title": "Do It Now",
       "hook": "Support our 'Do It Now' initiative.",
       "visual": "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/6824cdd59cd8fb53e599ef0b.jpeg"
-    },
-    {
-      "id": "dripping-in-confidence-initiative",
-      "title": "Dripping in Confidence",
-      "hook": "Promote self-esteem with our 'Dripping in Confidence' program.",
-      "visual": "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67ab94d979284b777a6a7660.jpeg"
     },
     {
       "id": "green-light-movement",

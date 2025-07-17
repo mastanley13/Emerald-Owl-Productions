@@ -74,14 +74,6 @@ async function getWaterGamesData(): Promise<WaterGamesData> {
       {
         image: { 
           type: 'image', 
-          url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67ad1519ab36b0cd8b78150d.jpeg', 
-          alt: 'Water battle action' 
-        },
-        caption: 'Epic water battle in action'
-      },
-      {
-        image: { 
-          type: 'image', 
           url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a44b5e53f26ce4fe5ef5bd.jpeg', 
           alt: 'Water games participants' 
         },

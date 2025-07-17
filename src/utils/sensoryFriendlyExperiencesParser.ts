@@ -92,6 +92,10 @@ export function parseSensoryFriendlyExperiencesData(data: any): SensoryFriendlyE
           {
             url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/6732351055af5c28665fee1e.jpeg',
             alt: 'Sensory friendly event'
+          },
+          {
+            url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67ad1519ab36b0cd8b78150d.jpeg',
+            alt: 'Kids enjoying a sensory-friendly slime activity at a table'
           }
         ]
       },

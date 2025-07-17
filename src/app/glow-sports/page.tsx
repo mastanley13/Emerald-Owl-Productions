@@ -39,7 +39,7 @@ const glowSportsData: GlowSportsData = {
     title: 'Glow in the Dark Sports',
     description: 'Experience your favorite sports like never before – under the vibrant glow of blacklights! Perfect for parties, team building, and unique events.',
     backgroundImage: { // Example image - replace with actual
-      url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67104d5aaf962467f724d4ee.jpeg', // Placeholder image
+      url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/687933d002da474708446fa5.png', // Updated image
       alt: 'Glow in the dark sports action',
     },
   },
@@ -68,18 +68,23 @@ export default async function GlowSportsPage() {
       <Header />
       <main className="pt-16">
         {/* Hero Banner */}
-        <section className="relative min-h-[500px] flex items-center bg-gradient-to-b from-black via-black to-teal-950 text-white">
+        <section className="relative min-h-[800px] flex items-center bg-gradient-to-b from-black via-black to-teal-950 text-white">
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 to-teal-950/80 backdrop-blur-[2px]" />
             <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-teal-500/10 opacity-70 animate-pulse"></div>
             <div className="absolute top-32 -left-32 w-64 h-64 rounded-full bg-purple-400/10 opacity-60 animate-pulse" style={{ animationDuration: '8s' }}></div>
             {data.hero.backgroundImage && (
-              <Image
-                src={data.hero.backgroundImage.url}
-                alt={data.hero.backgroundImage.alt || data.hero.title}
-                fill
-                priority
-                className="object-cover opacity-30"
+              <div
+                className="absolute inset-0 w-full h-full z-0 bg-no-repeat bg-center bg-fixed"
+                style={{
+                  backgroundImage: `url('${data.hero.backgroundImage.url}')`,
+                  backgroundAttachment: 'fixed',
+                  backgroundSize: 'cover', // Use cover for seamless look
+                  backgroundPosition: 'center',
+                  backgroundColor: '#0f172a',
+                  opacity: 0.35,
+                }}
+                aria-label={data.hero.backgroundImage.alt || data.hero.title}
               />
             )}
           </div>

@@ -83,6 +83,28 @@ export default function CtaSection() {
             </div>
           </div>
 
+          {/* Laser Show Info Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <a
+              href="/laser-light-show"
+              className="inline-flex items-center justify-center px-8 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition-colors text-base mb-2 sm:mb-0"
+            >
+              LASER SHOW INFO
+            </a>
+            <a
+              href="/laser-safety"
+              className="inline-flex items-center justify-center px-8 py-3 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-600 transition-colors text-base mb-2 sm:mb-0"
+            >
+              SAFEST EXPERIENCE IN THE SKY
+            </a>
+            <a
+              href="/laser-show-benefits"
+              className="inline-flex items-center justify-center px-8 py-3 bg-purple-500 text-white font-semibold rounded-lg shadow-md hover:bg-purple-600 transition-colors text-base"
+            >
+              LASER SHOW BENEFITS
+            </a>
+          </div>
+
           {/* Trust Indicators */}
           <div className="border-t border-white/10 pt-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">

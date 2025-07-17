@@ -3,9 +3,7 @@ import Header from '../../components/shared/Layout/Header';
 import Footer from '../../components/shared/Layout/Footer';
 import { Metadata } from 'next';
 import HeroBanner from './components/HeroBanner';
-import VideoSection from './components/VideoSection';
 import ContentSection from './components/ContentSection';
-import GallerySection from './components/GallerySection';
 import CtaSection from './components/CtaSection';
 
 export const metadata: Metadata = {
@@ -19,9 +17,7 @@ export default function AmericanAnniversaryPage() {
       <Header />
       <main>
         <HeroBanner />
-        <VideoSection />
         <ContentSection />
-        <GallerySection />
         <CtaSection />
       </main>
       <Footer />

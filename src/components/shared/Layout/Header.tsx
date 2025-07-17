@@ -78,36 +78,19 @@ export default function Header() {
                   >
                     Neon Nights
                   </Link>
-                  {/* Sub-menu for Neon Nights - Desktop */}
-                  <div className="pl-4 border-l border-emerald-200 ml-2">
-                    <Link 
-                      href="/glow-foam-paint" 
-                      className="block px-3 py-1.5 text-sm text-emerald-600 hover:bg-emerald-100 hover:text-emerald-800"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      ↳ Glow Foam & Paint
-                    </Link>
-                    <Link 
-                      href="/glow-sports" 
-                      className="block px-3 py-1.5 text-sm text-emerald-600 hover:bg-emerald-100 hover:text-emerald-800"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      ↳ Glow Sports
-                    </Link>
-                  </div>
+                  <Link 
+                    href="/glow-sports" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Glow in the Dark Sports
+                  </Link>
                   <Link 
                     href="/foam-parties" 
                     className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
                     onClick={() => setMenuOpen(false)}
                   >
                     Foam Parties & Water Battles
-                  </Link>
-                  <Link 
-                    href="/color-run" 
-                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Color Run Experience
                   </Link>
                   <Link 
                     href="/water-games" 
@@ -117,25 +100,13 @@ export default function Header() {
                     Water Games
                   </Link>
                   <Link 
-                    href="/dripping-in-confidence" 
+                    href="https://www.drippinginconfidence.com" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
                     onClick={() => setMenuOpen(false)}
                   >
                     Dripping in Confidence
-                  </Link>
-                  <Link 
-                    href="/gunge" 
-                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Gunge
-                  </Link>
-                  <Link 
-                    href="/sensory-friendly-experiences" 
-                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Sensory Friendly Experiences
                   </Link>
                 </div>
               </div>
@@ -158,36 +129,19 @@ export default function Header() {
                     >
                       Neon Nights
                     </Link>
-                    {/* Sub-menu for Neon Nights - Mobile */}
-                    <div className="pl-6">
-                      <Link 
-                        href="/glow-foam-paint" 
-                        className="block py-1 text-sm text-emerald-600 hover:bg-emerald-100 rounded-md"
-                        onClick={() => setMenuOpen(false)}
-                      >
-                        ↳ Glow Foam & Paint
-                      </Link>
-                      <Link 
-                        href="/glow-sports" 
-                        className="block py-1 text-sm text-emerald-600 hover:bg-emerald-100 rounded-md"
-                        onClick={() => setMenuOpen(false)}
-                      >
-                        ↳ Glow Sports
-                      </Link>
-                    </div>
+                    <Link 
+                      href="/glow-sports" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Glow in the Dark Sports
+                    </Link>
                     <Link 
                       href="/foam-parties" 
                       className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
                       onClick={() => setMenuOpen(false)}
                     >
                       Foam Parties & Water Battles
-                    </Link>
-                    <Link 
-                      href="/color-run" 
-                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      Color Run Experience
                     </Link>
                     <Link 
                       href="/water-games" 
@@ -197,25 +151,13 @@ export default function Header() {
                       Water Games
                     </Link>
                     <Link 
-                      href="/dripping-in-confidence" 
+                      href="https://www.drippinginconfidence.com" 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
                       onClick={() => setMenuOpen(false)}
                     >
                       Dripping in Confidence
-                    </Link>
-                    <Link 
-                      href="/gunge" 
-                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      Gunge
-                    </Link>
-                    <Link 
-                      href="/sensory-friendly-experiences" 
-                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      Sensory Friendly Experiences
                     </Link>
                   </React.Fragment>
                 )}

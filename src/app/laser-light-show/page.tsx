@@ -26,11 +26,24 @@ export default async function LaserLightShowPage() {
       <section className="bg-black">
         <div className="container mx-auto px-0">
           <div className="relative aspect-video w-full">
+            {/* Small YouTube Icon Overlay - Debug Version */}
+            <a
+              href="https://www.youtube.com/@emeraldowlproductions9615"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute bottom-2 right-2 z-50 opacity-90 hover:opacity-100 transition-opacity border-2 border-yellow-400 rounded-full shadow-lg"
+              aria-label="Visit our YouTube Channel"
+              style={{ pointerEvents: 'auto', background: 'rgba(0,0,0,0.3)' }}
+            >
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" className="text-red-500 drop-shadow-md">
+                <path d="M23.498 6.186a2.994 2.994 0 00-2.107-2.117C19.228 3.5 12 3.5 12 3.5s-7.228 0-9.391.569A2.994 2.994 0 00.502 6.186C0 8.36 0 12 0 12s0 3.64.502 5.814a2.994 2.994 0 002.107 2.117C4.772 20.5 12 20.5 12 20.5s7.228 0 9.391-.569a2.994 2.994 0 002.107-2.117C24 15.64 24 12 24 12s0-3.64-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
             <iframe 
               width="100%" 
               height="100%" 
-              src={`${data.videoContent.videoUrl}?autoplay=1&mute=1&playsinline=1&loop=1&playlist=${data.videoContent.videoUrl.split('/').pop()}`}
-              title={data.hero.title || "Experience Video"} 
+              src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/673c32fe15ee06bf5fbfeed7.mp4"
+              title="Experience Video" 
               frameBorder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowFullScreen
@@ -61,6 +74,9 @@ export default async function LaserLightShowPage() {
             </div>
             <cite className="text-sm text-emerald-600 font-medium">- International Laser Display Association (ILDA)</cite>
           </div>
+
+          {/* Event Gallery moved here */}
+          {EventGallerySection()}
 
           {/* Advantages Grid */}
           <div className="grid md:grid-cols-2 gap-8">
@@ -526,7 +542,6 @@ export default async function LaserLightShowPage() {
         <ExperienceHeadline heroData={data.hero} /> {/* Title here is still data.hero.title */}
         <WhyLasersSection />
         <DescriptiveContentSection />
-        <EventGallerySection />
         <FaqSection />
         <TestimonialsSection />
       </main>

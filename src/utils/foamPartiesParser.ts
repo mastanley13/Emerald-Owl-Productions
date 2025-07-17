@@ -1,4 +1,4 @@
-import { FoamPartiesData, GalleryItem, PackageOption, ColorRunOption, FaqItem } from '../types/foamParties';
+import { FoamPartiesData, GalleryItem, PackageOption, FaqItem } from '../types/foamParties';
 import { Resource } from '../types/homepage';
 
 /**
@@ -153,23 +153,6 @@ export function parseFoamPartiesData(rawData: any): FoamPartiesData {
     }
   ];
 
-  // Extract color run option
-  const colorRun: ColorRunOption = {
-    title: 'Color Run Experience',
-    description: 'Add vibrant color powder to your event for an unforgettable experience! Our color powder is safe, non-toxic, and washes away easily with water.',
-    image: {
-      type: 'image',
-      url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a44e325186f7f9bbdbea13.jpeg',
-      alt: 'Participants celebrating in a cloud of vibrant colors at an Emerald Owl Productions Color Run event.'
-    },
-    benefits: [
-      'Biodegradable and environmentally friendly colors',
-      'Available in vibrant custom color options',
-      'Perfect for fundraisers and charity events',
-      'Can be combined with our foam packages'
-    ]
-  };
-
   // Extract FAQs
   const faqs: FaqItem[] = [
     {
@@ -181,10 +164,6 @@ export function parseFoamPartiesData(rawData: any): FoamPartiesData {
       answer: 'We recommend at least 20\' x 20\' of open space for a standard foam party setup. Larger events may require more space.'
     },
     {
-      question: 'Can foam parties be held indoors?',
-      answer: 'Yes, with proper precautions. We recommend a space with adequate drainage and non-slip flooring. We\'ll work with you to ensure your venue is suitable.'
-    },
-    {
       question: 'What should participants wear?',
       answer: 'Comfortable clothes that can get wet, such as swimwear, shorts, and t-shirts. We recommend bringing a change of clothes and towels.'
     }
@@ -193,16 +172,16 @@ export function parseFoamPartiesData(rawData: any): FoamPartiesData {
   // Create the structured data
   const foamPartiesData: FoamPartiesData = {
     meta: {
-      title: rawData.title || 'Foam Parties & Color Run | Emerald Owl Productions',
-      description: rawData.meta?.description || 'Create high-energy, fun-filled foam parties and color run events for any occasion!',
+      title: rawData.title || 'Foam Parties | Emerald Owl Productions',
+      description: rawData.meta?.description || 'Create high-energy, fun-filled foam parties for any occasion!',
       keywords: rawData.meta?.keywords || ''
     },
     hero: {
-      title: 'Foam Parties & Color Run',
+      title: 'Foam Parties',
       backgroundImage: resources.byCategory.heroBackground[0] || {
         type: 'image',
         url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a453fb7ee1c12aa7752dcc.jpeg',
-        alt: 'Foam Parties & Color Run Hero'
+        alt: 'Foam Parties Hero'
       }
     },
     videoContent: {
@@ -212,19 +191,17 @@ export function parseFoamPartiesData(rawData: any): FoamPartiesData {
       note: 'PLEASE UNMUTE TO HEAR INFORMATION'
     },
     contentSection: {
-      title: 'Unforgettable Foam Parties & Color Runs',
-      description: 'Transform any event into an exciting, high-energy experience with our premium foam parties and vibrant color runs! Perfect for school events, festivals, corporate team building, fundraisers, and private celebrations.',
+      title: 'Unforgettable Foam Parties',
+      description: 'Transform any event into an exciting, high-energy experience with our premium foam parties! Perfect for school events, festivals, corporate team building, fundraisers, and private celebrations.',
       features: [
         'Professional foam cannons and equipment',
         'Safe, non-toxic, hypoallergenic foam',
         'Customizable packages for any event size',
         'Experienced staff to ensure smooth operation',
-        'Optional DJ services and lighting effects',
-        'Combine with color powder for even more fun!'
+        'Optional DJ services and lighting effects'
       ]
     },
     foamPackages: foamPackages,
-    colorRun: colorRun,
     gallery: foamPartyGalleryImages,
     faqs: faqs,
     cta: {

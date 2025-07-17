@@ -61,7 +61,10 @@ export default function ContactUsPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-emerald-800">Phone</h3>
-                      <p className="text-gray-700">(252) 563-5436</p>
+                      <p className="text-gray-700">
+                        <span>833-GLOW-EOP</span><br />
+                        <span>(252) 764-7628</span>
+                      </p>
                     </div>
                   </div>
                   
@@ -87,8 +90,8 @@ export default function ContactUsPage() {
                     <div>
                       <h3 className="text-lg font-semibold text-emerald-800">Office</h3>
                       <p className="text-gray-700">
-                        222 Young Ave, Suite 5<br />
-                        Henderson, NC 27536
+                        PO Box 4911<br />
+                        Emerald Isle, NC 28594
                       </p>
                     </div>
                   </div>

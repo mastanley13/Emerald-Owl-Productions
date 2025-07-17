@@ -60,16 +60,6 @@ export interface PackageOption {
 }
 
 /**
- * Color Run Option
- */
-export interface ColorRunOption {
-  title: string;
-  description: string;
-  image: Resource;
-  benefits?: string[];
-}
-
-/**
  * Call To Action data
  */
 export interface CtaData {
@@ -95,7 +85,6 @@ export interface FoamPartiesData {
   videoContent?: VideoContentData;
   contentSection: ContentSectionData;
   foamPackages?: PackageOption[];
-  colorRun?: ColorRunOption;
   gallery: GalleryItem[];
   faqs?: FaqItem[];
   cta: CtaData;
@@ -105,7 +94,6 @@ export interface FoamPartiesData {
       videoThumbnails: Resource[];
       galleryImages: Resource[];
       packageImages: Resource[];
-      colorRunImages: Resource[];
       all: Resource[];
     };
   };

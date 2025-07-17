@@ -65,6 +65,22 @@ export default async function NeonNightsPage() {
                   Take the Next Step
                 </Link>
               </div>
+              {/* Hero Banner Video */}
+              <div className="mt-10 w-full max-w-3xl mx-auto rounded-lg overflow-hidden shadow-2xl shadow-purple-500/30">
+                <video 
+                  className="w-full h-auto rounded-lg"
+                  controls
+                  preload="metadata"
+                  poster=""
+                  style={{ background: 'black' }}
+                >
+                  <source 
+                    src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/68793a967cef1e1238d4e246.mov" 
+                    type="video/quicktime"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
           </div>
         </section>
@@ -276,13 +292,6 @@ export default async function NeonNightsPage() {
 
             {/* CTAs for Sub-Experiences */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
-              <Link href="/glow-foam-paint" className="block bg-black/50 p-8 rounded-lg shadow-lg hover:shadow-pink-500/30 transition-shadow duration-300">
-                <h3 className="text-2xl font-bold mb-4 text-pink-400">Glow in the Dark Foam & Paint</h3>
-                <p className="mb-4 text-gray-300">
-                  Dive into a vibrant world of glowing foam and paint! An unforgettable experience that combines messy fun with dazzling neon colors under blacklights.
-                </p>
-                <span className="text-pink-400 font-semibold hover:underline">Explore Glow Foam & Paint &rarr;</span>
-              </Link>
               
               <Link href="/glow-sports" className="block bg-black/50 p-8 rounded-lg shadow-lg hover:shadow-teal-500/30 transition-shadow duration-300">
                 <h3 className="text-2xl font-bold mb-4 text-teal-400">Glow in the Dark Sports</h3>

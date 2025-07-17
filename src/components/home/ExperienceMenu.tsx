@@ -12,12 +12,12 @@ interface ExperienceMenuProps {
 type CategoryKey = keyof ExperienceCategory | 'entireMenu';
 
 const ExperienceMenu: React.FC<ExperienceMenuProps> = ({ experiences }) => {
-  const [activeCategory, setActiveCategory] = useState<CategoryKey>('mainCourses');
+  const [activeCategory, setActiveCategory] = useState<CategoryKey>('entireMenu');
 
   const categoryTitles: Record<CategoryKey, string> = {
     mainCourses: 'Entrees (Large Experiences)',
     appetizers: 'Appetizers (Small/Add-on Experiences)',
-    desserts: 'Desserts (All Experiences)',
+    desserts: 'Desserts (Initiatives)',
     entireMenu: 'Entire Menu (All Experiences)',
   };
 
@@ -43,13 +43,8 @@ const ExperienceMenu: React.FC<ExperienceMenuProps> = ({ experiences }) => {
       // Main experiences
       'foam parties': '/foam-parties',
       'foam party': '/foam-parties',
-      'glow foam paint': '/glow-foam-paint',
-      'glow foam': '/glow-foam-paint',
-      'foam paint': '/glow-foam-paint',
       'glow sports': '/glow-sports',
       'glow sport': '/glow-sports',
-      'gunge experience': '/gunge',
-      'gunge': '/gunge',
       'laser light show': '/laser-light-show',
       'laser show': '/laser-light-show',
       'laser light': '/laser-light-show',
@@ -59,9 +54,8 @@ const ExperienceMenu: React.FC<ExperienceMenuProps> = ({ experiences }) => {
       'water game': '/water-games',
       'water wars': '/water-games',
       'water battle': '/water-games',
-      'dripping in confidence': '/dripping-in-confidence',
+      'dripping in confidence': 'https://www.drippinginconfidence.com',
       'color run': '/color-run',
-      'colour run': '/color-run',
       'holiday events': '/holiday-events',
       'holiday event': '/holiday-events',
       'special occasions': '/special-occasions',
@@ -92,22 +86,6 @@ const ExperienceMenu: React.FC<ExperienceMenuProps> = ({ experiences }) => {
         return url;
       }
     }
-
-    // Check for keyword matches
-    if (title.includes('foam')) return '/foam-parties';
-    if (title.includes('glow') && title.includes('paint')) return '/glow-foam-paint';
-    if (title.includes('glow') && title.includes('sport')) return '/glow-sports';
-    if (title.includes('laser')) return '/laser-light-show';
-    if (title.includes('neon')) return '/neon-nights';
-    if (title.includes('water')) return '/water-games';
-    if (title.includes('gunge') || title.includes('slime')) return '/gunge';
-    if (title.includes('sensory')) return '/sensory-friendly-experiences';
-    if (title.includes('color') || title.includes('colour')) return '/color-run';
-    if (title.includes('holiday')) return '/holiday-events';
-    if (title.includes('anniversary') || title.includes('america')) return '/american-anniversary-celebration';
-    if (title.includes('fundrais')) return '/fundraisers';
-    if (title.includes('emmy')) return '/emmy-the-owl';
-    if (title.includes('initiative')) return '/our-initiatives';
 
     // Default fallback - go to our experiences page
     return '/our-experiences';
@@ -201,7 +179,7 @@ const ExperienceMenu: React.FC<ExperienceMenuProps> = ({ experiences }) => {
         <div className="flex justify-center mb-16">
           <div className="bg-black/20 backdrop-blur-sm p-2 rounded-2xl shadow-xl border border-emerald-600/30">
             <div className="flex flex-col sm:flex-row gap-2">
-              {(['mainCourses', 'appetizers', 'desserts', 'entireMenu'] as CategoryKey[]).map((key) => (
+              {(['entireMenu', 'mainCourses', 'appetizers', 'desserts'] as CategoryKey[]).map((key) => (
                 <button
                   key={key}
                   onClick={() => setActiveCategory(key)}

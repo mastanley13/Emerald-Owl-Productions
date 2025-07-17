@@ -4,7 +4,6 @@ import Header from '../components/shared/Layout/Header';
 import HeroBanner from '../components/home/HeroBanner';
 import IntroSection from '../components/home/IntroSection';
 import AmericaBanner from '../components/home/AmericaBanner';
-import VideoHighlight from '../components/home/VideoHighlight';
 import Footer from '../components/shared/Layout/Footer';
 import Memorial from '../components/home/Memorial';
 import { getHomepageData, getExperiencesData } from '../services/contentService';
@@ -117,10 +116,8 @@ export default async function Home() {
     <React.Fragment>
       <Header />
       <main>
-        <HeroBanner data={homepageData.hero} />
+        <HeroBanner data={homepageData.hero} video={homepageData.videoHighlight} />
         <IntroSection />
-        <VideoHighlight data={homepageData.videoHighlight} />
-        <AmericaBanner data={homepageData.americaBanner} />
         <ExperienceMenu experiences={experiencesData} />
         <Memorial />
       </main>
