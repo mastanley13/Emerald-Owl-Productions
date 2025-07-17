@@ -75,8 +75,8 @@ export default async function NeonNightsPage() {
                   style={{ background: 'black' }}
                 >
                   <source 
-                    src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/68793a967cef1e1238d4e246.mov" 
-                    type="video/quicktime"
+                    src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/687943025d37ba9d7c588426.mp4" 
+                    type="video/mp4"
                   />
                   Your browser does not support the video tag.
                 </video>
