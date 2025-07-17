@@ -45,9 +45,7 @@ async function getFoamPartiesData(): Promise<FoamPartiesData> {
     parsedData.meta.description = "High-energy foam parties, perfect with our exciting Water Battle Games for unforgettable events!";
     parsedData.contentSection.description = parsedData.contentSection.description.replace("Our foam parties create", "Our exhilarating foam parties create");
     parsedData.meta.keywords = ['foam party', 'water battles', 'foam and water games', 'event entertainment', 'kids parties', 'outdoor fun'].join(', ');
-    if (parsedData.colorRun) {
-      delete parsedData.colorRun;
-    }
+    // Removed erroneous colorRun property deletion
 
     // Update the second gallery image if gallery exists and has at least two items
     if (parsedData.gallery && parsedData.gallery.length >= 2) {
@@ -162,7 +160,6 @@ async function getFoamPartiesData(): Promise<FoamPartiesData> {
           videoThumbnails: [],
           galleryImages: [],
           packageImages: [],
-          colorRunImages: [],
           all: []
         }
       }

@@ -48,25 +48,28 @@ export default async function NeonNightsPage() {
           </div>
           
           <div className="container mx-auto px-6 z-10 relative py-16">
-            <div className="max-w-4xl">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                <span className="text-purple-400 relative drop-shadow-md">
-                  {data.hero.title}
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl mb-10 text-gray-100 font-light max-w-2xl">
-                {data.hero.description || "Glow in the dark party experiences that transform any venue into a vibrant wonderland"}
-              </p>
-              <div className="flex flex-wrap gap-5">
-                <Link 
-                  href={data.cta.url} 
-                  className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-xl hover:shadow-purple-300/30"
-                >
-                  Take the Next Step
-                </Link>
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-10 max-w-6xl mx-auto">
+              {/* Left: Text Content */}
+              <div className="flex-1 min-w-0">
+                <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                  <span className="text-purple-400 relative drop-shadow-md">
+                    {data.hero.title}
+                  </span>
+                </h1>
+                <p className="text-xl md:text-2xl mb-10 text-gray-100 font-light max-w-2xl">
+                  {data.hero.description || "Glow in the dark party experiences that transform any venue into a vibrant wonderland"}
+                </p>
+                <div className="flex flex-wrap gap-5">
+                  <Link 
+                    href={data.cta.url} 
+                    className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-xl hover:shadow-purple-300/30"
+                  >
+                    Take the Next Step
+                  </Link>
+                </div>
               </div>
-              {/* Hero Banner Video */}
-              <div className="mt-10 w-full max-w-3xl mx-auto rounded-lg overflow-hidden shadow-2xl shadow-purple-500/30">
+              {/* Right: Video */}
+              <div className="flex-1 min-w-0 w-full max-w-xl md:max-w-md lg:max-w-lg xl:max-w-xl mt-10 md:mt-0 rounded-lg overflow-hidden shadow-2xl shadow-purple-500/30">
                 <video 
                   className="w-full h-auto rounded-lg"
                   controls
