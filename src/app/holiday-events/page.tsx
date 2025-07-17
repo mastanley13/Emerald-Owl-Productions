@@ -248,7 +248,7 @@ export default async function HolidayEventsPage() {
                       src={event.image.url}
                       alt={event.image.alt}
                       fill
-                      className="object-cover hover:scale-110 transition-transform duration-700"
+                      className={`object-cover hover:scale-110 transition-transform duration-700${index === 0 ? ' object-[center_25%]' : ''}`}
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent"></div>

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { DrippingInConfidenceData } from '../../types/drippingInConfidence';
 import { parseDrippingInConfidenceData } from '../../utils/drippingInConfidenceParser';
+import IframeVideoWithOverlay from '../../components/IframeVideoWithOverlay';
 
 // This generates metadata for the page
 export async function generateMetadata(): Promise<Metadata> {
@@ -125,13 +126,11 @@ export default async function DrippingInConfidencePage() {
               </div>
               
               <div className="relative aspect-video max-w-4xl mx-auto overflow-hidden rounded-xl shadow-xl">
-                <iframe 
-                  src={data.videoContent.videoUrl} 
-                  title="Dripping in Confidence Video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowFullScreen
+                <IframeVideoWithOverlay
+                  src={data.videoContent.videoUrl}
                   className="absolute top-0 left-0 w-full h-full"
-                ></iframe>
+                  title="Dripping in Confidence Video"
+                />
               </div>
             </div>
           </section>

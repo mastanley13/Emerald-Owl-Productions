@@ -361,16 +361,16 @@ export default async function WaterGamesPage() {
               </div>
 
               {/* Improved Gallery Layout */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {/* Featured Large Image */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                {/* Left: Tall Vertical Image */}
                 {data.gallery.length > 0 && (
-                  <div className="lg:col-span-2 relative rounded-xl overflow-hidden shadow-lg h-[400px]">
+                  <div className="lg:col-span-1 relative rounded-xl overflow-hidden shadow-lg aspect-[3/4]">
                     <Image 
                       src={data.gallery[0].image.url}
                       alt={data.gallery[0].caption || data.gallery[0].image.alt}
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-700"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 66vw"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     {data.gallery[0].caption && (
                       <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/80 via-black/30 to-transparent">
@@ -380,10 +380,11 @@ export default async function WaterGamesPage() {
                   </div>
                 )}
                 
-                {/* Vertical Stack of Images */}
-                <div className="grid grid-cols-1 gap-6 h-[400px]">
+                {/* Right: 2x2 Grid instead of tall column */}
+                <div className="lg:col-span-2 grid grid-cols-2 gap-4">
+                  {/* Top row: 2 images */}
                   {data.gallery.slice(1, 3).map((item, index) => (
-                    <div key={index} className="relative rounded-xl overflow-hidden shadow-lg h-full">
+                    <div key={index} className="relative rounded-xl overflow-hidden shadow-lg aspect-[3/2]">
                       <Image 
                         src={item.image.url}
                         alt={item.caption || item.image.alt}
@@ -398,13 +399,51 @@ export default async function WaterGamesPage() {
                       )}
                     </div>
                   ))}
+                  
+                  {/* 3rd image: smaller and better proportioned */}
+                  {data.gallery.length > 3 && (
+                    <div className="col-span-2 relative rounded-xl overflow-hidden shadow-lg aspect-[3/1]">
+                      <Image 
+                        src={data.gallery[3].image.url}
+                        alt={data.gallery[3].caption || data.gallery[3].image.alt}
+                        fill
+                        className="object-cover object-[center_30%] hover:scale-110 transition-transform duration-500"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 66vw"
+                      />
+                      {data.gallery[3].caption && (
+                        <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity">
+                          <p className="text-white text-sm p-3 font-medium">{data.gallery[3].caption}</p>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
 
+              {/* Bottom: 2 images side by side */}
+              <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                {data.gallery.slice(4, 6).map((item, index) => (
+                  <div key={index} className="relative rounded-xl overflow-hidden shadow-lg aspect-[16/9]">
+                    <Image 
+                      src={item.image.url}
+                      alt={item.caption || item.image.alt}
+                      fill
+                      className={`object-cover hover:scale-110 transition-transform duration-500${index === 1 ? ' object-[center_25%]' : ''}`}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    {item.caption && (
+                      <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity">
+                        <p className="text-white text-sm p-3 font-medium">{item.caption}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+
               {/* Additional Images in Grid */}
-              {data.gallery.length > 3 && (
+              {data.gallery.length > 6 && (
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-                  {data.gallery.slice(3, 7).map((item, index) => (
+                  {data.gallery.slice(6, 10).map((item, index) => (
                     <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
                       <Image 
                         src={item.image.url}

@@ -100,6 +100,13 @@ export default function Header() {
                     Water Games
                   </Link>
                   <Link 
+                    href="/sensory-friendly-experiences" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Sensory Friendly Experiences
+                  </Link>
+                  <Link 
                     href="https://www.drippinginconfidence.com" 
                     target="_blank"
                     rel="noopener noreferrer"
@@ -149,6 +156,13 @@ export default function Header() {
                       onClick={() => setMenuOpen(false)}
                     >
                       Water Games
+                    </Link>
+                    <Link 
+                      href="/sensory-friendly-experiences" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Sensory Friendly Experiences
                     </Link>
                     <Link 
                       href="https://www.drippinginconfidence.com" 

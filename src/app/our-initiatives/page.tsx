@@ -43,7 +43,9 @@ export default async function OurInitiativesPage() {
       title: found?.title || title,
       description: found?.hook || `Details about ${title} coming soon.`, // Use hook as description
       visual: title.toLowerCase() === "green light movement" 
-                ? 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/673caec4f788b01c1e96f576.jpeg' 
+                ? 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/687961aa02da47d0db454d31.jpeg' 
+              : title.toLowerCase() === "dripping in confidence"
+                ? 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/6715c4feafc1d92163c3bdeb.png'
                 : (found?.visual || '/images/placeholder.jpg') // Default placeholder image
     };
   });
@@ -80,12 +82,12 @@ export default async function OurInitiativesPage() {
               <div className="space-y-12">
                 {displayedInitiatives.map((initiative) => (
                   <div key={initiative.id} className="bg-gray-50 p-6 rounded-lg shadow-sm flex flex-col md:flex-row items-center gap-6">
-                    <div className="relative w-full md:w-1/3 h-56 md:h-auto md:aspect-square rounded-lg overflow-hidden shadow-md">
+                    <div className="relative w-full md:w-1/3 h-56 md:h-auto md:aspect-square rounded-lg overflow-hidden shadow-md bg-white">
                       <Image 
                         src={initiative.visual}
                         alt={initiative.title}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 25vw"
                       />
                     </div>

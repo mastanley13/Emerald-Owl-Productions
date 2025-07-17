@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getLaserLightShowData } from '../../services/contentService';
 import { Metadata } from 'next';
+import VideoWithOverlay from '../../components/VideoWithOverlay';
 import ExperienceHeadline from '../../components/experiences/ExperienceHeadline';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -39,16 +40,10 @@ export default async function LaserLightShowPage() {
                 <path d="M23.498 6.186a2.994 2.994 0 00-2.107-2.117C19.228 3.5 12 3.5 12 3.5s-7.228 0-9.391.569A2.994 2.994 0 00.502 6.186C0 8.36 0 12 0 12s0 3.64.502 5.814a2.994 2.994 0 002.107 2.117C4.772 20.5 12 20.5 12 20.5s7.228 0 9.391-.569a2.994 2.994 0 002.107-2.117C24 15.64 24 12 24 12s0-3.64-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
               </svg>
             </a>
-            <iframe 
-              width="100%" 
-              height="100%" 
+            <VideoWithOverlay
               src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/673c32fe15ee06bf5fbfeed7.mp4"
-              title="Experience Video" 
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen
               className="absolute inset-0"
-            ></iframe>
+            />
           </div>
         </div>
       </section>
@@ -472,7 +467,7 @@ export default async function LaserLightShowPage() {
                       src={item.image.url}
                       alt={item.image.alt || 'Laser Light Show Gallery Image'}
                       fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      className={`object-cover transition-transform duration-300 group-hover:scale-105${index === 10 ? ' object-bottom' : ''}`}
                       // Adjusted sizes prop for potentially more images - might need fine-tuning
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                     />

@@ -1,3 +1,5 @@
+import VideoWithOverlay from '../../../components/VideoWithOverlay';
+
 export default function HeroBanner() {
   return (
     <section className="relative w-full min-h-[calc(100vh-80px)] pt-20 pb-16 bg-slate-900 overflow-hidden">
@@ -55,20 +57,10 @@ export default function HeroBanner() {
             PLEASE UNMUTE TO HEAR INFORMATION
           </span>
           <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg bg-black">
-            <video
+            <VideoWithOverlay
+              src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/673c32fe15ee06bf5fbfeed7.mp4"
               className="w-full h-full object-cover"
-              controls
-              autoPlay
-              muted
-              playsInline
-              style={{ background: 'black' }}
-            >
-              <source
-                src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/673c32fe15ee06bf5fbfeed7.mp4"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
+            />
           </div>
         </div>
 

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { HeroBannerData } from '../../types/homepage';
 import SurveyModal from './SurveyModal';
+import VideoWithOverlay from '../VideoWithOverlay';
 
 interface HeroBannerProps {
   data: HeroBannerData;
@@ -109,32 +110,9 @@ export default function HeroBanner({ data, video }: HeroBannerProps) {
             <div className="flex flex-col items-center md:items-end w-full h-full">
               <div className="mb-4 text-lg font-semibold text-emerald-700 text-center md:text-right tracking-wide drop-shadow-sm">See Our Experiences In Action</div>
               <div className="w-full max-w-[500px] aspect-video rounded-xl overflow-hidden shadow-2xl border-4 border-white/80 bg-black p-2 md:p-0">
-                <iframe
-                  src={(() => {
-                    try {
-                      const url = new URL(video.videoUrl);
-                      url.searchParams.set('autoplay', '1');
-                      if (url.hostname.includes('vimeo.com')) {
-                        url.searchParams.set('muted', '1');
-                        url.searchParams.delete('mute');
-                      } else {
-                        url.searchParams.set('mute', '1');
-                        url.searchParams.delete('muted');
-                      }
-                      return url.toString();
-                    } catch (e) {
-                      const sep = video.videoUrl.includes('?') ? '&' : '?';
-                      if (video.videoUrl.includes('vimeo.com')) {
-                        return `${video.videoUrl}${sep}autoplay=1&muted=1`;
-                      } else {
-                        return `${video.videoUrl}${sep}autoplay=1&mute=1`;
-                      }
-                    }
-                  })()}
-                  allow="autoplay; encrypted-media; picture-in-picture"
-                  allowFullScreen
+                <VideoWithOverlay
+                  src={video.videoUrl}
                   className="w-full h-full rounded-lg"
-                  title={video.title || 'Emerald Owl Productions Video'}
                   style={{ background: '#000' }}
                 />
               </div>

@@ -5,6 +5,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getNeonNightsData } from '../../services/contentService';
 import { Metadata } from 'next';
+import VideoWithOverlay from '../../components/VideoWithOverlay';
+import IframeVideoWithOverlay from '../../components/IframeVideoWithOverlay';
+import React, { useRef, useState } from 'react';
 
 export async function generateMetadata(): Promise<Metadata> {
   // Fetch data
@@ -20,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function NeonNightsPage() {
   // Fetch data
   const data = await getNeonNightsData();
-  
+
   return (
     <>
       <Header />
@@ -70,19 +73,9 @@ export default async function NeonNightsPage() {
               </div>
               {/* Right: Video */}
               <div className="flex-1 min-w-0 w-full max-w-xl md:max-w-md lg:max-w-lg xl:max-w-xl mt-10 md:mt-0 rounded-lg overflow-hidden shadow-2xl shadow-purple-500/30">
-                <video 
-                  className="w-full h-auto rounded-lg"
-                  controls
-                  preload="metadata"
-                  poster=""
-                  style={{ background: 'black' }}
-                >
-                  <source 
-                    src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/687943025d37ba9d7c588426.mp4" 
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
+                <VideoWithOverlay
+                  src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/687943025d37ba9d7c588426.mp4"
+                />
               </div>
             </div>
           </div>
@@ -163,38 +156,14 @@ export default async function NeonNightsPage() {
             </p>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {/* Video 1 */}
-              <div className="relative rounded-lg overflow-hidden shadow-2xl shadow-purple-500/20">
-                <video 
-                  className="w-full h-auto rounded-lg"
-                  controls
-                  preload="metadata"
-                  poster=""
-                >
-                  <source 
-                    src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/686f19b69a51b826a4149f52.mp4" 
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
-              </div>
+              <VideoWithOverlay
+                src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/686f19b69a51b826a4149f52.mp4"
+              />
               
               {/* Video 2 */}
-              <div className="relative rounded-lg overflow-hidden shadow-2xl shadow-purple-500/20">
-                <video 
-                  className="w-full h-auto rounded-lg"
-                  controls
-                  preload="metadata"
-                  poster=""
-                >
-                  <source 
-                    src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/686f19b6677990e6fb4458b9.mp4" 
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
-              </div>
+              <VideoWithOverlay
+                src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/686f19b6677990e6fb4458b9.mp4"
+              />
             </div>
             
             <div className="text-center mt-12">
@@ -271,13 +240,11 @@ export default async function NeonNightsPage() {
                 Watch Neon Nights in Action
               </h2>
               <div className="max-w-4xl mx-auto aspect-video relative">
-                <iframe 
+                <IframeVideoWithOverlay
+                  src={data.videoContent.videoUrl}
                   className="w-full h-full rounded-lg shadow-xl"
-                  src={data.videoContent.videoUrl} 
                   title="Neon Nights Experience"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowFullScreen
-                ></iframe>
+                />
               </div>
               <p className="text-center text-white mt-6">
                 FUN MUSIC INCLUDED! DON&apos;T FORGET TO UNMUTE!
@@ -375,7 +342,7 @@ export default async function NeonNightsPage() {
                   src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/686f277ee9ff4c0eb3b0a5d0.jpeg"
                   alt="Neon Nights Gallery 8"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                 />
               </div>
