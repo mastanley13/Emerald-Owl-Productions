@@ -64,7 +64,7 @@ export default async function NeonNightsPage() {
                 </p>
                 <div className="flex flex-wrap gap-5">
                   <Link 
-                    href={data.cta.url} 
+                    href="/contact-us" 
                     className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-xl hover:shadow-purple-300/30"
                   >
                     Take the Next Step
