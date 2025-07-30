@@ -1,4 +1,4 @@
-import React from 'react';
+gitimport React from 'react';
 import { Metadata } from 'next';
 import Header from '../../components/shared/Layout/Header';
 import Footer from '../../components/shared/Layout/Footer';
