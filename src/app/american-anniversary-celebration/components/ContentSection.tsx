@@ -1,7 +1,7 @@
 "use client";
 
 import GallerySection from "./GallerySection";
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import Image from 'next/image';
 
 export default function ContentSection() {
@@ -23,17 +23,17 @@ export default function ContentSection() {
   ], []);
 
   // Preload images for smoother transitions
-  const preloadImages = () => {
+  const preloadImages = useCallback(() => {
     rainSnowImages.forEach((image) => {
       const img = new window.Image();
       img.src = image.src;
     });
-  };
+  }, [rainSnowImages]);
 
   // Preload images on component mount and preload next image
   useEffect(() => {
     preloadImages();
-  }, []);
+  }, [preloadImages]);
 
   // Preload next image when current image changes
   useEffect(() => {
@@ -78,7 +78,7 @@ export default function ContentSection() {
                   </div>
                   <div className="flex-1">
                     <p className="text-xl text-slate-700 leading-relaxed font-medium">
-                      Emerald Owl Productions is designing a special laser show to celebrate America's 250th Anniversary in 2026.
+                      Emerald Owl Productions is designing a special laser show to celebrate America&apos;s 250th Anniversary in 2026.
                     </p>
                   </div>
                 </div>
@@ -169,7 +169,7 @@ export default function ContentSection() {
                 
                 <div className="space-y-6 text-lg text-slate-700 leading-relaxed max-w-3xl mx-auto">
                   <p>
-                    Laser shows are more than just beautiful and unique, they're strategic.
+                    Laser shows are more than just beautiful and unique, they&apos;re strategic.
                   </p>
                   
                   <p>
@@ -177,7 +177,7 @@ export default function ContentSection() {
                   </p>
                   
                   <p>
-                    They're also the safest entertainment in the sky — with no pyrotechnics, no loud explosions, and no physical objects or debris in the air. The only thing in the sky is light!
+                    They&apos;re also the safest entertainment in the sky — with no pyrotechnics, no loud explosions, and no physical objects or debris in the air. The only thing in the sky is light!
                   </p>
                 </div>
               </div>
@@ -346,7 +346,7 @@ export default function ContentSection() {
                       <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-green-600">Neon Nights</span>
                     </h3>
                     <p className="text-xl text-slate-700 leading-relaxed">
-                      This high-energy experience turns your event into an interactive celebration that can last for hours. Participants don't just watch — they become a part of the show. And that interaction is what creates lifelong memories.
+                      This high-energy experience turns your event into an interactive celebration that can last for hours. Participants don&apos;t just watch — they become a part of the show. And that interaction is what creates lifelong memories.
                     </p>
                   </div>
 
@@ -380,7 +380,7 @@ export default function ContentSection() {
                           <div className="w-4 h-4 bg-white rounded-full"></div>
                         </div>
                         <p className="text-lg text-slate-700 leading-relaxed font-medium">
-                          You'll save that video to the cloud so you never lose it.
+                          You&apos;ll save that video to the cloud so you never lose it.
                         </p>
                       </div>
                     </div>
@@ -483,7 +483,7 @@ export default function ContentSection() {
                       </div>
                       <div className="flex-1">
                         <p className="text-lg text-slate-700 leading-relaxed">
-                          Just like weddings, laser shows are highly scalable. Each event deserves personal attention as they each have different goals, venues, crowds, and budgets. We're here to help you find the right fit without overpaying or settling for something that doesn't match your vision.
+                          Just like weddings, laser shows are highly scalable. Each event deserves personal attention as they each have different goals, venues, crowds, and budgets. We&apos;re here to help you find the right fit without overpaying or settling for something that doesn&apos;t match your vision.
                         </p>
                       </div>
                     </div>
@@ -499,7 +499,7 @@ export default function ContentSection() {
                       </div>
                       <div className="flex-1">
                         <p className="text-lg text-slate-700 leading-relaxed">
-                          We don't offer one-size-fits-all pricing because we don't believe in forcing a sale that doesn't serve your needs. Instead, a short conversation helps us give you a fair and accurate quote.
+                          We don&apos;t offer one-size-fits-all pricing because we don&apos;t believe in forcing a sale that doesn&apos;t serve your needs. Instead, a short conversation helps us give you a fair and accurate quote.
                         </p>
                       </div>
                     </div>
@@ -516,7 +516,7 @@ export default function ContentSection() {
                     </div>
                     <div className="flex-1">
                       <p className="text-lg text-slate-700 leading-relaxed">
-                        Good to know: Show length typically doesn't have a major impact on cost. Whether your show runs 10 minutes or 40, most of the expense comes from setup, equipment, and staffing.
+                        Good to know: Show length typically doesn&apos;t have a major impact on cost. Whether your show runs 10 minutes or 40, most of the expense comes from setup, equipment, and staffing.
                       </p>
                     </div>
                   </div>
@@ -551,7 +551,7 @@ export default function ContentSection() {
                 {/* Call to Action */}
                 <div className="text-center">
                   <p className="text-xl text-slate-700 leading-relaxed mb-8">
-                    Let's talk about what's possible:
+                    Let&apos;s talk about what&apos;s possible:
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
