@@ -61,59 +61,59 @@ export default function ContentSection() {
           }}></div>
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-5xl mx-auto">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="max-w-7xl mx-auto">
             {/* Main Content Card */}
-            <div className="bg-white rounded-3xl shadow-2xl shadow-slate-900/10 border border-slate-200/50 p-12 md:p-16 relative overflow-hidden">
+            <div className="bg-white rounded-3xl shadow-2xl shadow-slate-900/10 border border-slate-200/50 p-6 sm:p-8 md:p-12 lg:p-16 relative overflow-hidden">
               {/* Decorative Elements */}
               <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-red-400/10 to-blue-400/10 rounded-full -translate-x-16 -translate-y-16"></div>
               <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-blue-400/10 to-red-400/10 rounded-full translate-x-12 translate-y-12"></div>
               
               {/* Content */}
-              <div className="relative z-10 space-y-8">
+              <div className="relative z-10 space-y-6 sm:space-y-8">
                 {/* First Paragraph with Red Circle */}
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-red-500 rounded-full flex items-center justify-center shadow-lg">
-                    <div className="w-6 h-6 bg-white rounded-full"></div>
+                <div className="flex flex-col sm:flex-row items-start space-y-3 sm:space-y-0 sm:space-x-4">
+                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-red-500 rounded-full flex items-center justify-center shadow-lg">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-white rounded-full"></div>
                   </div>
                   <div className="flex-1">
-                    <p className="text-xl text-slate-700 leading-relaxed font-medium">
+                    <p className="text-lg sm:text-xl text-slate-700 leading-relaxed font-medium">
                       Emerald Owl Productions is designing a special laser show to celebrate America&apos;s 250th Anniversary in 2026.
                     </p>
                   </div>
                 </div>
 
                 {/* Second Paragraph with Blue Circle */}
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center shadow-lg">
-                    <div className="w-6 h-6 bg-white rounded-full"></div>
+                <div className="flex flex-col sm:flex-row items-start space-y-3 sm:space-y-0 sm:space-x-4">
+                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-full flex items-center justify-center shadow-lg">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-white rounded-full"></div>
                   </div>
                   <div className="flex-1">
-                    <p className="text-xl text-slate-700 leading-relaxed">
+                    <p className="text-lg sm:text-xl text-slate-700 leading-relaxed">
                       This one-of-a-kind experience will feature brilliant laser beams projecting over your audience, all choreographed to a mix of patriotic music, famous quotes, and a journey through some of the greatest decades in American music history.
                     </p>
                   </div>
                 </div>
 
                 {/* Third Paragraph with Red Circle */}
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-red-500 rounded-full flex items-center justify-center shadow-lg">
-                    <div className="w-6 h-6 bg-white rounded-full"></div>
+                <div className="flex flex-col sm:flex-row items-start space-y-3 sm:space-y-0 sm:space-x-4">
+                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-red-500 rounded-full flex items-center justify-center shadow-lg">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-white rounded-full"></div>
                   </div>
                   <div className="flex-1">
-                    <p className="text-xl text-slate-700 leading-relaxed">
+                    <p className="text-lg sm:text-xl text-slate-700 leading-relaxed">
                       The show length is fully customizable. Our standard version runs 30–40 minutes, but many clients choose a shorter version to serve as a grand finale for an evening of activities.
                     </p>
                   </div>
                 </div>
 
                 {/* Fourth Paragraph with Blue Circle */}
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center shadow-lg">
-                    <div className="w-6 h-6 bg-white rounded-full"></div>
+                <div className="flex flex-col sm:flex-row items-start space-y-3 sm:space-y-0 sm:space-x-4">
+                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-blue-500 rounded-full flex items-center justify-center shadow-lg">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-white rounded-full"></div>
                   </div>
                   <div className="flex-1">
-                    <p className="text-xl text-slate-700 leading-relaxed">
+                    <p className="text-lg sm:text-xl text-slate-700 leading-relaxed">
                       The Celebrate America Laser Show can be held indoors or outdoors. If outdoors, EOP handles all required FAA paperwork and approvals. Please note that we want to start that process no less than 2 months prior to your show and the earlier the better in case adjustments are needed.
                     </p>
                   </div>
@@ -152,22 +152,22 @@ export default function ContentSection() {
           }}></div>
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="max-w-7xl mx-auto">
             
             {/* Main Content Card */}
-            <div className="bg-white rounded-3xl shadow-2xl shadow-slate-900/10 border border-slate-200/50 p-12 md:p-16 relative overflow-hidden">
+            <div className="bg-white rounded-3xl shadow-2xl shadow-slate-900/10 border border-slate-200/50 p-6 sm:p-8 md:p-12 lg:p-16 relative overflow-hidden">
               {/* Decorative Elements */}
               <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-red-400/10 to-blue-400/10 rounded-full -translate-x-16 -translate-y-16"></div>
               <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-blue-400/10 to-red-400/10 rounded-full translate-x-12 translate-y-12"></div>
               
               {/* Content */}
               <div className="relative z-10 text-center">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 sm:mb-8">
                   Why Choose a <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-600">Laser Show</span>?
                 </h2>
                 
-                <div className="space-y-6 text-lg text-slate-700 leading-relaxed max-w-3xl mx-auto">
+                <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-slate-700 leading-relaxed max-w-4xl mx-auto">
                   <p>
                     Laser shows are more than just beautiful and unique, they&apos;re strategic.
                   </p>
@@ -187,12 +187,12 @@ export default function ContentSection() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="text-center mt-12">
-              <p className="text-xl text-slate-700 leading-relaxed mb-8">
+            <div className="text-center mt-8 sm:mt-12">
+              <p className="text-lg sm:text-xl text-slate-700 leading-relaxed mb-6 sm:mb-8">
                 Learn more about safety and benefits of laser shows here:
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
                 <a
                   href="/laser-safety"
                   className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
@@ -216,9 +216,9 @@ export default function ContentSection() {
             </div>
 
             {/* Carousel Section - Rain & Snow Laser Photos */}
-            <div className="bg-white rounded-3xl shadow-2xl shadow-slate-900/10 border border-slate-200/50 p-8 md:p-10 mt-12">
+            <div className="bg-white rounded-3xl shadow-2xl shadow-slate-900/10 border border-slate-200/50 p-6 sm:p-8 md:p-10 mt-8 sm:mt-12">
               <div className="text-center">
-                <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-6 sm:mb-8">
                   LASERS IN{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300">
                     RAIN
@@ -319,67 +319,67 @@ export default function ContentSection() {
           }}></div>
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-5xl mx-auto">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="max-w-7xl mx-auto">
             {/* Main Content Card */}
-            <div className="bg-white rounded-3xl shadow-2xl shadow-slate-900/10 border border-emerald-200/50 p-12 md:p-16 relative overflow-hidden">
+            <div className="bg-white rounded-3xl shadow-2xl shadow-slate-900/10 border border-emerald-200/50 p-6 sm:p-8 md:p-12 lg:p-16 relative overflow-hidden">
               {/* Decorative Elements */}
               <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-emerald-400/10 to-green-400/10 rounded-full -translate-x-16 -translate-y-16"></div>
               <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-green-400/10 to-emerald-400/10 rounded-full translate-x-12 translate-y-12"></div>
               
               {/* Content */}
-              <div className="relative z-10 space-y-8">
+              <div className="relative z-10 space-y-6 sm:space-y-8">
                 {/* Main Title */}
                 <div className="text-center">
-                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 sm:mb-6">
                     Want to Make It Even <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-green-600">Bigger</span> And Get More Value From Your Investment?
                   </h2>
-                  <p className="text-xl text-slate-700 leading-relaxed max-w-3xl mx-auto">
+                  <p className="text-lg sm:text-xl text-slate-700 leading-relaxed max-w-4xl mx-auto">
                     Once we are already at your venue, additional experiences become quite cost effective. Our most popular is:
                   </p>
                 </div>
 
                 {/* Neon Nights Highlight Card */}
-                <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl p-8 md:p-10 border border-emerald-200/50">
-                  <div className="text-center mb-8">
-                    <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl p-6 sm:p-8 md:p-10 border border-emerald-200/50">
+                  <div className="text-center mb-6 sm:mb-8">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">
                       <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-green-600">Neon Nights</span>
                     </h3>
-                    <p className="text-xl text-slate-700 leading-relaxed">
+                    <p className="text-lg sm:text-xl text-slate-700 leading-relaxed">
                       This high-energy experience turns your event into an interactive celebration that can last for hours. Participants don&apos;t just watch — they become a part of the show. And that interaction is what creates lifelong memories.
                     </p>
                   </div>
 
                   {/* Analogy Section */}
-                  <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg">
-                    <h4 className="text-xl font-semibold text-slate-900 mb-6 text-center">
+                  <div className="bg-white rounded-xl p-4 sm:p-6 md:p-8 shadow-lg">
+                    <h4 className="text-lg sm:text-xl font-semibold text-slate-900 mb-4 sm:mb-6 text-center">
                       Think of it this way:
                     </h4>
                     
-                    <div className="space-y-4">
-                      <div className="flex items-start space-x-4">
-                        <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
-                          <div className="w-4 h-4 bg-white rounded-full"></div>
+                    <div className="space-y-3 sm:space-y-4">
+                      <div className="flex flex-col sm:flex-row items-start space-y-2 sm:space-y-0 sm:space-x-4">
+                        <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-red-500 rounded-full flex items-center justify-center">
+                          <div className="w-3 h-3 sm:w-4 sm:h-4 bg-white rounded-full"></div>
                         </div>
-                        <p className="text-lg text-slate-700 leading-relaxed">
+                        <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
                           If you record a laser show today, will you watch it with your family 10 years from now? Honestly……probably not.
                         </p>
                       </div>
                       
-                      <div className="flex items-start space-x-4">
-                        <div className="flex-shrink-0 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center">
-                          <div className="w-4 h-4 bg-white rounded-full"></div>
+                      <div className="flex flex-col sm:flex-row items-start space-y-2 sm:space-y-0 sm:space-x-4">
+                        <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-emerald-500 rounded-full flex items-center justify-center">
+                          <div className="w-3 h-3 sm:w-4 sm:h-4 bg-white rounded-full"></div>
                         </div>
-                        <p className="text-lg text-slate-700 leading-relaxed">
+                        <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
                           But if you record your kids dancing with grandma under lasers, black lights, and maybe even in a foam pit...
                         </p>
                       </div>
                       
-                      <div className="flex items-start space-x-4">
-                        <div className="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                          <div className="w-4 h-4 bg-white rounded-full"></div>
+                      <div className="flex flex-col sm:flex-row items-start space-y-2 sm:space-y-0 sm:space-x-4">
+                        <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-green-500 rounded-full flex items-center justify-center">
+                          <div className="w-3 h-3 sm:w-4 sm:h-4 bg-white rounded-full"></div>
                         </div>
-                        <p className="text-lg text-slate-700 leading-relaxed font-medium">
+                        <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
                           You&apos;ll save that video to the cloud so you never lose it.
                         </p>
                       </div>
@@ -388,12 +388,12 @@ export default function ContentSection() {
                 </div>
 
                 {/* Themes Section */}
-                <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl p-8 md:p-10 border border-emerald-200/50">
-                  <h4 className="text-2xl font-bold text-slate-900 mb-6 text-center">
+                <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl p-6 sm:p-8 md:p-10 border border-emerald-200/50">
+                  <h4 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4 sm:mb-6 text-center">
                     Available Neon Nights themes include:
                   </h4>
                   
-                  <div className="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-3xl mx-auto">
                     <div className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
                       <div className="flex items-center space-x-3">
                         <div className="w-3 h-3 bg-emerald-500 rounded-full"></div>
@@ -454,35 +454,35 @@ export default function ContentSection() {
           }}></div>
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-5xl mx-auto">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="max-w-7xl mx-auto">
             {/* Main Content Card */}
-            <div className="bg-white rounded-3xl shadow-2xl shadow-slate-900/10 border border-slate-200/50 p-12 md:p-16 relative overflow-hidden">
+            <div className="bg-white rounded-3xl shadow-2xl shadow-slate-900/10 border border-slate-200/50 p-6 sm:p-8 md:p-12 lg:p-16 relative overflow-hidden">
               {/* Decorative Elements */}
               <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-slate-400/10 to-gray-400/10 rounded-full -translate-x-16 -translate-y-16"></div>
               <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-gray-400/10 to-slate-400/10 rounded-full translate-x-12 translate-y-12"></div>
               
               {/* Content */}
-              <div className="relative z-10 space-y-8">
+              <div className="relative z-10 space-y-6 sm:space-y-8">
                 {/* Main Title */}
                 <div className="text-center">
-                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 sm:mb-8">
                     Rates & <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-600 to-gray-600">Booking Info</span>
                   </h2>
                 </div>
 
                 {/* Information Cards */}
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
                   {/* First Card */}
-                  <div className="bg-gradient-to-br from-slate-50 to-gray-50 rounded-2xl p-6 md:p-8 border border-slate-200/50">
-                    <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-12 h-12 bg-slate-500 rounded-full flex items-center justify-center shadow-lg">
-                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="bg-gradient-to-br from-slate-50 to-gray-50 rounded-2xl p-4 sm:p-6 md:p-8 border border-slate-200/50">
+                    <div className="flex flex-col sm:flex-row items-start space-y-3 sm:space-y-0 sm:space-x-4">
+                      <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-slate-500 rounded-full flex items-center justify-center shadow-lg">
+                        <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                         </svg>
                       </div>
                       <div className="flex-1">
-                        <p className="text-lg text-slate-700 leading-relaxed">
+                        <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
                           Just like weddings, laser shows are highly scalable. Each event deserves personal attention as they each have different goals, venues, crowds, and budgets. We&apos;re here to help you find the right fit without overpaying or settling for something that doesn&apos;t match your vision.
                         </p>
                       </div>
@@ -490,15 +490,15 @@ export default function ContentSection() {
                   </div>
 
                   {/* Second Card */}
-                  <div className="bg-gradient-to-br from-slate-50 to-gray-50 rounded-2xl p-6 md:p-8 border border-slate-200/50">
-                    <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-12 h-12 bg-slate-500 rounded-full flex items-center justify-center shadow-lg">
-                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="bg-gradient-to-br from-slate-50 to-gray-50 rounded-2xl p-4 sm:p-6 md:p-8 border border-slate-200/50">
+                    <div className="flex flex-col sm:flex-row items-start space-y-3 sm:space-y-0 sm:space-x-4">
+                      <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-slate-500 rounded-full flex items-center justify-center shadow-lg">
+                        <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                         </svg>
                       </div>
                       <div className="flex-1">
-                        <p className="text-lg text-slate-700 leading-relaxed">
+                        <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
                           We don&apos;t offer one-size-fits-all pricing because we don&apos;t believe in forcing a sale that doesn&apos;t serve your needs. Instead, a short conversation helps us give you a fair and accurate quote.
                         </p>
                       </div>
@@ -507,15 +507,15 @@ export default function ContentSection() {
                 </div>
 
                 {/* Third Card - Full Width */}
-                <div className="bg-gradient-to-br from-slate-50 to-gray-50 rounded-2xl p-6 md:p-8 border border-slate-200/50">
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-slate-500 rounded-full flex items-center justify-center shadow-lg">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="bg-gradient-to-br from-slate-50 to-gray-50 rounded-2xl p-4 sm:p-6 md:p-8 border border-slate-200/50">
+                  <div className="flex flex-col sm:flex-row items-start space-y-3 sm:space-y-0 sm:space-x-4">
+                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-slate-500 rounded-full flex items-center justify-center shadow-lg">
+                      <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </div>
                     <div className="flex-1">
-                      <p className="text-lg text-slate-700 leading-relaxed">
+                      <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
                         Good to know: Show length typically doesn&apos;t have a major impact on cost. Whether your show runs 10 minutes or 40, most of the expense comes from setup, equipment, and staffing.
                       </p>
                     </div>
@@ -523,15 +523,15 @@ export default function ContentSection() {
                 </div>
 
                 {/* Fourth Card - Full Width */}
-                <div className="bg-gradient-to-br from-slate-50 to-gray-50 rounded-2xl p-6 md:p-8 border border-slate-200/50">
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-slate-500 rounded-full flex items-center justify-center shadow-lg">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="bg-gradient-to-br from-slate-50 to-gray-50 rounded-2xl p-4 sm:p-6 md:p-8 border border-slate-200/50">
+                  <div className="flex flex-col sm:flex-row items-start space-y-3 sm:space-y-0 sm:space-x-4">
+                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-slate-500 rounded-full flex items-center justify-center shadow-lg">
+                      <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                       </svg>
                     </div>
                     <div className="flex-1">
-                      <p className="text-lg text-slate-700 leading-relaxed">
+                      <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
                         Extremely cost effective for additional shows and nights: That is great news if you decide to run your show more than one night or have more than one show in a single night.
                       </p>
                     </div>
@@ -539,22 +539,22 @@ export default function ContentSection() {
                 </div>
 
                 {/* Pricing Highlight */}
-                <div className="bg-gradient-to-br from-slate-100 to-gray-100 rounded-2xl p-8 md:p-10 border-2 border-slate-300/50 text-center">
-                  <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                <div className="bg-gradient-to-br from-slate-100 to-gray-100 rounded-2xl p-6 sm:p-8 md:p-10 border-2 border-slate-300/50 text-center">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
                     Celebrate America Laser Show packages start at
                   </h3>
-                  <div className="text-4xl md:text-5xl font-bold text-slate-900">
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900">
                     $7,676.76
                   </div>
                 </div>
 
                 {/* Call to Action */}
                 <div className="text-center">
-                  <p className="text-xl text-slate-700 leading-relaxed mb-8">
+                  <p className="text-lg sm:text-xl text-slate-700 leading-relaxed mb-6 sm:mb-8">
                     Let&apos;s talk about what&apos;s possible:
                   </p>
                   
-                  <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
                     <a 
                       href="tel:252-764-7628"
                       className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
