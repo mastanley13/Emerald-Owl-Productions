@@ -2,7 +2,7 @@ import VideoWithOverlay from '../../../components/VideoWithOverlay';
 
 export default function HeroBanner() {
   return (
-    <section className="relative w-full min-h-[calc(100vh-80px)] pt-20 pb-16 bg-slate-900 overflow-hidden">
+    <section className="relative w-full min-h-[calc(100vh-80px)] pt-32 pb-16 bg-slate-900 overflow-hidden">
       {/* Background Image with Professional Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
@@ -22,60 +22,33 @@ export default function HeroBanner() {
       {/* Content Container */}
       <div className="relative z-10 container mx-auto h-full flex flex-col justify-center items-center px-6 text-center">
         
-        {/* Sophisticated Badge */}
-        <div className="mb-8">
-          <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
-            <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
-            <span className="text-white/90 text-sm font-medium tracking-wide">HISTORIC MILESTONE</span>
-            <div className="w-2 h-2 bg-blue-500 rounded-full ml-3"></div>
-          </div>
-        </div>
-
-        {/* Main Headline - More Sophisticated Typography */}
+        {/* Main Headline */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
-          <span className="block text-white mb-2">America at</span>
+          <span className="block text-white mb-2">CELEBRATE AMERICA</span>
           <span className="block">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-white to-blue-400 font-black">
-              250 Years
+              LASER SHOW
             </span>
           </span>
         </h1>
 
-        {/* Refined Subtitle */}
+        {/* Subtitle */}
         <div className="mb-6 max-w-4xl mx-auto">
           <p className="text-xl md:text-2xl text-white/90 font-light mb-4 leading-relaxed">
-            A Revolutionary Laser Light Experience
+            Reserve Your Historic Celebration NOW
           </p>
           <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
-            Commemorating two and a half centuries of innovation, democracy, and the American spirit through cutting-edge visual storytelling
+            Shows Start at $7,676.76
           </p>
         </div>
 
-        {/* Video Section - Integrated and Responsive */}
+        {/* Video Section */}
         <div className="flex flex-col items-center w-full max-w-2xl mx-auto mb-8">
-          <span className="text-yellow-300 font-semibold text-sm mb-2 tracking-wide drop-shadow">
-            PLEASE UNMUTE TO HEAR INFORMATION
-          </span>
           <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg bg-black">
             <VideoWithOverlay
               src="https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/673c32fe15ee06bf5fbfeed7.mp4"
               className="w-full h-full object-cover"
             />
-          </div>
-        </div>
-
-        {/* Timeline */}
-        <div className="flex flex-col items-center mb-12">
-          <div className="flex items-center justify-center space-x-8 mb-2">
-            <div className="text-center">
-              <div className="text-3xl font-light text-blue-300">1776</div>
-              <div className="text-xs text-white/60 tracking-wider">FOUNDED</div>
-            </div>
-            <div className="w-24 h-px bg-gradient-to-r from-blue-400 to-red-400"></div>
-            <div className="text-center">
-              <div className="text-3xl font-light text-red-300">2026</div>
-              <div className="text-xs text-white/60 tracking-wider">ANNIVERSARY</div>
-            </div>
           </div>
         </div>
 
@@ -85,28 +58,14 @@ export default function HeroBanner() {
             href="/contact-us"
             className="group relative inline-flex items-center justify-center px-8 py-4 bg-white text-slate-900 font-semibold text-lg rounded-lg transition-all duration-300 hover:bg-white/90 hover:shadow-2xl hover:shadow-white/20 hover:-translate-y-1"
           >
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-            </svg>
-            Plan Your Celebration
+            Reserve Your Historic Celebration
             <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </a>
-          
-          <a 
-            href="#experience"
-            className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-semibold text-lg rounded-lg transition-all duration-300 hover:bg-white/10 hover:border-white/50 backdrop-blur-sm"
-          >
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-            </svg>
-            Learn More
-          </a>
         </div>
 
-        {/* Explore Indicator - moved below CTA buttons */}
+        {/* Explore Indicator */}
         <div className="flex flex-col items-center mb-12">
           <span className="text-xs text-white/70 tracking-wider mb-2">EXPLORE</span>
           <div className="w-px h-8 bg-gradient-to-b from-white/50 to-transparent animate-bounce"></div>

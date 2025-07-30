@@ -64,14 +64,6 @@ export default function GallerySection() {
               <span className="px-6 text-sm font-medium text-slate-500 tracking-wider uppercase">Experience Gallery</span>
               <div className="h-px w-12 bg-gradient-to-l from-transparent to-slate-300"></div>
             </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              See the <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-red-600">Revolution</span> in Action
-            </h2>
-            
-            <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-              Witness the spectacular laser light displays that bring America&apos;s 250-year journey to life through cutting-edge visual technology
-            </p>
           </div>
 
           {/* Perfect Grid Gallery */}
@@ -105,27 +97,6 @@ export default function GallerySection() {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Bottom CTA */}
-          <div className="text-center mt-16">
-            <div className="bg-white border border-slate-200 rounded-2xl p-8 max-w-2xl mx-auto shadow-lg">
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                Ready to Experience History?
-              </h3>
-              <p className="text-slate-600 mb-6 leading-relaxed">
-                These images represent just a glimpse of what your community will experience during America&apos;s 250th Anniversary celebration.
-              </p>
-              <a 
-                href="/contact-us"
-                className="inline-flex items-center justify-center px-8 py-3 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition-colors"
-              >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-                Plan Your Celebration
-              </a>
-            </div>
           </div>
         </div>
       </div>

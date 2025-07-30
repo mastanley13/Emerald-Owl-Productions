@@ -4,7 +4,6 @@ import Footer from '../../components/shared/Layout/Footer';
 import { Metadata } from 'next';
 import HeroBanner from './components/HeroBanner';
 import ContentSection from './components/ContentSection';
-import CtaSection from './components/CtaSection';
 
 export const metadata: Metadata = {
   title: 'American Anniversary Celebration | Emerald Owl Productions',
@@ -18,7 +17,6 @@ export default function AmericanAnniversaryPage() {
       <main>
         <HeroBanner />
         <ContentSection />
-        <CtaSection />
       </main>
       <Footer />
     </>
