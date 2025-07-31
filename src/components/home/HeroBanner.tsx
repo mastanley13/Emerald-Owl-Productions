@@ -121,25 +121,25 @@ export default function HeroBanner({ data, video }: HeroBannerProps) {
         </div>
             
             {/* Award badge strip */}
-            <div className="mt-12 flex flex-wrap items-center justify-center md:justify-start gap-x-8 gap-y-4">
+            <div className="mt-12 flex flex-wrap items-center justify-center md:justify-start gap-x-12 gap-y-6">
               {[ 
-                { text: "2022 & 2025 NCAF&E Supporting Member of the Year", url: "#", img: "/images/NCAF&E.jpg" },
-                { text: "2022 Best NC Downtown Event – Electric Light Fantasy", url: "#", img: "/images/Electric Light Fantasy.png" },
-                { text: "Better Business Bureau A+ rating", url: "#", img: "/images/BBB A+ Rating.jpeg" }
+                { text: "2022 & 2025 NCAF&E Supporting Member of the Year", url: "https://cdn.saffire.com/files.ashx?t=fg&rid=NCAFE&f=2025_Excellence_Award_Winners(2).pdf", img: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/688adfdd05df829ee4998fef.jpeg" },
+                { text: "2022 Best NC Downtown Event – Electric Light Fantasy", url: "https://www.wilsonnc.org/Home/Components/News/News/475/16", img: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/688adfdd05df82e3d2998fd0.png" },
+                { text: "Better Business Bureau A+ rating", url: "https://www.bbb.org/us/nc/emerald-isle/profile/party-planning/emerald-owl-productions-inc-0593-90333019", img: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/688adfddba7d04b5732c7d89.jpeg" }
                 // Add fourth award once details are provided
               ].map((award, index) => (
                 <a href={award.url} key={index} target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center text-center transition-transform hover:scale-105">
-                  {/* Badge image frame */}
-                  <div className="w-20 h-20 bg-white rounded-full mb-2 flex items-center justify-center group-hover:shadow-lg border-2 border-gray-200 overflow-hidden">
+                  {/* Badge image frame - Made much bigger */}
+                  <div className="w-32 h-32 md:w-40 md:h-40 bg-white rounded-full mb-4 flex items-center justify-center group-hover:shadow-xl border-4 border-gray-200 overflow-hidden shadow-lg">
                     <Image 
                       src={award.img} 
                       alt={award.text} 
-                      width={60} 
-                      height={60} 
-                      className="object-contain"
+                      width={120} 
+                      height={120} 
+                      className="object-contain w-24 h-24 md:w-32 md:h-32"
                     />
                   </div>
-                  <span className="text-xs font-medium text-gray-600 group-hover:text-emerald-600 max-w-[120px]">{award.text}</span>
+                  <span className="text-sm md:text-base font-medium text-gray-700 group-hover:text-emerald-600 max-w-[160px] md:max-w-[200px] leading-tight">{award.text}</span>
                 </a>
               ))}
             </div>

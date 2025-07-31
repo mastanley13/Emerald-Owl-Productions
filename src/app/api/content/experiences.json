@@ -27,22 +27,10 @@
       "visual": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/673c35f2d88b411473f4fc7d.jpeg"
     },
     {
-      "id": "dunk-tank",
-      "title": "Dunk Tank",
-      "hook": "Classic dunk tank fun for any gathering.",
-      "visual": "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/6824cd65a1908e2309d283c2.png"
-    },
-    {
-      "id": "dj-emcee-games",
-      "title": "DJ / Emcee / Games",
-      "hook": "Professional DJ, emcee, and interactive games.",
-      "visual": "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/6824ceb67410f90678a27c16.jpeg"
-    },
-    {
       "id": "glow-sports",
       "title": "Glow-in-the-Dark Sports",
       "hook": "Illuminate your event with glow-in-the-dark sports.",
-      "visual": "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67104d556dbca5b137091876.jpeg"
+      "visual": "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/687933d002da474708446fa5.png"
     },
     {
       "id": "sensory-friendly",
@@ -65,10 +53,16 @@
       "visual": "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/6824cdd59cd8fb53e599ef0b.jpeg"
     },
     {
+      "id": "dripping-in-confidence",
+      "title": "Dripping in Confidence",
+      "hook": "Celebrate life's messiness with confidence-building gunge experiences.",
+      "visual": "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/6715c4feafc1d92163c3bdeb.png"
+    },
+    {
       "id": "green-light-movement",
       "title": "The Green Light Movement",
       "hook": "Join 'The Green Light Movement' for a cause.",
-      "visual": "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/673caec4f788b01c1e96f576.jpeg"
+      "visual": "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/687961aa02da47d0db454d31.jpeg"
     }
   ]
 } 

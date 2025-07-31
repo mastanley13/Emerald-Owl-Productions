@@ -115,6 +115,13 @@ export default function Header() {
                   >
                     Dripping in Confidence
                   </Link>
+                  <Link 
+                    href="/customized-logos-messages" 
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Customized Logos & Messages
+                  </Link>
                 </div>
               </div>
               
@@ -172,6 +179,13 @@ export default function Header() {
                       onClick={() => setMenuOpen(false)}
                     >
                       Dripping in Confidence
+                    </Link>
+                    <Link 
+                      href="/customized-logos-messages" 
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      Customized Logos & Messages
                     </Link>
                   </React.Fragment>
                 )}

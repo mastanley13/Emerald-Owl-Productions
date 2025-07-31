@@ -6,6 +6,8 @@ import { getLaserLightShowData } from '../../services/contentService';
 import { Metadata } from 'next';
 import VideoWithOverlay from '../../components/VideoWithOverlay';
 import ExperienceHeadline from '../../components/experiences/ExperienceHeadline';
+import RainSnowGallery from './components/RainSnowGallery';
+import EventGallery from './components/EventGallery';
 
 export async function generateMetadata(): Promise<Metadata> {
   // Fetch data
@@ -71,7 +73,7 @@ export default async function LaserLightShowPage() {
           </div>
 
           {/* Event Gallery moved here */}
-          {EventGallerySection()}
+          <EventGallery />
 
           {/* Advantages Grid */}
           <div className="grid md:grid-cols-2 gap-8">
@@ -422,64 +424,14 @@ export default async function LaserLightShowPage() {
         </section>
       )}
 
+      {/* Rain & Snow Gallery */}
+      <RainSnowGallery />
+
       {/* "Safety Section" (data.safetyFeatures) REMOVED - Content moving to a new page */}
     </>
   );
 
-  // Helper for Event Gallery - UPDATED with local images
-  const EventGallerySection = () => {
-    const galleryImages = [
-      { url: "/images/laser-shows/467694483_976125001223903_5093470484545336563_n.jpg", alt: "Laser Show Event" },
-      { url: "/images/laser-shows/470168049_10231621522374952_301543704080340089_n.jpg", alt: "Laser Show Display" },
-      { url: "/images/laser-shows/470200922_915025004102155_5742525955633390744_n.jpg", alt: "Laser Show Performance" },
-      { url: "/images/laser-shows/Corolla Reflection.jpeg", alt: "Corolla Laser Show Reflection" },
-      { url: "/images/laser-shows/IMG_5638.jpeg", alt: "Laser Show Experience" },
-      { url: "/images/laser-shows/IMG_6476.jpeg", alt: "Laser Show Setup" },
-      { url: "/images/laser-shows/IMG_6510.jpeg", alt: "Laser Show in Action" },
-      { url: "/images/laser-shows/IMG_6516.jpeg", alt: "Laser Show Audience" },
-      { url: "/images/laser-shows/IMG_6519.jpeg", alt: "Laser Show Beams" },
-      { url: "/images/laser-shows/Plymouth Laser Show 3.jpeg", alt: "Plymouth Laser Show" },
-      { url: "/images/laser-shows/Senior bus indoors view.jpeg", alt: "Senior Bus Indoor View" },
-      { url: "/images/laser-shows/Senior bus.jpeg", alt: "Senior Bus Laser Show" },
-    ];
-    const imagesToDisplay = galleryImages.map(img => ({ image: { url: img.url, alt: img.alt }, caption: null }));
-    
-    // Determine number of columns based on image count for better responsiveness
-    let gridColsClass = "lg:grid-cols-3"; // Default for many images
-    if (imagesToDisplay.length <= 4) {
-      gridColsClass = "lg:grid-cols-4";
-    } else if (imagesToDisplay.length === 5) {
-        gridColsClass = "lg:grid-cols-5"; // Or keep 3/4 and let it wrap
-    } else if (imagesToDisplay.length === 6) {
-        gridColsClass = "lg:grid-cols-3"; // 2 rows of 3
-    }
 
-    return imagesToDisplay.length > 0 ? (
-      <section className="bg-gray-100 py-16">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center text-emerald-600 mb-12">Event Gallery</h2>
-          <div className={`grid grid-cols-1 sm:grid-cols-2 ${gridColsClass} gap-4 md:gap-6`}> {/* Adjusted gap and dynamic cols */}
-            {imagesToDisplay.map((item, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
-                <div className="relative aspect-[4/3] w-full">
-                  {item.image && (
-                    <Image 
-                      src={item.image.url}
-                      alt={item.image.alt || 'Laser Light Show Gallery Image'}
-                      fill
-                      className={`object-cover transition-transform duration-300 group-hover:scale-105${index === 10 ? ' object-bottom' : ''}`}
-                      // Adjusted sizes prop for potentially more images - might need fine-tuning
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                    />
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    ) : null;
-  };
 
   const FaqSection = () => (
     data.faqs && data.faqs.length > 0 ? (

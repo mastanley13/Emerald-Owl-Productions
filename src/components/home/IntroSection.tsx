@@ -66,13 +66,26 @@ export default function IntroSection() {
           
           {/* Experience Examples */}
           <div className="bg-gray-50 p-8 rounded-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Creating Unforgettable Memories</h3>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed mb-6">
               Whether you&apos;re dancing to your favorite 80s hits at <strong>Neon Nights</strong>, 
               enjoying a holiday laser show from your car, diving into a foam-filled water battle, 
               or getting splashed (or even drenched) in color with our <strong>Dripping in Confidence</strong> initiative, 
               your guests will go home with a positive memory that lasts.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="mailto:info@emeraldowlproductions.com"
+                className="inline-flex items-center justify-center px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg shadow hover:bg-emerald-700 transition-colors text-lg"
+              >
+                <span className="mr-2">📧</span> info@emeraldowlproductions.com
+              </a>
+              <a
+                href="tel:18334569367"
+                className="inline-flex items-center justify-center px-6 py-3 bg-emerald-100 text-emerald-700 font-semibold rounded-lg shadow hover:bg-emerald-200 transition-colors text-lg"
+              >
+                <span className="mr-2">📞</span> 833-GLOW-EOP or (252) 764-7628
+              </a>
+            </div>
           </div>
         </div>
       </div>

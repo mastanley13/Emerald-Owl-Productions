@@ -49,6 +49,16 @@ const glowSportsData: GlowSportsData = {
   },
 };
 
+// Gallery images data
+const galleryImages = [
+  {
+    url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/688af569417b03446a60ea4a.jpeg',
+  },
+  {
+    url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/688af569ba7d0402e52dd089.jpeg',
+  },
+];
+
 export async function generateMetadata(): Promise<Metadata> {
   // const data = await getGlowSportsData(); // TODO
   const data = glowSportsData; // Using placeholder
@@ -139,7 +149,51 @@ export default async function GlowSportsPage() {
           </div>
         </section>
 
-        {/* TODO: Add Gallery Section */}
+        {/* Gallery Section */}
+        <section className="bg-gradient-to-b from-black to-gray-900 text-white py-16">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4 text-teal-400">
+                Glow Sports in Action
+              </h2>
+            </div>
+            
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8 max-w-6xl mx-auto">
+              {galleryImages.map((image, index) => (
+                <div key={index} className="group relative overflow-hidden rounded-lg shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-teal-300/20 w-full max-w-md">
+                  <div className="relative aspect-[4/3] w-full">
+                    <Image
+                      src={image.url}
+                      alt={image.alt}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 600px"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 className="text-lg font-semibold text-white mb-2">
+                      {image.title}
+                    </h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            <div className="text-center mt-12">
+              <Link
+                href="/contact-us"
+                className="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-xl hover:shadow-teal-300/30"
+              >
+                Book Your Glow Sports Event
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* TODO: Add FAQ Section if applicable */}
 
         <Newsletter />

@@ -107,6 +107,22 @@ export default async function OurInitiativesPage() {
                           Learn More
                         </Link>
                       )}
+                      {initiative.title.toLowerCase() === "do it now" && (
+                        <Link 
+                          href="/do-it-now" 
+                          className="inline-block mt-2 px-4 py-2 bg-emerald-600 text-white text-sm font-semibold rounded-md hover:bg-emerald-700 transition-colors"
+                        >
+                          Learn More
+                        </Link>
+                      )}
+                      {initiative.title.toLowerCase() === "green light movement" && (
+                        <Link 
+                          href="/green-light-movement" 
+                          className="inline-block mt-2 px-4 py-2 bg-emerald-600 text-white text-sm font-semibold rounded-md hover:bg-emerald-700 transition-colors"
+                        >
+                          Learn More
+                        </Link>
+                      )}
                     </div>
                   </div>
                 ))}

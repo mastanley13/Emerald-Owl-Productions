@@ -3,100 +3,130 @@ import Image from 'next/image';
 export default function GallerySection() {
   const galleryItems = [
     {
-      caption: "Patriotic laser light display with American flag projection",
       image: {
-        url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67b17f8970fcfe8794242cee.jpeg"
+        url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/688aeb5b417b03865d60ca30.jpeg"
       }
     },
     {
-      caption: "Spectacular red, white, and blue laser show",
       image: {
-        url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a4d1ca9769a795ba5981de.jpeg"
+        url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/688aeb5b05df82c5a39a5c04.jpeg"
       }
     },
     {
-      caption: "Dynamic patriotic light beams in celebration",
       image: {
-        url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a4d1281890c66c679de1bb.jpeg"
+        url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/688aeb5b08dbc31a2224d6d3.jpeg"
       }
     },
     {
-      caption: "Community gathering with patriotic laser backdrop",
       image: {
-        url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a4d1603553cd59a0a68f21.png"
+        url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/688aeb5ba4c55fecb4550bd0.jpeg"
       }
     },
     {
-      caption: "Evening laser light show featuring American themes",
       image: {
-        url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a4d18823290240bf390f2f.jpeg"
-      }
-    },
-    {
-      caption: "Immersive patriotic visual experience",
-      image: {
-        url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a4d14f9769a74712598159.jpeg"
-      }
-    },
-    {
-      caption: "Advanced laser technology showcasing American history",
-      image: {
-        url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a44608aa4eed6d00f735bd.jpeg"
-      }
-    },
-    {
-      caption: "Breathtaking anniversary celebration light display",
-      image: {
-        url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a445db9b155f2998700f62.jpeg"
+        url: "https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/688aeb5b08dbc3463024d6d2.png"
       }
     }
   ];
 
   return (
-    <section className="py-24 bg-slate-50">
+    <section className="py-12 bg-slate-50">
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
           
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center mb-6">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent to-slate-300"></div>
-              <span className="px-6 text-sm font-medium text-slate-500 tracking-wider uppercase">Experience Gallery</span>
-              <div className="h-px w-12 bg-gradient-to-l from-transparent to-slate-300"></div>
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center justify-center mb-4">
+              <div className="h-px w-8 bg-gradient-to-r from-transparent to-slate-300"></div>
+              <span className="px-4 text-sm font-medium text-slate-500 tracking-wider uppercase">Experience Gallery</span>
+              <div className="h-px w-8 bg-gradient-to-l from-transparent to-slate-300"></div>
             </div>
           </div>
 
-          {/* Perfect Grid Gallery */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {galleryItems.map((item, index) => (
-              <div 
-                key={index} 
-                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-              >
-                {/* Image Container */}
-                <div className="relative aspect-[4/3] overflow-hidden">
+          {/* 1-2-2 Layout Gallery - Compact */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* Top Row - 1 wide image */}
+            <div className="lg:col-span-4">
+              <div className="group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+                <div className="relative aspect-[16/9] overflow-hidden">
                   <Image
-                    src={item.image.url}
-                    alt={item.caption}
+                    src={galleryItems[0].image.url}
+                    alt="Patriotic laser light display - featured"
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
                   />
-                  
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <p className="text-white text-sm leading-relaxed">
-                        {item.caption}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Subtle Border Accent */}
-                  <div className="absolute inset-0 border-2 border-transparent group-hover:border-white/20 rounded-2xl transition-colors duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 border-2 border-transparent group-hover:border-white/20 rounded-xl transition-colors duration-300"></div>
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* Middle Row - 2 images */}
+            <div className="lg:col-span-2">
+              <div className="group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+                <div className="relative aspect-[3/2] overflow-hidden">
+                  <Image
+                    src={galleryItems[1].image.url}
+                    alt="Patriotic laser light display 1"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 border-2 border-transparent group-hover:border-white/20 rounded-xl transition-colors duration-300"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-2">
+              <div className="group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+                <div className="relative aspect-[3/2] overflow-hidden">
+                  <Image
+                    src={galleryItems[2].image.url}
+                    alt="Patriotic laser light display 2"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 border-2 border-transparent group-hover:border-white/20 rounded-xl transition-colors duration-300"></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom Row - 2 images */}
+            <div className="lg:col-span-2">
+              <div className="group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+                <div className="relative aspect-[3/2] overflow-hidden">
+                  <Image
+                    src={galleryItems[3].image.url}
+                    alt="Patriotic laser light display 3"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 border-2 border-transparent group-hover:border-white/20 rounded-xl transition-colors duration-300"></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-2">
+              <div className="group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+                <div className="relative aspect-[3/2] overflow-hidden">
+                  <Image
+                    src={galleryItems[4].image.url}
+                    alt="Patriotic laser light display 4"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 border-2 border-transparent group-hover:border-white/20 rounded-xl transition-colors duration-300"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
