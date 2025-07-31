@@ -62,10 +62,10 @@ export default function GreenLightMovementPage() {
                     At select EOP events, we will offer green, battery-powered light-up bracelets for $5.00. We will recover $2.00 to cover costs, and the remaining $3.00 will be donated to a previously approved local mental health program.
                   </p>
                   <p className="text-gray-700 mb-6 leading-relaxed">
-                    At a special moment during the evening, all activities will pause. We will invite attendees to participate in a simple yet powerful gesture. We will ask attendees if they have ever personally faced an intense personal struggle, needed to ask for help, or wish they had at any time in their life, to please consider letting others know they are not alone by turning on their green light and raise their hand for the duration of the next song. Someone in the crowd tonight may be feeling alone—and their light could remind them that they're not.
+                    At a special moment during the evening, all activities will pause. We will invite attendees to participate in a simple yet powerful gesture. We will ask attendees if they have ever personally faced an intense personal struggle, needed to ask for help, or wish they had at any time in their life, to please consider letting others know they are not alone by turning on their green light and raise their hand for the duration of the next song. Someone in the crowd tonight may be feeling alone&mdash;and their light could remind them that they&apos;re not.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    As "Brighter Days" by Blessing Offor plays, the entire venue will glow green. Lasers will freeze in soft, static green, and the space will fill with a shared sense of compassion and courage.
+                    As &quot;Brighter Days&quot; by Blessing Offor plays, the entire venue will glow green. Lasers will freeze in soft, static green, and the space will fill with a shared sense of compassion and courage.
                   </p>
                 </div>
               </div>
@@ -89,7 +89,7 @@ export default function GreenLightMovementPage() {
                 <h2 className="text-3xl font-bold text-green-900 mb-6">Continue the Movement</h2>
                 <div className="bg-green-50 p-8 rounded-xl shadow-lg border-l-4 border-green-800">
                   <p className="text-gray-700 leading-relaxed">
-                    Permanent silicon bracelets will be available for the Green Light Movement. This bracelet will signify that people dealing with something, anything, even a stranger, have a "Green Light" to talk to the person wearing the bracelet.
+                    Permanent silicon bracelets will be available for the Green Light Movement. This bracelet will signify that people dealing with something, anything, even a stranger, have a &quot;Green Light&quot; to talk to the person wearing the bracelet.
                   </p>
                 </div>
               </div>

@@ -192,10 +192,10 @@ export default async function LaserLightShowPage() {
             <h3 className="text-2xl font-bold text-gray-900 mb-6">A Quick History</h3>
             <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-emerald-600">
               <p className="text-gray-700 mb-4">
-                Before 2020, laser shows were exclusively in-person events, held in parks, amphitheaters, and large outdoor venues—making them a mostly summer and warm-weather experience.
+                Before 2020, laser shows were exclusively in-person events, held in parks, amphitheaters, and large outdoor venues&mdash;making them a mostly summer and warm-weather experience.
               </p>
               <p className="text-gray-700">
-                Then came 2020, and the rise of the drive-in laser show. As a creative response to COVID restrictions, we launched drive-in holiday shows in Wilson, NC (near Raleigh) and Pittsburgh, PA. These shows proved not only feasible—but wildly popular.
+                Then came 2020, and the rise of the drive-in laser show. As a creative response to COVID restrictions, we launched drive-in holiday shows in Wilson, NC (near Raleigh) and Pittsburgh, PA. These shows proved not only feasible&mdash;but wildly popular.
               </p>
             </div>
           </div>
