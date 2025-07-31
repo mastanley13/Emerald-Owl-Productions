@@ -92,10 +92,10 @@ export default function DoItNowPage() {
                   On August 14, we lost our Vice President and dear friend, Matthew Keenan, in a tragic car accident. He was 100% not at fault. He was only 35.
                 </p>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  In the days following Matt's passing, something became painfully clear: many people at his wake shared regrets, messages they had meant to share but never did. One friend said their last interaction had been an argument. Others simply wished they had told Matt how much he meant to them.
+                  In the days following Matt&apos;s passing, something became painfully clear: many people at his wake shared regrets, messages they had meant to share but never did. One friend said their last interaction had been an argument. Others simply wished they had told Matt how much he meant to them.
                 </p>
                 <p className="text-gray-700 mb-8 leading-relaxed">
-                  That realization inspired us to create the Do It Now Initiative. This isn't just a tribute to Matt. It's a mission. A movement. A chance for people to act on something they might otherwise put off until it's too late — saying the thing that matters, before it's too late to say it.
+                  That realization inspired us to create the Do It Now Initiative. This isn&apos;t just a tribute to Matt. It&apos;s a mission. A movement. A chance for people to act on something they might otherwise put off until it&apos;s too late — saying the thing that matters, before it&apos;s too late to say it.
                 </p>
               </div>
 
@@ -114,7 +114,7 @@ export default function DoItNowPage() {
                      <li>A quiet space to write</li>
                    </ul>
                    <p className="text-gray-700 leading-relaxed">
-                     Guests are encouraged to write a heartfelt message to someone in their life. It could be a thank you. An apology. Or just a simple "I love you." They place the letter in our red mailbox, and EOP delivers it to the post office the next day.
+                     Guests are encouraged to write a heartfelt message to someone in their life. It could be a thank you. An apology. Or just a simple &quot;I love you.&quot; They place the letter in our red mailbox, and EOP delivers it to the post office the next day.
                    </p>
                  </div>
                </div>
@@ -126,7 +126,7 @@ export default function DoItNowPage() {
                   Just days before his death, Matt was excitedly working on plans for a new laser show themed concept: The British Invasion. As part of that idea, he was going to travel to England and personally find and inspect a real black taxi cab — a one-of-a-kind photo prop for our events. As a skilled mechanic, this hands-on adventure was right up his alley.
                 </p>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  He never got the chance. But to honor his vision, we've decided to invest in props Matt would have loved. We've purchased four authentic UK red mailboxes from an antique shop in South Carolina. They've become the first physical symbols of the Do It Now Initiative: eye-catching, interactive, and emotionally powerful.
+                  He never got the chance. But to honor his vision, we&apos;ve decided to invest in props Matt would have loved. We&apos;ve purchased four authentic UK red mailboxes from an antique shop in South Carolina. They&apos;ve become the first physical symbols of the Do It Now Initiative: eye-catching, interactive, and emotionally powerful.
                 </p>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   In the future, we hope to add authentic red phone booths. That way, guests can also choose to make a meaningful phone call in the moment.
@@ -165,7 +165,7 @@ export default function DoItNowPage() {
                   </p>
                                      <div className="bg-gradient-to-r from-red-100 to-blue-200 p-8 rounded-xl text-center">
                      <p className="text-2xl font-bold text-gray-800 italic">
-                       Life is unpredictable. Don't wait. Do it now.
+                       Life is unpredictable. Don&apos;t wait. Do it now.
                      </p>
                    </div>
                 </div>

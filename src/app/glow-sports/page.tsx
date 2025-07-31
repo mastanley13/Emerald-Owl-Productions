@@ -53,9 +53,13 @@ const glowSportsData: GlowSportsData = {
 const galleryImages = [
   {
     url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/688af569417b03446a60ea4a.jpeg',
+    alt: 'Glow sports action shot 1',
+    title: 'Glow Sports Action',
   },
   {
     url: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/688af569ba7d0402e52dd089.jpeg',
+    alt: 'Glow sports action shot 2',
+    title: 'Glow Sports Action',
   },
 ];
 

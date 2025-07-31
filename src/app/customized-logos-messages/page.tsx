@@ -76,7 +76,7 @@ export default async function CustomizedLogosMessagesPage() {
                 {/* Questions Section */}
                 <div className="grid md:grid-cols-1 gap-8 mb-12">
                   <div className="bg-emerald-50 p-8 rounded-lg border-l-4 border-emerald-600">
-                    <h3 className="text-2xl font-bold text-emerald-700 mb-6">Do you want maximum exposure of a major sponsor's logo at your event?</h3>
+                    <h3 className="text-2xl font-bold text-emerald-700 mb-6">Do you want maximum exposure of a major sponsor&apos;s logo at your event?</h3>
                   </div>
                   
                   <div className="bg-sky-50 p-8 rounded-lg border-l-4 border-sky-600">

@@ -80,7 +80,7 @@ export default function GreenLightMovementPage() {
                   We are having a logo created for this movement as well, and we have purchased a website, www.greenlightmovement.us
                 </p>
                 <p className="text-gray-700 mb-8 leading-relaxed">
-                  This small moment has the power to create lasting connection……and let someone know they're not alone.
+                  This small moment has the power to create lasting connection……and let someone know they&apos;re not alone.
                 </p>
               </div>
 
