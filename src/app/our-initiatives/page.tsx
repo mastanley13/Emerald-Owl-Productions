@@ -9,7 +9,7 @@ import Link from 'next/link'; // Keep Link for the CTA
 
 export const metadata: Metadata = {
   title: 'Our Initiatives | Emerald Owl Productions',
-  description: 'Discover our community and social impact initiatives: Dripping in Confidence, Do It Now, and Green Light Movement.',
+  description: 'Discover our community and social impact initiatives: Do It Now and Green Light Movement.',
 };
 
 // Helper function to find an initiative by title from the fetched data
@@ -31,9 +31,8 @@ export default async function OurInitiativesPage() {
   }
 
   const targetInitiativeTitles = [
-    "Dripping in Confidence",
     "Do It Now",
-    "Green Light Movement"
+    "The Green Light Movement"
   ];
 
   const displayedInitiatives = targetInitiativeTitles.map(title => {
@@ -42,11 +41,9 @@ export default async function OurInitiativesPage() {
       id: found?.id || title.toLowerCase().replace(/\s+/g, '-'), // Generate an ID if not found
       title: found?.title || title,
       description: found?.hook || `Details about ${title} coming soon.`, // Use hook as description
-      visual: title.toLowerCase() === "green light movement" 
-                ? 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/687961aa02da47d0db454d31.jpeg' 
-              : title.toLowerCase() === "dripping in confidence"
-                ? 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/6715c4feafc1d92163c3bdeb.png'
-                : (found?.visual || '/images/placeholder.jpg') // Default placeholder image
+      visual: title.toLowerCase().includes("green light movement")
+        ? 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/687961aa02da47d0db454d31.jpeg'
+        : (found?.visual || '/images/placeholder.jpg') // Default placeholder image
     };
   });
 
@@ -97,27 +94,17 @@ export default async function OurInitiativesPage() {
                         {initiative.description}
                       </p>
                       {/* You can add more specific details or links here if available */}
-                      {initiative.title.toLowerCase() === "dripping in confidence" && (
-                        <Link 
-                          href="https://www.drippinginconfidence.com/" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="inline-block mt-2 px-4 py-2 bg-emerald-600 text-white text-sm font-semibold rounded-md hover:bg-emerald-700 transition-colors"
-                        >
-                          Learn More
-                        </Link>
-                      )}
                       {initiative.title.toLowerCase() === "do it now" && (
-                        <Link 
-                          href="/do-it-now" 
+                        <Link
+                          href="/do-it-now"
                           className="inline-block mt-2 px-4 py-2 bg-emerald-600 text-white text-sm font-semibold rounded-md hover:bg-emerald-700 transition-colors"
                         >
                           Learn More
                         </Link>
                       )}
-                      {initiative.title.toLowerCase() === "green light movement" && (
-                        <Link 
-                          href="/green-light-movement" 
+                      {initiative.title.toLowerCase().includes("green light movement") && (
+                        <Link
+                          href="/green-light-movement"
                           className="inline-block mt-2 px-4 py-2 bg-emerald-600 text-white text-sm font-semibold rounded-md hover:bg-emerald-700 transition-colors"
                         >
                           Learn More
