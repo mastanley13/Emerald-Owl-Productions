@@ -106,17 +106,8 @@ export default function Header() {
                   >
                     Sensory Friendly Experiences
                   </Link>
-                  <Link 
-                    href="https://www.drippinginconfidence.com" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Dripping in Confidence
-                  </Link>
-                  <Link 
-                    href="/customized-logos-messages" 
+                  <Link
+                    href="/customized-logos-messages"
                     className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
                     onClick={() => setMenuOpen(false)}
                   >
@@ -171,17 +162,8 @@ export default function Header() {
                     >
                       Sensory Friendly Experiences
                     </Link>
-                    <Link 
-                      href="https://www.drippinginconfidence.com" 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
-                      onClick={() => setMenuOpen(false)}
-                    >
-                      Dripping in Confidence
-                    </Link>
-                    <Link 
-                      href="/customized-logos-messages" 
+                    <Link
+                      href="/customized-logos-messages"
                       className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
                       onClick={() => setMenuOpen(false)}
                     >

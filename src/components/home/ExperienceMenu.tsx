@@ -54,7 +54,6 @@ const ExperienceMenu: React.FC<ExperienceMenuProps> = ({ experiences }) => {
       'water game': '/water-games',
       'water wars': '/water-games',
       'water battle': '/water-games',
-      'dripping in confidence': 'https://www.drippinginconfidence.com',
       'color run': '/color-run',
       'holiday events': '/holiday-events',
       'holiday event': '/holiday-events',
@@ -62,17 +61,20 @@ const ExperienceMenu: React.FC<ExperienceMenuProps> = ({ experiences }) => {
       'special occasion': '/special-occasions',
       'sensory friendly': '/sensory-friendly-experiences',
       'sensory-friendly': '/sensory-friendly-experiences',
+      'do it now': '/do-it-now',
       'america anniversary': '/american-anniversary-celebration',
       'american anniversary': '/american-anniversary-celebration',
       '250th anniversary': '/american-anniversary-celebration',
       'anniversary celebration': '/american-anniversary-celebration',
-      
+
       // Community initiatives
       'emmy the owl': '/emmy-the-owl',
       'our initiatives': '/our-initiatives',
       'our initiative': '/our-initiatives',
       'fundraisers': '/fundraisers',
-      'fundraising': '/fundraisers'
+      'fundraising': '/fundraisers',
+      'green light movement': '/green-light-movement',
+      'the green light movement': '/green-light-movement'
     };
 
     // Check for exact matches first

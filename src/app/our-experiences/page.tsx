@@ -7,7 +7,7 @@ import { getExperiencesData } from '../../services/contentService';
 import ExperienceMenu from '../../components/home/ExperienceMenu';
 
 // Define a type for the color names
-type ServiceColor = 'emerald' | 'purple' | 'pink' | 'blue' | 'teal' | 'sky';
+type ServiceColor = 'emerald' | 'purple' | 'blue' | 'teal' | 'sky';
 
 // Define an interface for a single service
 interface Service {
@@ -36,14 +36,6 @@ const services: Service[] = [
     image: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67a4558baa4eed1400f75c3a.jpeg',
     link: '/neon-nights',
     color: 'purple'
-  },
-  {
-    id: 'dripping',
-    title: 'Dripping in Confidence',
-    description: 'Fun and messy experiences',
-    image: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67ab94d979284b777a6a7660.jpeg',
-    link: 'https://www.drippinginconfidence.com',
-    color: 'pink'
   },
   {
     id: 'sensory',
@@ -77,12 +69,6 @@ const getColorClasses = (color: ServiceColor) => {
       hover: 'hover:bg-purple-700',
       shadow: 'shadow-purple-100/40',
       text: 'text-purple-600'
-    },
-    pink: {
-      bg: 'bg-pink-600',
-      hover: 'hover:bg-pink-700',
-      shadow: 'shadow-pink-100/40',
-      text: 'text-pink-600'
     },
     blue: {
       bg: 'bg-blue-600',

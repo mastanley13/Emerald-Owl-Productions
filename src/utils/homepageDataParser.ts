@@ -92,13 +92,6 @@ export function parseHomepageData(rawData: any): HomepageData {
       link: '/neon-nights'
     },
     {
-      id: 'dripping',
-      title: 'Dripping in Confidence',
-      description: 'Fun and messy experiences',
-      image: resources.byCategory.drippingInConfidence[0]?.url || 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67ab94d979284b777a6a7660.jpeg',
-      link: '/dripping-in-confidence'
-    },
-    {
       id: 'foam-parties',
       title: 'Foam Party & Color Run',
       description: 'Exciting foam activities and entertainment',

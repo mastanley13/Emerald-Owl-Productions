@@ -67,9 +67,9 @@ export default function IntroSection() {
           {/* Experience Examples */}
           <div className="bg-gray-50 p-8 rounded-lg">
             <p className="text-gray-700 leading-relaxed mb-6">
-              Whether you&apos;re dancing to your favorite 80s hits at <strong>Neon Nights</strong>, 
-              enjoying a holiday laser show from your car, diving into a foam-filled water battle, 
-              or getting splashed (or even drenched) in color with our <strong>Dripping in Confidence</strong> initiative, 
+              Whether you&apos;re dancing to your favorite 80s hits at <strong>Neon Nights</strong>,
+              enjoying a holiday laser show from your car, diving into a foam-filled water battle,
+              or supporting community causes through our <strong>Green Light Movement</strong> initiative,
               your guests will go home with a positive memory that lasts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
