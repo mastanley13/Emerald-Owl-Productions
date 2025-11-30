@@ -196,15 +196,22 @@ export default function Header() {
               </Link>
               <div className="hidden lg:group-hover:block absolute left-0 top-full backdrop-blur-md shadow-lg rounded-md min-w-[220px] z-50 lg:bg-white/90">
                 <div className="py-2">
-                  <Link 
-                    href="/holiday-events" 
+                  <Link
+                    href="/holiday-events"
                     className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
                     onClick={() => setMenuOpen(false)}
                   >
                     Holiday Events
                   </Link>
-                  <Link 
-                    href="/american-anniversary-celebration" 
+                  <Link
+                    href="/holiday-events/laser-shows-2025"
+                    className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    2025 Holiday Laser Shows
+                  </Link>
+                  <Link
+                    href="/american-anniversary-celebration"
                     className="block px-4 py-2 text-emerald-700 hover:bg-emerald-50 hover:text-emerald-900"
                     onClick={() => setMenuOpen(false)}
                   >
@@ -231,15 +238,22 @@ export default function Header() {
               <div className="lg:hidden pl-4 mt-1 space-y-1">
                 {menuOpen && (
                   <React.Fragment>
-                    <Link 
-                      href="/holiday-events" 
+                    <Link
+                      href="/holiday-events"
                       className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
                       onClick={() => setMenuOpen(false)}
                     >
                       Holiday Events
                     </Link>
-                    <Link 
-                      href="/american-anniversary-celebration" 
+                    <Link
+                      href="/holiday-events/laser-shows-2025"
+                      className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      2025 Holiday Laser Shows
+                    </Link>
+                    <Link
+                      href="/american-anniversary-celebration"
                       className="block py-1.5 px-3 text-emerald-700 hover:bg-emerald-50 rounded-md"
                       onClick={() => setMenuOpen(false)}
                     >
