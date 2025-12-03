@@ -117,8 +117,8 @@ export default async function Home() {
     <React.Fragment>
       <Header />
       <main>
-        <ChristmasShowsLink />
         <HeroBanner data={homepageData.hero} video={homepageData.videoHighlight} />
+        <ChristmasShowsLink />
         <IntroSection />
         <ExperienceMenu experiences={experiencesData} />
         <Memorial />
