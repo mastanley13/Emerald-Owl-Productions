@@ -77,13 +77,22 @@ export default function HeroBanner({ data, video }: HeroBannerProps) {
               <div className="absolute -inset-4 bg-white/70 blur-xl -z-10 rounded-full"></div>
             </div>
             <div className="flex flex-wrap gap-5 justify-center md:justify-start mb-6 md:mb-0">
-              <button 
-                onClick={scrollToExperienceMenu} 
+              <button
+                onClick={scrollToExperienceMenu}
                 className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 shadow-xl hover:shadow-emerald-300/60 hover:-translate-y-1 transform relative overflow-hidden group focus:outline-none focus:ring-2 focus:ring-emerald-400"
               >
                 <span className="relative z-10">View Our Menu of Experiences</span>
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-45 transform -translate-x-full transition-transform duration-1000 ease-in-out group-hover:translate-x-full"></span>
               </button>
+              <Link
+                href="/holiday-events"
+                className="group relative overflow-hidden bg-white/90 backdrop-blur-sm border-2 border-emerald-600 py-4 px-10 rounded-full transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-emerald-400"
+              >
+                <span className="relative z-10 text-emerald-600 group-hover:text-white transition-colors duration-300 font-bold text-center">
+                  click here for information on upcoming Christmas shows
+                </span>
+                <span className="absolute inset-0 bg-emerald-600 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 rounded-full"></span>
+              </Link>
               <button
                 onClick={() => setIsSurveyOpen(true)}
                 className="group relative overflow-hidden bg-white/90 backdrop-blur-sm border-2 border-emerald-600 py-4 px-10 rounded-full transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-emerald-400"
