@@ -10,7 +10,7 @@ import { getHomepageData, getExperiencesData } from '../services/contentService'
 import ExperienceMenu from '../components/home/ExperienceMenu';
 import { parseHomepageData } from '../utils/homepageDataParser';
 import { ExperiencesData } from '../types/experiences';
-import HolidayLaserShowPromo from '../components/home/HolidayLaserShowPromo';
+import ChristmasShowsLink from '../components/home/ChristmasShowsLink';
 
 // Comprehensive fallback data that matches the expected structure
 const FALLBACK_HOMEPAGE_DATA = parseHomepageData({
@@ -118,7 +118,7 @@ export default async function Home() {
       <Header />
       <main>
         <HeroBanner data={homepageData.hero} video={homepageData.videoHighlight} />
-        <HolidayLaserShowPromo />
+        <ChristmasShowsLink />
         <IntroSection />
         <ExperienceMenu experiences={experiencesData} />
         <Memorial />
