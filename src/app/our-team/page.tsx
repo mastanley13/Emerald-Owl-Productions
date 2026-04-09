@@ -79,6 +79,18 @@ const teamMembers = [
       "Carrie grew up in a small town outside Raleigh, NC. During school, her past time consisted of drawing into the wee hours and competing in quite a few sports which carried over into college at St. Andrews University in Laurinburg, NC. An art major at SAU, her focus became painting and sculpture. Carrie then attended graduate school at UCF's Florida Interactive Entertainment Academy, where she studied concept art, texturing, & 3D modeling. She even designed Emmy the Owl and our logo! Now Carrie lives near Asheville, NC where she is a freelance scenic artist and muralist. Carrie is happy to bring her experience and creative eye to the Emerald Owl team!"
     ]
   },
+  {
+    name: 'CHRISTINA DOSS',
+    title: 'Partnership Development & Outreach Director',
+    category: 'Director',
+    imageUrl: '/images/team/christina-doss-headshot.jpg',
+    emails: ['christina@emeraldowlproductions.com'],
+    phone: '(336) 684-5899',
+    bio: [
+      'Based in the heart of North Carolina, Christina is eager to build partnerships through the Tar Heel State and beyond.',
+      'As a former student of Dance Marathon, Christina understands the challenges of fundraising in schools today, and the opportunities that come with it.'
+    ]
+  },
   // Technicians
   {
     name: 'JASON SALT',
