@@ -37,19 +37,6 @@ const teamMembers = [
     ]
   },
   {
-    name: 'ALI CHEELY',
-    title: 'Director of Partnership Development - Director of Neurodivergent Events',
-    category: 'Director',
-    imageUrl: 'https://storage.googleapis.com/msgsndr/d2BYZGOF7ecSj21A0t4N/media/67144f7bf312d46538860eaa.jpeg',
-    phone: '(252)570-9453',
-    emails: ['ali@emeraldowlproductions.com'],
-    bio: [
-      "Ali Cheely is a mother of 4 children, 3 of which have special needs, including neurological differences. Ali brings her teaching and coaching experience from school, church, and home settings to EOP. She has worked with children and adults with autism, Down syndrome, Split brain syndrome, Cerebral palsy, OCD, ADHD, global cognitive delays, and short stature/dwarfism. Ali has also worked with individuals who are non verbal and non ambulatory.",
-      '"I know how hard it is when you feel there are no events that meet the unique needs of your kids. As Director of Neurodivergent Events, my job is to create specific experiences that meet the needs of populations that are often overlooked by event planners. It is truly humbling to use my knowledge and background to create memories via epic events for these populations."'
-    ]
-  },
-
-  {
     name: 'SUSAN KELLUM',
     title: 'Project & Event Consultant',
     category: 'Director',
