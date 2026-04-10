@@ -37,6 +37,18 @@ const teamMembers = [
     ]
   },
   {
+    name: 'CHRISTINA DOSS',
+    title: 'Partnership Development & Outreach Director',
+    category: 'Director',
+    imageUrl: 'https://assets.cdn.filesafe.space/d2BYZGOF7ecSj21A0t4N/media/69d93212a4e6aa34cb9285fd.jpg',
+    emails: ['christina@emeraldowlproductions.com'],
+    phone: '(336) 684-5899',
+    bio: [
+      'Based in the heart of North Carolina, Christina is eager to build partnerships through the Tar Heel State and beyond.',
+      'As a former student of Dance Marathon, Christina understands the challenges of fundraising in schools today, and the opportunities that come with it.'
+    ]
+  },
+  {
     name: 'SUSAN KELLUM',
     title: 'Project & Event Consultant',
     category: 'Director',
