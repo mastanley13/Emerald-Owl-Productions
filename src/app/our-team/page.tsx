@@ -83,7 +83,7 @@ const teamMembers = [
     name: 'CHRISTINA DOSS',
     title: 'Partnership Development & Outreach Director',
     category: 'Director',
-    imageUrl: '/images/team/christina-doss-headshot.jpg',
+    imageUrl: 'https://assets.cdn.filesafe.space/d2BYZGOF7ecSj21A0t4N/media/69d93212a4e6aa34cb9285fd.jpg',
     emails: ['christina@emeraldowlproductions.com'],
     phone: '(336) 684-5899',
     bio: [
