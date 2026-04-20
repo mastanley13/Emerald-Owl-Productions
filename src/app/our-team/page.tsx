@@ -92,15 +92,17 @@ const teamMembers = [
     ]
   },
   {
-    name: 'CHRISTINA DOSS',
-    title: 'Partnership Development & Outreach Director',
+    name: 'TABITHA DAVIS',
+    title: 'Marketing Director | Drip in Confidence Experience Manager',
     category: 'Director',
-    imageUrl: 'https://assets.cdn.filesafe.space/d2BYZGOF7ecSj21A0t4N/media/69d93212a4e6aa34cb9285fd.jpg',
-    emails: ['christina@emeraldowlproductions.com'],
-    phone: '(336) 684-5899',
+    imageUrl: 'https://assets.cdn.filesafe.space/d2BYZGOF7ecSj21A0t4N/media/69e62ba19f80f33386960454.jpg',
+    emails: ['Tabitha@emeraldowlproductions.com'],
+    phone: '(412) 713-6517',
     bio: [
-      'Based in the heart of North Carolina, Christina is eager to build partnerships through the Tar Heel State and beyond.',
-      'As a former student of Dance Marathon, Christina understands the challenges of fundraising in schools today, and the opportunities that come with it.'
+      'Tabi is a multidisciplinary creative and business strategist with a background in photography, digital marketing, and brand development. With over 18 years of experience, she specializes in blending visual storytelling with strategic marketing to help brands stand out and connect with their audience.',
+      'At Emerald Owl Productions, Tabi takes on a dynamic, hands-on role that goes beyond traditional marketing. She represents the brand in the community, builds relationships with schools and organizations for fundraising programs, and helps bring interactive experiences to life. She embraces the fun, immersive energy of each experience while helping execute and manage productions.',
+      'Tabi is the manager of the "Drip In Confidence Experience," an innovative and fun photo shoot that embraces the mess of life and how our response to it builds our confidence!',
+      'She was drawn to Emerald Owl Productions for its creativity, energy, and mission to create memorable, joy-filled experiences, making it a natural fit for her passion for both connection and innovation.'
     ]
   },
   // Technicians
