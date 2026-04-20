@@ -37,6 +37,20 @@ const teamMembers = [
     ]
   },
   {
+    name: 'TABITHA DAVIS',
+    title: 'Marketing Director | Drip in Confidence Experience Manager',
+    category: 'Director',
+    imageUrl: 'https://assets.cdn.filesafe.space/d2BYZGOF7ecSj21A0t4N/media/69e62ba19f80f33386960454.jpg',
+    emails: ['Tabitha@emeraldowlproductions.com'],
+    phone: '(412) 713-6517',
+    bio: [
+      'Tabi is a multidisciplinary creative and business strategist with a background in photography, digital marketing, and brand development. With over 18 years of experience, she specializes in blending visual storytelling with strategic marketing to help brands stand out and connect with their audience.',
+      'At Emerald Owl Productions, Tabi takes on a dynamic, hands-on role that goes beyond traditional marketing. She represents the brand in the community, builds relationships with schools and organizations for fundraising programs, and helps bring interactive experiences to life. She embraces the fun, immersive energy of each experience while helping execute and manage productions.',
+      'Tabi is the manager of the "Drip In Confidence Experience," an innovative and fun photo shoot that embraces the mess of life and how our response to it builds our confidence!',
+      'She was drawn to Emerald Owl Productions for its creativity, energy, and mission to create memorable, joy-filled experiences, making it a natural fit for her passion for both connection and innovation.'
+    ]
+  },
+  {
     name: 'CHRISTINA DOSS',
     title: 'Partnership Development & Outreach Director',
     category: 'Director',
@@ -89,20 +103,6 @@ const teamMembers = [
     emails: ['info@emeraldowlproductions.com'],
     bio: [
       "Carrie grew up in a small town outside Raleigh, NC. During school, her past time consisted of drawing into the wee hours and competing in quite a few sports which carried over into college at St. Andrews University in Laurinburg, NC. An art major at SAU, her focus became painting and sculpture. Carrie then attended graduate school at UCF's Florida Interactive Entertainment Academy, where she studied concept art, texturing, & 3D modeling. She even designed Emmy the Owl and our logo! Now Carrie lives near Asheville, NC where she is a freelance scenic artist and muralist. Carrie is happy to bring her experience and creative eye to the Emerald Owl team!"
-    ]
-  },
-  {
-    name: 'TABITHA DAVIS',
-    title: 'Marketing Director | Drip in Confidence Experience Manager',
-    category: 'Director',
-    imageUrl: 'https://assets.cdn.filesafe.space/d2BYZGOF7ecSj21A0t4N/media/69e62ba19f80f33386960454.jpg',
-    emails: ['Tabitha@emeraldowlproductions.com'],
-    phone: '(412) 713-6517',
-    bio: [
-      'Tabi is a multidisciplinary creative and business strategist with a background in photography, digital marketing, and brand development. With over 18 years of experience, she specializes in blending visual storytelling with strategic marketing to help brands stand out and connect with their audience.',
-      'At Emerald Owl Productions, Tabi takes on a dynamic, hands-on role that goes beyond traditional marketing. She represents the brand in the community, builds relationships with schools and organizations for fundraising programs, and helps bring interactive experiences to life. She embraces the fun, immersive energy of each experience while helping execute and manage productions.',
-      'Tabi is the manager of the "Drip In Confidence Experience," an innovative and fun photo shoot that embraces the mess of life and how our response to it builds our confidence!',
-      'She was drawn to Emerald Owl Productions for its creativity, energy, and mission to create memorable, joy-filled experiences, making it a natural fit for her passion for both connection and innovation.'
     ]
   },
   // Technicians
