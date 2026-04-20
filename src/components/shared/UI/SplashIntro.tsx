@@ -13,14 +13,14 @@ const SplashIntro: React.FC<SplashIntroProps> = ({ onComplete }) => {
   const [videoError, setVideoError] = useState(false);
 
   useEffect(() => {
-    // Auto-hide splash after 7 seconds (or immediately if video fails)
+    // Auto-hide splash after 4 seconds (or immediately if video fails)
     const timer = setTimeout(() => {
       setIsFading(true);
       setTimeout(() => {
         setIsVisible(false);
         onComplete();
       }, 1000); // Wait for fade out animation
-    }, 7000);
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, [onComplete]);
