@@ -211,6 +211,16 @@ interface TeamMember {
 
 export default function OurTeamPage() {
   const directors = teamMembers.filter(member => member.category === 'Director') as TeamMember[];
+  const prioritizedDirectorOrder = ['MICHAEL MEYER', 'TABITHA DAVIS'];
+  const sortedDirectors = [...directors].sort((a, b) => {
+    const aIndex = prioritizedDirectorOrder.indexOf(a.name);
+    const bIndex = prioritizedDirectorOrder.indexOf(b.name);
+
+    if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+    if (aIndex !== -1) return -1;
+    if (bIndex !== -1) return 1;
+    return 0;
+  });
   const technicians = teamMembers.filter(member => member.category === 'Technician') as TeamMember[];
   const behindTheScenes = teamMembers.filter(member => member.category === 'BehindTheScenes') as TeamMember[];
 
@@ -311,7 +321,7 @@ export default function OurTeamPage() {
                   Our Directors
                 </h2>
                 <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 lg:gap-16 mb-16 lg:mb-24">
-                  {directors.map(renderMember)}
+                  {sortedDirectors.map(renderMember)}
                 </div>
               </>
             )}
