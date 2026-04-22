@@ -211,7 +211,7 @@ interface TeamMember {
 
 export default function OurTeamPage() {
   const directors = teamMembers.filter(member => member.category === 'Director') as TeamMember[];
-  const prioritizedDirectorOrder = ['MICHAEL MEYER', 'TABITHA DAVIS'];
+  const prioritizedDirectorOrder = ['KRISTA STROSNIDER', 'MICHAEL MEYER', 'TABITHA DAVIS'];
   const sortedDirectors = [...directors].sort((a, b) => {
     const aIndex = prioritizedDirectorOrder.indexOf(a.name);
     const bIndex = prioritizedDirectorOrder.indexOf(b.name);
